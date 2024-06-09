@@ -1,0 +1,5 @@
+{
+    "fpquery": "setclient/token__{}/tenant_id__{}/username__{}/uuid__{}/custnum__{}/loyaltynr__{}/newsletter__{}/title__Mr.%20test%20title/firstname__first%20test%20name/middlename__middle%20test%20name/lastname__last%20test%20name/warehouse__/remarks__Test%20remarks/born__29-04-2000/email__mail%40mail.com/fax__1234567890/telephone__0123%20456%20789/street__Test%20street%20name/housenum__99/houseadd__Test%20house%20address/zipcode__1234AB/city__Test%20city/country__Test%20country/zgrptest_name_1__3",
+    "method": "setclient",
+    "confirmed": false
+}

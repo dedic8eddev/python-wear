@@ -1,0 +1,847 @@
+basePath: /
+definitions:
+  SaleCustomer:
+    description:
+      The customer making the sale. This will link the sale to this customer
+      record.
+    properties:
+      id:
+        description: The unique identifier of the customer record.
+        type: string
+    type: object
+  BaseFilter:
+    properties:
+      _id:
+        description: Get a document with a specific _id.
+        type: string
+      active:
+        description: Filter active or non active documents.
+        type: boolean
+      endDate:
+        description:
+          '"Find documents created before a specific time." "It should
+          be datetime string with w timezone offset from UTC in the following format:
+          " "YYYY-MM-DDTHH:MM:SS+0000." "For example 2018-04-01T17:00:00+0200."
+          '
+        type: string
+      startDate:
+        description:
+          '"Find documents created after a specific time." "It should be
+          datetime string with w timezone offset from UTC in the following format:
+          " "YYYY-MM-DDTHH:MM:SS+0000." "For example 2018-04-01T17:00:00+0200."
+          '
+        type: string
+    type: object
+  Empty:
+    title: Empty object
+    type: object
+  Products:
+    description: The products ordered in a sales order.
+    items:
+      properties:
+        articleCode:
+          type: string
+        articleDescription:
+          type: string
+        articleGroup:
+          type: string
+        brand:
+          type: string
+        collection:
+          type: string
+        csb:
+          description: Central Bureau of Statistics code used for international trade
+          type: string
+        localizedPrice:
+          type: number
+        localizedSuggestedRetailPrice:
+          type: number
+        price:
+          type: number
+        season:
+          type: string
+        sizes:
+          description: List of available sizes, ordered as they should appear on invoices.
+          items:
+            type: string
+          type: array
+        skus:
+          items:
+            barcode:
+              required: true
+              type: string
+            color:
+              required: true
+              type: string
+            colorCode:
+              type: string
+            colorCodeSupplier:
+              type: string
+            colorDescription:
+              type: string
+            colorSupplier:
+              type: string
+            mainColorCode:
+              type: string
+            mainColorCodeDescription:
+              type: string
+            qty:
+              required: true
+              type: integer
+            size:
+              required: true
+              type: string
+            subColorCode:
+              type: string
+            subColorCodeDescription:
+              type: string
+          type: array
+        suggestedRetailPrice:
+          type: number
+        supplierName:
+          type: string
+        valuePrice:
+          type: number
+        year:
+          type: string
+      required:
+        - articleCode
+        - skus
+        - price
+        - localizedPrice
+        - suggestedRetailPrice
+        - localizedSuggestedRetailPrice
+      type: object
+    type: array
+  Query:
+    properties:
+      limit:
+        maximum: 1000
+        minimum: 1
+        type: integer
+      skip:
+        minimum: 0
+        type: integer
+      sort:
+        description: A list of fields to sort by.
+        items:
+          $ref: "#/definitions/SortItem"
+        type: array
+    title: Query Schema
+    type: object
+  SalesOrder:
+    description: These properties describe a finalized sales order.
+    properties:
+      active:
+        default: true
+        description:
+          An indicator if the document is active or inactive. An inactive
+          document will not appear in search results.
+        type: boolean
+      agentId:
+        description:
+          The unique identifier of the sales agent who is creating the
+          sale.
+        type: string
+      agentName:
+        description: The name of the sales agent who is creating the sales order.
+        type: string
+      customer:
+        $ref: "#/definitions/SaleCustomer"
+      discountPercentage1:
+        description: The value of the discount as a percentage.
+        type: number
+      discountPercentage2:
+        description: The value of the discount as a percentage.
+        type: number
+      discountTerm1:
+        description:
+          If a customer pays before this term, the value in discountPercentage1
+          will be applied to the sale.
+        type: integer
+      discountTerm2:
+        description:
+          If a customer pays before this term, the value in discountPercentage2
+          will be applied to the sale.
+        type: integer
+      docNumber:
+        description: A unique identifier. This defaults to a UUID v4 when not provided.
+        type: string
+      fixDate:
+        description:
+          The latest date that a shipment of ordered items can be made.
+          After this date, items should not be shipped.
+        format: date-time
+        type: string
+      nettTerm:
+        description: The payment deadline.
+        type: integer
+      products:
+        $ref: "#/definitions/Products"
+      remarks:
+        description: Free text remarks about this order.
+        type: string
+      reservationDate:
+        description:
+          The earliest and preferred date that a shipment of ordered items
+          can be made.
+        format: date-time
+        type: string
+      shippingCarrier:
+        description: The preferred delivery company.
+        type: string
+      signature:
+        description:
+          This property is required if the status is complete. A base64
+          encoded image of the signature which looks like this 'data:image/png;base64,XXXX'
+          where XXXX represents the actual base64 encoded image.
+        type: string
+      signatureDate:
+        description:
+          The date and time when the order was signed. Defaults to the
+          server date/time.
+        format: date-time
+        type: string
+      status:
+        description: The status of the order.
+        enum:
+          - complete
+          - draft
+        type: string
+    required:
+      - products
+      - customer
+      - status
+    type: object
+  SalesOrderFilter:
+    allOf:
+      - $ref: "#/definitions/BaseFilter"
+      - properties:
+          docNumber:
+            description: Get a sale with a specific docNumber.
+            type: string
+          status:
+            description: Get completed orders or drafts.
+            enum:
+              - complete
+              - draft
+            type: string
+        type: object
+  SalesOrderQuery:
+    allOf:
+      - $ref: "#/definitions/Query"
+      - properties:
+          filter:
+            $ref: "#/definitions/SalesOrderFilter"
+        title: Query Schema
+        type: object
+  SavedSalesOrder:
+    allOf:
+      - $ref: "#/definitions/SalesOrder"
+      - properties:
+          _id:
+            description: The The unique identifier id of the sales order.
+            type: string
+          created:
+            $ref: "#/definitions/Timestamp"
+          modified:
+            $ref: "#/definitions/Timestamp"
+        type: object
+  SortItem:
+    properties:
+      direction:
+        description: "The direction in which to order. \n1 -> ASCENDING\n-1 -> DESCENDING\n"
+        enum:
+          - 1
+          - -1
+        type: integer
+      field:
+        type: string
+    required:
+      - field
+      - direction
+    type: object
+  Timestamp:
+    properties:
+      action:
+        description: The source of the record
+        type: string
+      date:
+        description: When was this record created
+        type: string
+      user:
+        description: The user who triggered the creation of this record
+        properties:
+          _id:
+            type: string
+          username:
+            type: string
+        type: object
+    type: object
+externalDocs:
+  description: Find out more about Swagger
+  url: http://swagger.io
+host: api.test.softwearconnect.com/v1
+info:
+  contact:
+    email: help@softwear.nl
+  description: '<h1>Wholesale API Overview</h1><p>
+    This documentation is for the Softwear API (SWAPI) which allows third-party web
+    developers to interface with web services of Softwear, BV.
+    </p>
+    <h1>Environments</h1>
+    <p>
+    Softwear offers both a test and production environment. The purpose of the test
+    environment is to allow sand-boxed access to the Softwear API to setup and test your
+    implementation before going live. Requests made to the test environment will not affect
+    live data.
+    </p>
+    <p>
+    It is advisable to set the URL and Access Token as environment variables in your code
+    base rather than using hard-coded values to avoid any mixup between the two environments.
+    For more information about access to the test environment, see below.
+    </p>
+    <p>
+    <ul>
+    <li>
+    <strong>TEST URL: </strong><code>https://api.test.softwearconnect.com/v1/</code>
+    </li>
+    <li>
+    <strong>PRODUCTION URL: </strong><code>https://api.softwearconnect.com/v1/</code>
+    </li>
+    </ul>
+    </p>
+    <h1>Access Token</h1>
+    <p>
+    To use this API it is required to obtain a security token at
+    <a href="https://my.softwearconnect.com/#/tokens"
+    target="_blank" rel="noopener">https://my.softwearconnect.com/#/tokens</a>. The
+    token must be sent with each request in the X-API-Key header of the request. <strong
+    style="color: red;">Important!</strong> The access token should be stored in a
+    secure location and treated like a password. DO NOT share this token with anyone
+    else as this allows anyone with the token to access data. If you think your token
+    has been compromised, go to&nbsp;<a href="https://my.softwearconnect.com/#/tokens"
+    target="_blank" rel="noopener">https://my.softwearconnect.com/#/tokens</a> and
+    revoke the token. Then create a new token.
+    </p>
+    <h1>Testing Environment Access</h1>
+    <p>
+    There is a testing environment available which can be accessed from
+    <a href="https://api.test.softwearconnect.com">https://api.test.softwearconnect.com</a>.
+    This will need to be configured first before you are able to access this environment.
+    Please contact <a href="https://www.softwearconnect.com/#/support" target="_blank">Softwear Support</a>
+    for access to this environment. You will need a different access key for this
+    environment which can be generated at <a href="https://my.test.softwearconnect.com/#/tokens">
+    https://my.test.softwearconnect.com/#/tokens</a>
+    </p>
+    <h1>Requests</h1>
+    <h2>JSON</h2>
+    <p>
+    SWAPI is a pure <a href="https://www.json.org/" target="_blank">JSON</a> HTTP web API which means
+    that all requests and responses use content-type <code>application/json</code>.
+    Thus, it is important that your environment can parse and deal with requests and
+    responses in the JSON format.
+    </p>
+    <h2>HTTP Request Methods</h2>
+    <p>
+    SWAPI uses two primary <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods"
+    target="_blank">HTTP Request Methods</a>: GET and POST. Mostly we use the POST method to
+    both get and mutate data on the server side. The documentation below includes examples
+    of requests using the GET or POST method. The method to be used will be marked on
+    the left-hand side next to the resource name.
+    </p>
+    <h2>Request URL</h2>
+    <p>
+    Depending on your implementation, you will need to send a request to a particular resource.
+    The documentation includes each resource path which should be appended to the base URL mentioned
+    in the "Environments" section of this documentation.
+    </p>
+    <p>
+    Example: https://api.softwearconnect.com/v1/customers/add
+    </p>
+    <h1>UsefulTools</h1>
+    <p>
+    The Softwear API can be accessed with RESTful GUIs or with command
+    line tools such as <a href="https://en.wikipedia.org/wiki/CURL" target="blank">cURL</a>
+    or <a href="https://httpie.org/" target="blank">HTTPie</a>. This documentation
+    also includes a "Try It Out" button which will generate the example cURL command.</p><h1>Example
+    Usage</h1><p>Below is an example of sending a request to the test environment
+    using cURL. Please note that some resources require a GET request while others
+    require a POST request. The GET vs POST endpoints are marked below with different
+    colours.</p><p><code>curl -X GET "https://api.test.softwearconnect.com/v1/swapi/stock?barcode=11111111111"
+    -H "accept: application/json" -H "X-API-Key: TEST-API-KEY"</code>
+    </p>
+    <h1>Support and Feedback</h1>
+    <p>
+    If you need support or have feedback, we want to hear it! Please contact our
+    <a href="https://www.softwearconnect.com/#/support" target="_blank">support team</a> or chat with us from this
+    page using the chat bubble in the lower right-hand corner.
+    </p>'
+  title: Softwear API
+  version: 1.0.0
+paths:
+  /sales-orders/add:
+    post:
+      consumes:
+        - application/json
+      description:
+        The endpoint will add a sales order and return the primary key
+        of the sales order document.
+      operationId: addSalesOrder
+      parameters:
+        - description: Your API Key
+          in: header
+          name: X-API-Key
+          required: true
+          type: string
+        - description: A sales order object
+          in: body
+          name: body
+          required: true
+          schema:
+            properties:
+              data:
+                allOf:
+                  - $ref: "#/definitions/SalesOrder"
+            type: object
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: Successful addition of a sales order
+          schema:
+            properties:
+              data:
+                description: An array containing the id of the saved document.
+                items:
+                  example: 5ad5bbdcf3dfcc0bf14dd2b8
+                  type: string
+                type: array
+              status:
+                enum:
+                  - ok
+                type: string
+            type: object
+        "400":
+          description: Invalid sales order.
+      security:
+        api_key: []
+      summary: Add a sales order
+      tags:
+        - sales-orders
+  /sales-orders/get:
+    post:
+      consumes:
+        - application/json
+      description: This endpoint retrieves an array of sales orders.
+      operationId: getSalesOrders
+      parameters:
+        - description: Your API Key
+          in: header
+          name: X-API-Key
+          required: true
+          type: string
+        - description: A description of the query
+          in: body
+          name: body
+          required: false
+          schema:
+            $ref: "#/definitions/SalesOrderQuery"
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            items:
+              $ref: "#/definitions/SavedSalesOrder"
+            type: array
+        "400":
+          description: Invalid query
+      security:
+        api_key: []
+      summary: Retrieve sales orders
+      tags:
+        - sales-orders
+  /sales-orders/save:
+    post:
+      consumes:
+        - application/json
+      description:
+        This endpoint modifies a sales order. This is only possible with
+        draft sales orders.
+      operationId: SaveSalesOrder
+      parameters:
+        - description: Your API Key
+          in: header
+          name: X-API-Key
+          required: true
+          type: string
+        - description: A sales order object
+          in: body
+          name: body
+          required: true
+          schema:
+            properties:
+              data:
+                _id:
+                  description: The unique identifier of the sales order.
+                  type: string
+                allOf:
+                  - $ref: "#/definitions/SalesOrder"
+            type: object
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: Successful save of a sales order
+          schema:
+            properties:
+              data:
+                description:
+                  A single element array containing the id of the saved
+                  record.
+                items:
+                  example: 5ad5bbdcf3dfcc0bf14dd2b8
+                  type: string
+                type: array
+              status:
+                enum:
+                  - ok
+                type: string
+            type: object
+        "400":
+          description: Invalid sales order.
+      security:
+        api_key: []
+      summary: Modify a sales order.
+      tags:
+        - sales-orders
+  /swapi/sku:
+    get:
+      description: This endpoint is used to get information about a product.
+      operationId: getSku
+      parameters:
+        - description: Your API Key
+          in: header
+          name: X-API-Key
+          required: true
+          type: string
+        - description:
+            The barcode property is the unique code (IAN or EAN) assigned
+            to the article/product for which product information should be returned.
+            The barcode property is case-sensitive.
+          in: query
+          name: barcode
+          required: false
+          type: string
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: 200 Status OK
+          schema:
+            $ref: swapi_sku_get_response.json#/definitions/SWWSkuGetSchema
+      security:
+        api_key: []
+      summary: Get information for a particular product from its barcode
+      tags:
+        - sku
+  /swapi/stock:
+    get:
+      description:
+        This endpoint is used to get the actual stock of a product. If
+        a client visits an e-commerce site and views a product, the stock endpoint
+        can be used to check the available stock for sizes and colors. The response
+        can be parsed and rendered to the client in a color/size matrix.
+      operationId: getStock
+      parameters:
+        - description: Your API Key
+          in: header
+          name: X-API-Key
+          required: true
+          type: string
+        - description:
+            The articleCode property is the internal code of the article/product
+            for which stock should be returned. The articlecode property is case-sensitive.
+            Articlecode can be either a single code or a comma separated list of codes.
+          in: query
+          name: articleCode
+          required: false
+          type: string
+        - description:
+            The barcode property is the unique code (IAN or EAN) assigned
+            to the article/product for which stock should be returned. The barcode property
+            is case-sensitive. The barcode property can be either a single barcode or
+            a comma separated list of barcodes. Stock for all variations of an article/product
+            will be returned.
+          in: query
+          name: barcode
+          required: false
+          type: string
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: 200 Status OK
+          schema:
+            $ref: swapi_stock_detail_get_response.json#/definitions/SWWStockDetailGetSchema
+      security:
+        api_key: []
+      summary: Get stock information for a particular product
+      tags:
+        - stock
+  /swapi/stock/logical:
+    get:
+      description:
+        This endpoint is used to get the actual stock of a product. If
+        a client visits an e-commerce site and views a product, the stock endpoint
+        can be used to check the available stock for sizes and colors. The response
+        can be parsed and rendered to the client in a color/size matrix. Logical returns
+        result as true or false. True means that there is at least one item of that
+        product in stock, regardless of size and color.
+      operationId: getLogicalStock
+      parameters:
+        - description: Your API Key
+          in: header
+          name: X-API-Key
+          required: true
+          type: string
+        - description:
+            The articleCode property is the internal code of the article/product
+            for which stock should be returned. The articlecode property is case-sensitive.
+            Articlecode can be either a single code or a comma separated list of codes.
+          in: query
+          name: articleCode
+          required: false
+          type: string
+        - description:
+            The barcode property is the unique code (IAN or EAN) assigned
+            to the article/product for which stock should be returned. The barcode property
+            is case-sensitive. The barcode property can be either a single barcode or
+            a comma separated list of barcodes. Stock for all variations of an article/product
+            will be returned.
+          in: query
+          name: barcode
+          required: false
+          type: string
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: 200 Status OK
+          schema:
+            $ref: swapi_stock_logical_get_response.json#/definitions/SWWStockLogicalGetSchema
+      security:
+        api_key: []
+      summary: Get stock information for a particular product in a logical response
+      tags:
+        - stock
+  /swapi/stock/per-location:
+    get:
+      description:
+        This endpoint is used to get the actual stock of a product. If
+        a client visits an e-commerce site and views a product, the stock endpoint
+        can be used to check the available stock for sizes and colors. The response
+        can be parsed and rendered to the client in a color/size matrix. The 'per-location'
+        option returns a result per SKU as well, but grouped by shop/location.
+      operationId: getStockPerLocation
+      parameters:
+        - description: Your API Key
+          in: header
+          name: X-API-Key
+          required: true
+          type: string
+        - description:
+            The articleCode property is the internal code of the article/product
+            for which stock should be returned. The articlecode property is case-sensitive.
+            Articlecode can be either a single code or a comma separated list of codes.
+          in: query
+          name: articleCode
+          required: false
+          type: string
+        - description:
+            The barcode property is the unique code (IAN or EAN) assigned
+            to the article/product for which stock should be returned. The barcode property
+            is case-sensitive. The barcode property can be either a single barcode or
+            a comma separated list of barcodes. Stock for all variations of an article/product
+            will be returned.
+          in: query
+          name: barcode
+          required: false
+          type: string
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: 200 Status OK
+          schema:
+            $ref: swapi_stock_per_location_get_response.json#/definitions/SWWStockPerLocationGetSchema
+      security:
+        api_key: []
+      summary: Get stock information for a particular product grouped by location
+      tags:
+        - stock
+  /wholesale-customers/get:
+    post:
+      consumes:
+        - application/json
+      description:
+        This endpoint is used to retrieve customers of wholesalers. These
+        records represent companies instead of an individual consumer.
+      operationId: getWholesaleCustomers
+      parameters:
+        - description: Your API Key
+          in: header
+          name: X-API-Key
+          required: true
+          type: string
+        - description: A description of the query
+          in: body
+          name: body
+          required: false
+          schema:
+            $ref: wholesale_customer_get_parameters.json#/definitions/WholesaleCustomerGetSchema
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            $ref: wholesale_customer_get_response.json#/definitions/GetResponse
+        "400":
+          description: Invalid query
+      security:
+        api_key: []
+      summary: Retrieve wholesale customers
+      tags:
+        - wholesale customers
+  /wholesale-customers/save:
+    post:
+      consumes:
+        - application/json
+      description:
+        This endpoint upserts a wholesale customer document. A whole sale customer is usually a retail
+        company or organisation which purchases products from a wholesaler. If a wholesale
+        customer with the provided _id exists it modifies the existing wholesale customer
+        document. Otherwise the endpoint will save a new wholesale customer document.
+      operationId: saveWholesaleCustomer
+      parameters:
+        - description: Your API Key
+          in: header
+          name: X-API-Key
+          required: true
+          type: string
+        - description: A wholesale customer object
+          in: body
+          name: body
+          required: true
+          schema:
+            $ref: wholesale_customer_save.json#/definitions/SaveParameters
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: Successful save
+          schema:
+            $ref: save_response.json#/definitions/SaveResponse
+        "400":
+          description: Invalid wholesale customer.
+      security:
+        api_key: []
+      summary: Save a wholesale customer record
+      tags:
+        - wholesale customers
+  /swapi/wholesale-customer/sales:
+    get:
+      description: |
+        This endpoint is used to retrieve the products sold to a customer of a wholesaler (e.g. retailer).
+      produces:
+        - "application/json"
+      parameters:
+        - name: "X-API-Key"
+          in: "header"
+          required: true
+          type: "string"
+
+        - name: "uuid"
+          description: |
+            UUID of the customer
+          in: "query"
+          type: "string"
+
+        - name: "email"
+          description: |
+            email address of the customer
+          in: "query"
+          type: "string"
+
+      responses:
+        200:
+          description: "200 response"
+          schema:
+            $ref: swapi_wholesale_customer_sales_get_response.json#/definitions/SWWWholesaleCustomerSalesSchema
+      security:
+        - api_key: []
+      tags:
+        - wholesale customers
+        - sales-orders
+
+  /transits/add:
+    post:
+      description: |
+        This endpoint adds a transit document. A transit is a manifest of products which are to be internally 
+        transitted to and from another location (e.g. warehouse or shop).
+      produces:
+        - "application/json"
+      parameters:
+        - name: "X-API-Key"
+          in: "header"
+          required: true
+          type: "string"
+        - name: "sale"
+          in: "body"
+          schema:
+            $ref: "transit_save.json#/definitions/SaveParameters"
+      responses:
+        200:
+          description: "200 response"
+          schema:
+            $ref: "save_response.json#/definitions/SaveResponse"
+      security:
+        api_key: []
+      tags:
+        - transits
+
+  /transits/get:
+    post:
+      description: |
+        This endpoint can be used to query transit documents. Read more about transits in the transits/add endpoint.
+      produces:
+        - "application/json"
+      parameters:
+        - name: "X-API-Key"
+          in: "header"
+          required: true
+          type: "string"
+        - name: "query"
+          in: "body"
+          schema:
+            $ref: "transit_get_parameters.json#/definitions/TransitGet"
+      responses:
+        200:
+          description: "200 response"
+          schema:
+            $ref: "transit_get_response.json#/definitions/GetResponse"
+      security:
+        api_key: []
+      tags:
+        - transits
+schemes:
+  - https
+securityDefinitions:
+  api_key:
+    in: header
+    name: X-API-Key
+    type: apiKey
+swagger: "2.0"

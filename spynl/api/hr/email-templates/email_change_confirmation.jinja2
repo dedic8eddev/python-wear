@@ -1,0 +1,29 @@
+{% extends "base.jinja2" %}
+{% import 'macros.jinja2' as macros %}
+
+{% set softwear_logo = True %}
+
+{% block content %}
+  {{ macros.greeting(user_fullname) }}
+  {% if first %}
+    <p>
+      {{
+        _('email-template-change-confirmation-1',
+        mapping={'user_username': user_username, 'new_email_address': new_email_address})
+      }}
+    </p>
+  {% endif %}
+
+  <p>
+  {{
+    _('email-template-change-confirmation-2')
+  }}
+  </p>
+
+  {# add link button #}
+  {% set new_email_address = new_email_address | quoteplus %}
+  {% set link = [app_url, '/email-verification?email=', new_email_address, '&key=', key] | join('') %}
+  {{ macros.button(link, _('email-template-change-confirmation-button')) }}
+
+  {{ macros.regards() }}
+{% endblock %}

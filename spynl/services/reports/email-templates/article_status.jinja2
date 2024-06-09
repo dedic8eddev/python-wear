@@ -1,0 +1,19 @@
+{% extends 'base.jinja2' %}
+{% import 'macros.jinja2' as macros %}
+{% block content %}
+    {% if parameters['message'] %}
+        <p>
+            {{ parameters['message'] | safe }}
+        </p>
+    {% endif %}
+    <p>
+        {{ _('article-status-email-info',
+            mapping={
+                'report_name': parameters['report_name'],
+                'start_date': parameters['filter']['startDate'] | format_datetime(locale=locale, tzinfo=tz),
+                'end_date': parameters['filter']['endDate'] | format_datetime(locale=locale, tzinfo=tz),
+                'username': username, 'now': now
+            }
+        ) }}
+    </p>
+{% endblock %}

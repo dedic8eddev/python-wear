@@ -1,0 +1,299 @@
+{% extends "base_receipt.jinja2" %}
+
+{% block logo_space %}
+    <img src="{{ tenant_logo_url(request) }}"/>
+{% endblock %}
+
+{% block receipt_number %}
+    {{ _('receipt') | change_case }}: {{ sale['nr'] }}
+{% endblock %}
+
+{% block timestamp %}
+   {{ sale['created']['date'] | format_datetime(locale=locale, tzinfo=tz) }}
+{% endblock %}
+
+{% block barcode %}
+    <span style="font-family:'3 of 9 barcode'; font-size:26px; white-space:nowrap">
+        *-{{ sale['nr'] }}*
+    </span>
+{% endblock %}
+
+{% block cashier %}
+    {% if sale.get('cashier', {}).get('fullname') %}
+        {{ _('you-were-helped', mapping={'cashier': sale['cashier']['fullname']}) }}
+    {% endif %}
+{% endblock %}
+
+{% block address %}
+    <div class="address">
+        {% set shop = sale.get('shop', {}) %}
+        <div> {{ shop.get('name', '') }} </div>
+        <div> {{ shop.get('street', '') }} {{ shop.get('houseno', '') }} {{ shop.get('houseadd', '') }} </div>
+        <div> {{ shop.get('zipcode', '') }} {{ shop.get('city', '') }} </div>
+        <div> {{ shop.get('phone', '') }} </div>
+    </div>
+{% endblock %}
+
+
+{% set customer = sale.get('customer') %}
+{# in case customer exists but is None: #}
+{% if not customer %}
+    {% set customer = {} %}
+{% endif %}
+{% block customer %}
+    <div class="address">
+        <div>
+            {{ customer.get('title', '') }}
+            {{ customer.get('firstname', '') }}
+            {{ customer.get('middlename', '') }}
+            {{ customer.get('lastname', '') }}
+        </div>
+    </div>
+{% endblock %}
+
+{% block loyalty %}
+    <div class="address">
+        <div>
+            {% if customer.get('loyaltynr') %}
+                {{ _('loyalty-nr') | change_case }}: {{ customer['loyaltynr'] }}
+            {% endif %}
+        </div>
+        {# Test if point are in customer, 0 points need to printed as well #}
+        {% if parameters['printLoyaltyPoints'] and 'points' in customer %}
+            <div>
+                {{ _('loyalty-points') | change_case }}: {{ sale.get('loyaltyPoints', '') }}
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}
+
+{% set coupon_names = {
+    'A': _('coupon-ka'),
+    'C': _('coupon-kc'),
+    ' ': _('coupon-k'),
+    'I': _('coupon-ki'),
+    'U': _('coupon-ku'),
+    'T': _('credit-receipt')
+} %}
+
+{% set payments = [
+    {'key': 'storecredit', 'label': _('storecredit')},
+    {'key': 'pin', 'label': _('pin')},
+    {'key': 'cash', 'label': _('cash')},
+    {'key': 'creditcard', 'label': _('creditcard')},
+    {'key': 'creditreceipt', 'label': _('credit-receipt')},
+    {'key': 'couponin', 'label': _('couponin')},
+    {'key': 'consignment', 'label': _('consignment')},
+    {'key': 'webshop', 'label': _('webshop')},
+] %}
+
+{% block receipt_table %}
+    <table class="table table-highlight">
+        <thead>
+            <tr>
+                <th> {{ _('article') | change_case }} </th>
+                <th> {{ _('price') | change_case }} </th>
+                {% if sale.get('display_discount') %}
+                    <th> {{ _('discount') | change_case }} </th>
+                {% endif %}
+                <th> {{ _('quantity') | change_case }} </th>
+                <th> {{ _('total') | change_case }} </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in sale.get('receipt', []) %}
+                {% if entry.get('qty') %}
+                    <tr>
+                        {% if entry['category'] == 'barcode' %}
+                            <td>
+                                {{ entry.get('articleCode') }}
+                                {% if parameters['printExtendedReceipt'] %}
+                                    <div style="font-size:8pt;">
+                                        {{ entry.get('barcode', '') }}/{{ entry.get('articleDescription', '') }}/{{ entry.get('sizeLabel', '') }}/{{ entry.get('color', '')}}/{{ entry.get('brand', '') }}
+                                    </div>
+                                {% endif %}
+                                {% if user.get('settings')['displayAndPrintDiscountReason'] == true and entry.get('reason').desc %}
+                                    <div style="font-size:8pt;">
+                                        {{ entry.get('reason').desc }}
+                                    </div>
+                                {% endif %}
+                            </td>
+                            <td> {{ entry.get('nettPrice', '') | format_currency(currency, locale=locale) }} </td>
+                            {% if sale.get('display_discount') %}
+                                {% if  entry.get('discount', 0) | round(2) != 0 %}
+                                    <td>
+                                        {{ entry.get('discount', '') | format_currency(currency, locale=locale) }}
+                                    </td>
+                                {% else %}
+                                    <td></td>
+                                {% endif %}
+                            {% endif %}
+                            <td> {{ entry.get('qty') | int }} </td>
+                            <td> {{ entry.get('total', '') | format_currency(currency, locale=locale) }} </td>
+                        {% elif entry['category'] == 'storecredit' %}
+                            {% if sale.get('display_discount') %}
+                                {% set colspan = 3 %}
+                            {% else %}
+                                {% set colspan = 2 %}
+                            {% endif %}
+                            <td colspan="{{ colspan }}"> {{ _('pay-off-store-credit') | change_case(mode='title') }} </td>
+                            <td> {{ entry.get('qty') | int }} </td>
+                            <td> {{ entry.get('total', '') | format_currency(currency, locale=locale) }} </td>
+                        {% elif entry['category'] == 'coupon' %}
+                            {% if entry['type'] in [' ', 'C'] %}
+                                {# if there is a ' ' or C coupon, there should always be a discount column, so colspan is fixed #}
+                                <td colspan="5">
+                                    {{ coupon_names[entry['type']] | change_case(mode='title') }}
+                                    {{ entry.get('couponNr') }}
+                                    <BR>
+                                    {{ _('value') | change_case }}:
+                                    {{ entry.get('value', '') | format_currency(currency, locale=locale) }}
+                                </td>
+                            {% else %}
+                                {% if sale.get('display_discount') %}
+                                    {% set colspan = 4 %}
+                                {% else %}
+                                    {% set colspan = 3 %}
+                                {% endif %}
+                                <td colspan="{{ colspan }}">
+                                    {{ coupon_names[entry['type']] | change_case(mode='title') }}
+                                    {{ entry.get('couponNr') }}
+                                </td>
+                                <td> {{ entry.get('total', '') | format_currency(currency, locale=locale) }} </td>
+                            {% endif %}
+                        {% endif %}
+                    </tr>
+
+                {% endif %}
+            {% endfor %}
+            <tr class="total-row" style="border-top: 1pt solid grey;background: #fff;">
+                {% if sale.get('display_discount') %}
+                    {% set colspan = 3 %}
+                {% else %}
+                    {% set colspan = 2 %}
+                {% endif %}
+                <td colspan="{{ colspan }}"> {{ _('total') | change_case }} </td>
+                <td> {{ sale['totalNumber'] | int }} </td>
+                <td> {{ sale['totalPaid'] | format_currency(currency, locale=locale) }} </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="table table-payments">
+        <tbody>
+            {% if sale.get('display_discount') %}
+                <tr>
+                    <td> {{ _('total-discount') | change_case }} </td>
+                    <td> {{ sale['display_discount'] | format_currency(currency, locale=locale) }} </td>
+                </tr>
+            {% endif %}
+            {% for payment in payments %}
+                {% if sale.get('payments', {}).get(payment['key'])%}
+                    <tr>
+                        <td> {{ payment['label'] | change_case }} </td>
+                        <td> {{ sale['payments'][payment['key']] | format_currency(currency, locale=locale) }} </td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
+            {% if sale.get('difference') %}
+                <tr>
+                    <td> {{ _('round-off-difference') | change_case }} </td>
+                    <td> {{ sale['difference'] | format_currency(currency, locale=locale) }} </td>
+                </tr>
+            {% endif %}
+            {% if sale.get('change') %}
+                <tr>
+                    <td> {{ _('change') | change_case }} </td>
+                    <td> {{ sale['change'] | format_currency(currency, locale=locale) }} </td>
+                </tr>
+            {% endif %}
+            {# TODO: make this a loop?? pro: less code, con: concatenated keys #}
+            {% if sale.get('vat', {}).get('highamount') %}
+                <tr>
+                    <td>
+                        {{ _('vat-high-over',
+                            mapping={
+                                'percentage': sale['vat']['highvalue'] | format_decimal(locale=locale),
+                                'amount': sale['vat']['high_gross_total'] | format_currency(currency, locale=locale)
+                            }
+                        ) | change_case }}
+                    </td>
+                    <td> {{ sale['vat']['highamount'] | format_currency(currency, locale=locale) }} </td>
+                </tr>
+            {% endif %}
+            {% if sale.get('vat', {}).get('lowamount') %}
+                <tr>
+                    <td colspan="4">
+                        {{ _('vat-low-over',
+                            mapping={
+                                'percentage': sale['vat']['lowvalue'] | format_decimal(locale=locale),
+                                'amount': sale['vat']['low_gross_total'] | format_currency(currency, locale=locale)
+                            }
+                        ) | change_case }}
+                    </td>
+                    <td> {{ sale['vat']['lowamount'] | format_currency(currency, locale=locale) }} </td>
+                </tr>
+            {% endif %}
+            {% if sale.get('vat', {}).get('zeroamount') %}
+                <tr>
+                    <td>
+                        {{ _('vat-zero-over',
+                            mapping={
+                                'percentage': sale['vat']['zerovalue'] | format_decimal(locale=locale),
+                                'amount': sale['vat']['zero_gross_total'] | format_currency(currency, locale=locale)
+                            }
+                        ) | change_case }}
+                    </td>
+                    <td> {{ sale['vat']['zeroamount'] | format_currency(currency, locale=locale) }} </td>
+                </tr>
+            {% endif %}
+        </tbody>
+    </table>
+{% endblock %}
+
+{% block footer %}
+    <table class="table table-footer">
+        <tbody>
+            {% if sale.get('remark') %}
+            <tr style="border-bottom: 1pt solid grey;" >
+                <td> {{ sale['remark'] }} </td>
+            </tr>
+            {% endif %}
+            <tr>
+                <td> {{ parameters['footer'] | safe}} </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
+
+{% block pin_info %}
+    {% if sale.get('pinInfo') %}
+        <pre style="page-break-inside:avoid;">
+            {{ sale.get('pinInfo') }}
+        </pre>
+    {% endif %}
+{% endblock %}
+
+
+{% set coupon_strings = {
+    'C': {'name': _('cashback-coupon'), 'value-is': _('coupon-value-is')},
+    'T': {'name': _('credit-receipt'), 'value-is': _('coupon-t-value-is')}
+} %}
+
+{% block cashback_coupons %}
+    {% for coupon in sale.get('coupon', []) %}
+        <div style ="page-break-inside:avoid;">
+            <h2> {{ coupon_strings[coupon['type']]['name'] | change_case }} </h2>
+            <span style="font-family:'3 of 9 barcode'; font-size:26px; white-space:nowrap">
+                *+{{ coupon['id'] }}*
+            </span>
+            <div> +{{ coupon['id'] }} </div>
+            <p style="padding-bottom:0mm;margin-bottom:0mm;">
+                {{ coupon_strings[coupon['type']]['value-is'] }}:
+            </p>
+            <h1 style="padding-top:0mm;margin-top:1mm;margin-bottom:1cm;">
+                {{ coupon['value'] | format_currency(currency, locale=locale) }}
+            </h1>
+        </div>
+    {% endfor %}
+{% endblock %}

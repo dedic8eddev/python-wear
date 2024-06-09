@@ -1,0 +1,27 @@
+{
+    "tenant_id": "existingtenantid",
+    "type" : 2,
+    "shop" : {"id": "51", "name": "Shop 1"},
+    "receipt" : [
+        {
+            "qty": 1,
+            "sku":"sku_id",
+            "price": 0,
+            "valuePrice": 0,
+            "category": "barcode",
+            "averageValue": 0,
+            "discount": 0,
+            "articleCode": "yahoo-J-11",
+            "articleDescription": "Yahoo Jeans"
+        }
+    ],
+    "totalPaid" : 0,
+    "totalAmount" : 0,
+    "totalCoupon" : 0,
+    "totalDiscount" : 0,
+    "created" : {
+        "date" : null
+    },
+    "totalDiscountCoupon" : 0,
+    "active" : true
+}

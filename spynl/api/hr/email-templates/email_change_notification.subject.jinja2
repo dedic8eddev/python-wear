@@ -1,0 +1,10 @@
+{% if email_removed %}
+  {{
+    _('email-template-removal-notification-subject',
+    mapping={'user_username': user_username})
+  }}
+{% else %}
+  {{
+    _('email-template-change-notification-subject')
+  }}
+{% endif %}

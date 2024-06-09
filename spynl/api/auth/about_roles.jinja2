@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style>
+  p {
+    font-family: sans-serif;
+    text-align: justify;
+    font-size: 0.9em;
+  }
+  h1 {
+     font-family: sans-serif;
+  }
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: justify;
+    font-family: sans-serif;
+    font-size: 0.9em;
+    vertical-align: top;
+  }
+  th, td {
+    padding: 5px;
+  }
+</style>
+</head>
+<body>
+  <h1>Contents</h1>
+<p>There are three tables on this page, one listing all resources, one listing all tenant roles
+  and one listing all token roles. The resources in the roles tables do not show all corresponding
+paths, those need to be looked up in the resources table.</p> 
+<h1>Resources in Spynl</h1>
+<p>This table shows a summary of all resources in Spynl, what paths they correspond with
+  and what the ACL of the resource is. If a resource has a parent with an ACL, that ACL was
+  added to the child ACL, so this table gives the complete ACL, and you cannot see which ACEs
+  are child ACEs and which are parent ACEs.</p>
+<table border="1" style="width:100%">
+  <tr>
+    <th>Name</th>
+    <th>Plugin</th>
+    <th>Paths</th>
+    <th>ACL</th>
+  </tr>
+  {% for resource in resources|sort(attribute='resource') %}
+  <tr>
+    <th>{{resource['resource']}}</th>
+    <td>{{resource.get('plugin')}}</td>
+    <td>{{resource['paths']}}</td>
+    <td>
+        {% for ace in resource['acl'] %}
+      {{ace}} <br>
+      {% endfor %}
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+{% for role_type in ['tenant', 'token'] %}
+<h1>{{role_type|capitalize}} Roles in Spynl</h1>
+<p>This table shows a list of all the {{role_type}} roles and their descriptions.</p>
+<table border="1" style="width:100%">
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Resource</th>
+    <th>ACE</th>
+  </tr>
+  {% for role in roles|sort(attribute='role') %}
+  {% if role['type'] == role_type %}
+  {% set rowspan = role.get('resources', [1])|length %}
+  <tr>
+    <th rowspan = {{rowspan}}>{{role['role']}}</th>
+    {% set description = role.get('description', '') %}
+    {# translate description: #}
+    {% if not description is string %}
+        {% set description = description.translate(localizer) %}
+    {% endif %}
+    <td rowspan = {{rowspan}}>{{description}}</td>
+    {# add three empty cells if a role has no resources: #}
+    {% if not role.get('resources') %}
+    <td></td>
+    <td></td>
+    {% else %}
+    {% for resource, dict in role.get('resources', {})|dictsort %}
+    <td>{{resource}}</td>
+    <td>{{dict['access']}}</td>
+  </tr>
+  <tr>
+    {% endfor %}
+    {% endif %}
+  </tr>
+  {% endif %}
+  {% endfor %}
+</table>
+{% endfor %}
+</body>
+</html>

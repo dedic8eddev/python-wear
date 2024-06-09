@@ -1,0 +1,191 @@
+{% extends "packing_list_html_wrapper.jinja2" %}
+
+{% set locale = order.get('customer', {}).get('language', 'en_GB') %}
+
+{# This macro uses a utility function from spynl.services pdf.utils to translate. The translations
+are in that function. This is done because the document is tranlated based on the language
+of the customer, instead of that of the user. There are also more languages available, and
+it's easier to add one quickly #}
+{% macro translate(key) -%}
+    {{ key | translate(order.get('customer', {}).get('language', 'en')) }}
+{%- endmacro %}
+
+{% macro address(name, address) %}
+    <div class="store_name"> {{ name }} </div>
+    <div class="address">
+        <div> {{ address.get('address', '') }} </div>
+        <div> {{ address.get('zipcode', '') }} {{ address.get('city', '') }} </div>
+        <div> {{ address.get('country', '') | format_country(locale)}} </div>
+    </div>
+{% endmacro %}
+
+{% macro price(value) %}
+    {# This is to make sure we do not show any decimal places for DKK #}
+    {% set currency = order.get('customer', {}).get('currency', {}).get('code', '') %}
+    {% if currency == 'DKK' %}
+        {% set format = '#,##0\xa0¤' %}
+        {% set currency_digits = False %}
+    {% else %}
+        {% set format = None %}
+        {% set currency_digits = True %}
+    {% endif %}
+    {{ value | format_currency(currency,
+        locale=locale,
+        currency_digits=currency_digits,
+        format=format) }}
+{% endmacro %}
+
+{% macro decimal(value) %}
+    {{ value | format_decimal(locale=locale) }}
+{% endmacro %}
+
+{% block doc_header %}
+    {{ translate('Packing List') }}
+    {{ order.get('orderNumber') }}
+    {% if order['status'] not in ('ready-for-shipping', 'shipping') %}
+      - {{ translate(order['status']) | change_case }}
+    {% endif %}
+{% endblock %}
+
+{% block doc_info %}
+    <div style="float:right;">
+        {% if order.get('customReference') %}
+        <div>
+            <h3 style="display:inline;"> {{ translate('ref') | change_case }}: </h3> {{ order['customReference'] }}
+        </div>
+        <div>
+            <h3 style="display:inline;"> {{ translate('date') | change_case }}: </h3>
+            {{ order.get('modified', {}).get('date', '') | format_date(locale=locale) }}
+        </div>
+        {% else %}
+        <div>
+            <h3> {{ translate('date') | change_case }}: </h3>
+            {{ order.get('modified', {}).get('date', '') | format_date(locale=locale) }}
+        </div>
+        {% endif %}
+        <div>
+            <h3> {{ translate('reservation date') | change_case }}: </h3> {{ order.get('reservationDate', '') | format_date(locale=locale) }}
+        </div>
+    </div>
+{% endblock %}
+{% block employee %}
+    {% if order['customer']['employee'] == True %}
+    <div class="container-background">
+        {{ translate('Employee') }}
+    </div>
+    {% endif %}
+{% endblock %}
+
+{% block delivery_address %}
+    {% if order.get('customer').get('deliveryAddress') %}
+        <div class="address_header"> {{ translate('Delivery Address') }} </div>
+        {{ address(order['customer'].get('name', ''), order['customer']['deliveryAddress']) }}
+    {% endif %}
+{% endblock %}
+
+{% block logo_space %}
+    {{ order.get('orderTerms', {}).get('orderPreviewText1', '') | safe }}
+{% endblock %}
+
+{% block client_details %}
+    <div> {{ translate('Client number') }}: {{ order['customer'].get('clientNumber') }} </div>
+{% endblock %}
+
+{% block remarks %} <h3> {{ translate('remarks') | change_case }} </h3>{{ order.get('remarks', {}) }} {% endblock %}
+
+{% block product_table %}
+    <table class="product_table">
+        <tbody>
+            <tr>
+                <td rowspan="0" style="width:23mm">
+                    <img
+                        class="thumbnail"
+                        src="{{ article_image_location }}{{ product['articleCode'] }}.jpg">
+                </td>
+                <td style="font-weight:bold"> {{ product['articleCode'] }} </td>
+                <td> {# properties #} </td>
+                <td class="amounts" style="font-weight:bold">
+                    {{ translate('Retailprice') }}
+                    {{ price(product['localizedSuggestedRetailPrice']) }}
+                </td>
+            </tr>
+            <tr>
+                {# construct two tables to be able to loop over properties #}
+                <td> <table>
+                    <tr> <td> {{ product['articleDescription'] }} </td> </tr>
+                </table> </td>
+                <td> <table>
+                    {% for property in product.get('customsProperties', []) %}
+                        <tr>
+                            <td> {{ property['name'] }}: </td>
+                            <td> {{ property['value'] }} </td>
+                        </tr>
+                    {% endfor %}
+                </table> </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
+
+{% block sku_table %}
+    <table class="sku_table">
+        <thead>
+            <tr>
+                <th> {# color code #} </th>
+                <th> {# color description #} </th>
+                <th> {# remarks #} </th>
+                {% for size in product['skuTable']['available_sizes'] %}
+                    <th> {{ size }} </th>
+                {% endfor %}
+                <th class="amounts"> {{ translate('total') }} </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in product['skuTable']['skuRows'] %}
+                <tr>
+                    <td> {{ row['colorCode'] }} </td>
+                    <td> {{ row['colorDescription'] }} </td>
+                    <td> {{ row['remarks'] }} </td>
+                    {% for size in product['skuTable']['available_sizes'] %}
+                        <td>
+                            {% if row['quantities'][size] %}
+                                {{ row['quantities'][size] }}
+                            {% endif %}
+                        </td>
+                    {% endfor %}
+                    <td class="amounts"> {{ row['totalQuantity'] }} </td>
+                </tr>
+            {% endfor %}
+            <tr>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                {% for size in product['skuTable']['available_sizes'] %}
+                    <td>
+                        {% if product['skuTable']['sizeTotals'][size] %}
+                            {{ product['skuTable']['sizeTotals'][size] }}
+                        {% endif %}
+                    </td>
+                {% endfor %}
+                <td class="amounts">
+                    {{ product['skuTable']['totalQuantity'] }}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
+
+{% block summary %}
+    <table class="summary">
+        <tbody>
+            <tr>
+                <td> {{ translate('total number of items') }}:</td>
+                <td style="text-align: right"> {{ order['totalQuantity'] }} </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
+
+{% block order_terms_3 %}
+    {{ order.get('orderTerms', {}).get('orderPreviewText3', '') | safe }}
+{% endblock %}

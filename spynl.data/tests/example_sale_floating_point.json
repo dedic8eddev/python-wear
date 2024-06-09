@@ -1,0 +1,144 @@
+{
+    "cashier": {
+        "id": "mios.04@softwear.nu",
+        "name": "Mylene"
+    },
+    "nr": "50-12-19677",
+    "device_id": "KASSA",
+    "vat": {
+        "lowtotal": 0.0,
+        "zerovalue": 0.0,
+        "hightotal": -4.0,
+        "highvalue": 21.0,
+        "highamount": 0.0,
+        "zerototal": 0.0,
+        "lowamount": 0.0,
+        "zeroamount": 0.0,
+        "lowvalue": 9.0
+    },
+    "difference": -0.01,
+    "totalNumber": 8.0,
+    "totalDiscountCoupon": 0.0,
+    "overallReceiptDiscount": 7.99,
+    "totalStoreCreditPaid": 0.0,
+    "change": 8.0,
+    "totalPaid": 0.0,
+    "payments": {
+        "withdrawel": 0.0,
+        "storecredit": 0.0,
+        "pin": 0.0,
+        "cash": 0.0,
+        "consignment": 0.0,
+        "couponin": 0.0,
+        "creditcard": 0.0,
+        "creditreceipt": 0.0,
+        "webshop": 0.0
+    },
+    "receipt": [
+        {
+            "barcode": "7613137906379",
+            "vat": 21.0,
+            "category": "barcode",
+            "color": "BLACK ",
+            "price": 12.0,
+            "group": "slip",
+            "found": true,
+            "articleCode": "000000010031897",
+            "qty": -1,
+            "sizeLabel": "44",
+            "nettPrice": 14.99,
+            "changeDisc": true,
+            "articleDescription": "sloggi Romance Maxi",
+            "brand": "Triumph"
+        },
+        {
+            "barcode": "7613137906379",
+            "vat": 21.0,
+            "category": "barcode",
+            "color": "BLACK ",
+            "price": 12.0,
+            "group": "slip",
+            "found": true,
+            "articleCode": "000000010031897",
+            "qty": -1,
+            "sizeLabel": "44",
+            "nettPrice": 14.99,
+            "changeDisc": true,
+            "articleDescription": "sloggi Romance Maxi",
+            "brand": "Triumph"
+        },
+        {
+            "barcode": "7610604011475",
+            "vat": 21.0,
+            "category": "barcode",
+            "color": "BLACK ",
+            "price": 7.97,
+            "group": "slip",
+            "found": true,
+            "articleCode": "000000010005038",
+            "qty": -1,
+            "sizeLabel": "44",
+            "nettPrice": 9.95,
+            "changeDisc": true,
+            "articleDescription": "sloggi Basic Midi",
+            "brand": "Triumph"
+        },
+        {
+            "barcode": "7610604011475",
+            "vat": 21.0,
+            "category": "barcode",
+            "price": 7.96,
+            "articleCode": "000000010005038",
+            "qty": -1,
+            "nettPrice": 9.95
+        },
+        {
+            "barcode": "7613137906379",
+            "vat": 21.0,
+            "category": "barcode",
+            "price": 12.0,
+            "articleCode": "000000010031897",
+            "qty": 1,
+            "nettPrice": 14.99
+        },
+        {
+            "barcode": "7613137906379",
+            "vat": 21.0,
+            "category": "barcode",
+            "price": 12.0,
+            "articleCode": "000000010031897",
+            "qty": 1,
+            "nettPrice": 14.99
+        },
+        {
+            "barcode": "7610604011475",
+            "vat": 21.0,
+            "category": "barcode",
+            "price": 7.969999999999999,
+            "articleCode": "000000010005038",
+            "qty": 1,
+            "nettPrice": 9.95
+        },
+        {
+            "barcode": "7610604011475",
+            "vat": 21.0,
+            "category": "barcode",
+            "price": 7.959999999999999,
+            "articleCode": "000000010005038",
+            "qty": 1,
+            "nettPrice": 9.95
+        }
+    ],
+    "totalCoupon": 0.0,
+    "loyaltyPoints": 4,
+    "totalAmount": -0.0,
+    "shop": {
+        "id": "50",
+        "houseno": "",
+        "zipcode": "2611 RJ",
+        "street": "Molslaan 35-39",
+        "name": "A-Keuze",
+        "city": "Delft",
+        "phone": "015-2135004"
+    }
+}

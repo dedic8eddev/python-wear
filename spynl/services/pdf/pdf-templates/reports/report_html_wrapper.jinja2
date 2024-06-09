@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <style>
+         @page {
+             size: {{ parameters.get('pageSize', 'A4 landscape') }};
+             margin: 20mm 10mm 20mm 10mm;
+             @bottom-right {
+                 content: counter(page) "/" counter(pages);
+                 font-family: 'Roboto', sans-serif;
+                 font-size: 10pt;
+             }
+         }
+         {% block additional_css %} {% endblock %}
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <table class="header_table">
+                <tbody>
+                    <tr>
+                        <td style="vertical-align:middle">
+                            <h1> {% block doc_header %} {% endblock %} </h1>
+                        </td>
+                        <td style="vertical-align:top;overflow:hidden">
+                            <div style="float:right;"> {% block logo_space %} {% endblock %} </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="cover_page">
+            {% block cover_page %} {% endblock %}
+        </div>
+        {% block report_table %} {% endblock %}
+    </body>
+</html>

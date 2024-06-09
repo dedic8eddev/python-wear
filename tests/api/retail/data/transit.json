@@ -1,0 +1,29 @@
+{
+    "overallReceiptDiscount": 0,
+    "shop": {
+        "id": "50"
+    },
+    "transit": {
+        "transitPeer": "52",
+        "transitWarehouse": "Amstelveen",
+        "dir": "to"
+    },
+    "type": 3,
+    "receipt": [
+        {
+			"category": "barcode",
+            "barcode": "91",
+            "qty": 5,
+			"price": 10,
+			"vat": 21
+        },
+        {
+			"category": "barcode",
+            "barcode": "92",
+            "qty": 3,
+			"price": 17,
+			"vat": 21
+        }
+    ],
+    "nr": "51-4584-314"
+}

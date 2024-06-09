@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style>
+  p {
+    font-family: sans-serif;
+    text-align: justify;
+    font-size: 0.9em;
+  }
+  h1 {
+     font-family: sans-serif;
+  }
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: justify;
+    font-family: sans-serif;
+    font-size: 0.9em;
+    vertical-align: top;
+  }
+  th, td {
+    padding: 5px;
+  }
+</style>
+</head>
+<body>
+  <h1>Applications</h1>
+  <p> These are the applications that Spynl knows about. The id's get stored on the tenant if a
+    tenant has access to them. Roles for a certain application can only be assigned to users of
+    a tenant that has access to that application. The table below shows all the information about
+    the applications that is hardcoded in Spynl.
+<table border="1" style="width:100%">
+  <tr>
+    <th>Id</th>
+    <th>name</th>
+    <th>description</th>
+    <th>paid</th>
+    <th>category</th>
+    <th>option id</th>
+    <th>option name</th>
+    <th>option description</th>
+  </tr>
+{% for id, app in applications.items()|sort %}
+  {% set rowspan = app.get('options')|length %}
+  {% set rowspan = 1 if rowspan == 0 else rowspan %}
+  <tr>
+    <th rowspan = {{rowspan}}>{{id}}</th>
+    <td rowspan = {{rowspan}}>{{app.get('name')}}</td>
+    <td rowspan = {{rowspan}}>{{app.get('description')}}</td>
+    <td rowspan = {{rowspan}}>{{app.get('paid')}}</td>
+    <td rowspan = {{rowspan}}>{{app.get('category')}}</td>
+    {# add three empty cells if an application has no options: #}
+    {% if not app.get('options') %}
+    <td></td>
+    <td></td>
+    <td></td>
+    {% else %}
+    {% for opt_id in app.get('options')|sort %}
+    {% set option = app['options'][opt_id] %}
+    <td>{{opt_id}}</td>
+    <td>{{option['name']}}</td>
+    <td>{{option['description']}}</td>
+  </tr>
+  <tr>
+    {% endfor %}
+    {% endif %}
+  </tr>
+{% endfor %}
+</table>
+</body>
+</html>

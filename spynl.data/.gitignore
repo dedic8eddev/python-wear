@@ -1,0 +1,14 @@
+
+*.egg-info/
+*.pyc
+
+.eggs
+.cache
+
+*.mo
+*.log
+
+.coverage
+htmlcov
+
+.vscode

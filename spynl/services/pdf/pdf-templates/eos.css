@@ -1,0 +1,88 @@
+.table {
+  width: 100%;
+}
+
+.top {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.table-summary {
+  margin-top: 2mm;
+}
+
+.table-summary td:last-child {
+  font-weight: bold;
+  padding-left: 2mm;
+  text-align: right;
+}
+
+.table-highlight th, .table-remarks th {
+  padding-top: 4mm;
+  font-size: 12pt;
+  border-bottom: 1pt solid grey;
+}
+
+.table-highlight th:last-child, .table-highlight th:nth-child(2){
+  font-size: 10pt;
+  text-align: right;
+  font-weight: normal
+}
+
+.table-highlight tr:nth-child(even) {
+  background: #eee;
+}
+.table-highlight tr:nth-child(odd) {
+  background: #fff;
+}
+
+.table-highlight tr:last-child {
+  border-bottom: 1pt solid grey;
+}
+
+.cash-table {
+  width: 100%;
+}
+
+.cash-table tr:nth-child(odd) {
+  background: #eee;
+}
+.cash-table tr:nth-child(even) {
+  background: #fff;
+}
+.cash-table tr:last-child {
+  border-bottom: none;
+}
+
+.cash-table td {
+  padding-right: 1mm;
+  padding-left: 1mm;
+}
+
+.cash-table td:nth-child(3) {
+  text-align: right;
+}
+
+.cash-table td:last-child {
+  text-align: right;
+  width: 100%;
+}
+
+.logo {
+  vertical-align: top;
+  overflow: hidden;
+  float: right;
+}
+
+.logo img {
+  max-height: 2.5cm;
+  width: auto;
+}
+
+.amounts {
+  text-align: right;
+}
+
+.left {
+  float: left;
+}

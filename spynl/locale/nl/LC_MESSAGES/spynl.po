@@ -1,0 +1,1343 @@
+# Dutch translations for spynl.main.
+# Copyright (C) 2016 Softwear BV
+# This file is distributed under the same license as the spynl.main project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: spynl.main 5.48.rc1\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2022-02-15 09:27+0100\n"
+"PO-Revision-Date: 2016-09-28 16:22+0200\n"
+"Last-Translator: Nicolas <nicolas@softwear.nl>\n"
+"Language: nl\n"
+"Language-Team: nl <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+msgid "pos-app-name"
+msgstr "Kassa"
+
+msgid "pos-app-description"
+msgstr "Het kassasysteem gebruikt door retailcliënten"
+
+msgid "email-receipt-option-name"
+msgstr "E-mail bon"
+
+msgid "email-receipt-option-description"
+msgstr "De mogelijkheid om de bon per e-mail naar klanten te sturen."
+
+msgid "integrated-payment-solution-option-name"
+msgstr "Pinkoppeling"
+
+msgid "integrated-payment-solution-option-description"
+msgstr "De mogelijkheid om kassa en pin-apparaat aan elkaar te koppelen zodat de betalingsgegevens automatisch naar het pin-apparaat gestuurd worden."
+
+msgid "dashboard-app-name"
+msgstr "Dashboard"
+
+msgid "dashboard-app-description"
+msgstr "Overzichtelijk dashboard om belangrijke verkoopgegevens te bekijken"
+
+msgid "account-app-name"
+msgstr "Mijn Account"
+
+msgid "account-app-description"
+msgstr "Accountinstellingen en -administratie voor eigenaars en managers."
+
+msgid "photos-app-name"
+msgstr "Fotos"
+
+msgid "photos-app-description"
+msgstr "U kunt met de fotos applicatie uw product fotos toevoegen en beheren."
+
+msgid "products-app-name"
+msgstr "Latest Collection"
+
+msgid "products-app-description"
+msgstr "Product management"
+
+msgid "purchase-app-name"
+msgstr "Inkoop"
+
+msgid "purchase-app-description"
+msgstr "Inkoop-applicatie"
+
+msgid "crm-app-name"
+msgstr "Klantbeheer"
+
+msgid "crm-app-description"
+msgstr "Applicatie voor klantbeheer"
+
+msgid "secondscreen-app-name"
+msgstr "Secondscreen"
+
+msgid "secondscreen-app-description"
+msgstr "Klantendisplay voor foto's en eventueel met de kassabon. Deze app bestaat uit de betaalde opties voor secondscreen, de gratis versie is inbegrepen bij de Kassa."
+
+msgid "customer-entry-option-name"
+msgstr "Klantinvoer"
+
+msgid "customer-entry-option-description"
+msgstr "Applicatie voor klantinvoer"
+
+msgid "custom-playlist-option-name"
+msgstr "Eigen afspeellijst"
+
+msgid "custom-playlist-option-description"
+msgstr "De mogelijkheid om eigen foto's aan het secondscreen toe te voegen"
+
+msgid "inventory-app-name"
+msgstr "Inventarisatie"
+
+msgid "inventory-app-description"
+msgstr "Applicatie om de voorraad scannend te inventariseren. (Softwear 6)"
+
+msgid "webshop-app-name"
+msgstr "Webshop"
+
+msgid "webshop-app-description"
+msgstr "B2B-webshop"
+
+msgid "sales-app-name"
+msgstr "Sales-app"
+
+msgid "sales-app-description"
+msgstr "Verkoop applicatie"
+
+msgid "logistics-app-name"
+msgstr "Logistiek"
+
+msgid "logistics-app-description"
+msgstr "Logistiek is een applicatie-suite voor inventarisatie en binnenmelden."
+
+msgid "picking-app-name"
+msgstr "Orders Picken"
+
+msgid "picking-app-description"
+msgstr "Papierloos order picken."
+
+msgid "admin-app-description"
+msgstr "Admin applicatie."
+
+msgid "ecwid_link-app-name"
+msgstr "Webshop"
+
+msgid "ecwid_link-app-description"
+msgstr "Uw Webshop."
+
+msgid "foxpro_backoffice-app-name"
+msgstr "Backoffice"
+
+msgid "foxpro_backoffice-app-description"
+msgstr "De Softwear backoffice-omgeving."
+
+msgid "hardwearshop-app-name"
+msgstr "Hardwear Shop"
+
+msgid "hardwearshop-app-description"
+msgstr ""
+
+msgid "lc-demo-app-name"
+msgstr "Latest Collection Demo"
+
+msgid "lc-demo-app-description"
+msgstr ""
+
+msgid "pos-device-description"
+msgstr "De kassagebruikersrol"
+
+msgid "account-admin-description"
+msgstr "De \"Mijn Account\"-beheerdersrol"
+
+msgid "dashboard-user-description"
+msgstr "Dashboardgebruiker"
+
+msgid "dashboard-report-user-description"
+msgstr "De dashboard report_user kan gebruik maken van de geavanceerde rapportages van het dashboard. Dit is meestal de eigenaar en/of een administratief medewerker."
+
+msgid "products-admin-description"
+msgstr "Products administrator"
+
+msgid "products-admin-user"
+msgstr "administrator"
+
+msgid "purchase-admin-description"
+msgstr "Purchase administrator"
+
+msgid "purchase-admin-user"
+msgstr "administrator"
+
+msgid "secondscreen-user-description"
+msgstr "Gebruikersrol voor de klanteninvoermodule. Een gebruikersaccount voor een tablet die gebruikt wordt om klanten toe te voegen, krijgt deze rol."
+
+msgid "secondscreen-admin-description"
+msgstr "Kan de instellingen voor Secondscreen veranderen."
+
+msgid "inventory-user-description"
+msgstr "Gebruiker van Softwear 6 Inventarisatie"
+
+msgid "sales-user-description"
+msgstr "Gebruiker van de verkoop applicatie"
+
+msgid "sales-admin-description"
+msgstr "Admin van de verkoop applicatie"
+
+msgid "logistics-inventory-user-description"
+msgstr "Rol voor de gebruiker van het inventarisatie deel van de logistics applicatie."
+
+msgid "logistics-receivings-user-description"
+msgstr "Rol voor de gebruiker van het binnenmelden deel van de logistics applicatie."
+
+msgid "picking-user-description"
+msgstr "Rol voor de gebruiker van de picking applicatie."
+
+msgid "picking-admin-description"
+msgstr "Rol voor de admin gebruiker van de picking applicatie."
+
+msgid "owner-description"
+msgstr "Deze rol wordt dynamisch toegevoegd tijdens authorisatie als de gebruiker in de lijst van eigenaars van het account aanwezig is. Deze rol wordt niet toegevoegd aan de tenant rollen op de gebruiker."
+
+msgid "sw-account_manager-description"
+msgstr "Rol voor een Softwear-medewerker die nieuwe accounts aan mag maken."
+
+msgid "sw-admin-description"
+msgstr "Rol voor een Softwear-medewerker met de hoogste servicedesktoegang. Deze gebruiker kan bijvoorbeeld de eigenaar van een account wijzigen."
+
+msgid "sw-consultant-description"
+msgstr "Softwear-consultant"
+
+msgid "sw-developer-description"
+msgstr "Softwear-developer"
+
+msgid "spynl-developer-description"
+msgstr "Deze rol is nodig voor de About resource. De About resource wordt gedefiniëerd in spynl.main, dat onafhankelijk is van Softwear. We voegen deze rol automatisch toe in get_tenant_roles voor gebruikers met de sw-developer rol."
+
+msgid "sw-finance-description"
+msgstr "Softwear Financieel medewerker"
+
+msgid "sw-servicedesk-description"
+msgstr "Rol voor een servicedeskmedewerker. Deze rol heeft minder toegang dan de sw-admin rol, die bedoeld is voor servicedeskmedewerkers met meer privileges."
+
+msgid "sw-reporting_admin-description"
+msgstr "Softwear-medewerker, beheerder voor Rapportage"
+
+msgid "sw-marketing-description"
+msgstr "Softwear-marketingmedewerker kan nieuws toevoegen en reageren op berichten van het contactformulier."
+
+msgid "sww-api-description"
+msgstr "De rol voor de Softwear-user van de sync-processen"
+
+msgid "webshop-admin-description"
+msgstr "Beheerder van de webshop."
+
+msgid "password-does-not-meet-requirements-already-used"
+msgstr "Dit wachtwoord is onlangs gebruikt. Oude wachtwoorden kunnen beter niet nogmaals gebruikt worden. Neem een ander wachtwoord."
+
+msgid "auth-pre-flight-requests-allowed"
+msgstr "OPTIONS (pre-flight) requests zijn toegestaan."
+
+msgid "auth-anonymous-access"
+msgstr "Log in om toegang te krijgen."
+
+msgid "auth-authenticated-allowed"
+msgstr "Ge-authenticeerde gebruikers hebben hier toegang tot."
+
+msgid "auth-tenant-not-allowed-for-user"
+msgstr "U heeft geen toegang tot deze account. Vraag uw accountbeheerder om toegang."
+
+msgid "auth-no-active-tenant"
+msgstr "De huidige account (${tenant}) is niet actief."
+
+msgid "auth-not-a-b2b-context"
+msgstr "U kunt hier geen gedeelde data opvragen."
+
+msgid "auth-requested-tenant-not-active"
+msgstr "De gewenste account (${tenant}) is niet actief."
+
+msgid "auth-requested-tenant-no-access"
+msgstr "U heeft geen toegang tot de gegevens van account ${tenant}."
+
+msgid "auth-do-not-change-master-tenant"
+msgstr "Het is niet toegestaan documenten voor deze resource aan te passen voor de master account."
+
+msgid "not-allowed-public-doc-edit"
+msgstr "Geen account ID: Het is niet toegestaan openbare documenten te bewerken"
+
+msgid "not-allowed-edit-tenant-id"
+msgstr "Het is niet toegestaan de account ID te veranderen."
+
+msgid "missing-tenant-id"
+msgstr "Er moet een account zijn geselecteerd om toegang te krijgen."
+
+msgid "wrong-credentials"
+msgstr "Verkeerde gebruikersnaam of wachtwoord."
+
+msgid "expired-credentials"
+msgstr "Er zat te veel tijd tussen het inloggen en het opgeven van uw code, log aub opnieuw in."
+
+msgid "user-not-active"
+msgstr "Uw gebruikersaccount '${user}' is gedeactiveerd. Neem contact op met onze servicedesk om uw account weer te activeren."
+
+msgid "tenant-does-not-exist"
+msgstr "Account '${tenant}' kon niet worden gevonden."
+
+msgid "forbidden-tenant"
+msgstr "U heeft geen toegang tot deze account. Vraag uw accountbeheerder om toegang."
+
+msgid "tenant-not-active"
+msgstr "Account '${tenant}' is niet actief."
+
+msgid "no-active-tenant-found"
+msgstr "Uw gebruiker heeft geen toegang tot actieve accounts. Neem contact op met sales of de servicedesk om toegang te verkrijgen."
+
+msgid "cannot-retrieve-user"
+msgstr "De gewenste gebruiker kan niet worden gevonden."
+
+msgid "unrecognise-hash-type"
+msgstr "Ongeldige gebruikersveiligheidsinformatie."
+
+msgid "password-does-not-meet-requirements"
+msgstr "Het wachtwoord voldoet niet aan onze veiligheidseisen."
+
+msgid "invalid-jwt-token"
+msgstr "Ongeldig token. Probeer opnieuw in te loggen, als het probleem zich weer voordoet neem dan aub contact op met Softwear."
+
+msgid "invalid-session"
+msgstr "U bent niet ingelogd."
+
+msgid "old-style-session"
+msgstr "Log uit en log opnieuw, voordat u van bedrijfsaccount wisselt. Dit is maar een keer nodig."
+
+msgid "no-tenant-id-in-filter"
+msgstr "De tenant_id parameter mag niet leeg zijn. Controleer uw request en probeer opnieuw."
+
+msgid "no-search-by-tenant-id"
+msgstr "Zoeken op tenant_id is niet toegestaan. Verwijder dit uit uw request en probeer opnieuw."
+
+msgid "tenant-id-not-string"
+msgstr "De gegeven tenant_id parameter moet type <String> hebben, in plaats daarvan heeft het type <${type}>. Controleer uw request en probeer opnieuw."
+
+msgid "tenant-id-null"
+msgstr "De gegeven tenant_id parameter is leeg. Geef de correcte tenant_id parameter."
+
+msgid "no-foxpro-url"
+msgstr "De Foxpro URL is niet gegeven in de instellingen."
+
+msgid "default-token-error"
+msgstr "Er was een probleem met uw verzoek. Neem contact op met de servicedesk als dit blijft gebeuren. Onze excuses voor het ongemak."
+
+msgid "illegal-filter"
+msgstr "Uw account heeft geen toegang tot deze gegevens."
+
+msgid "password-does-not-meet-requirements-min-length"
+msgstr "Het wachtwoord moet minstens ${min_length} karakters lang zijn."
+
+msgid "password-does-not-meet-requirements-max-length"
+msgstr "Het wachtwoord mag niet langer dan ${max_length} karakters zijn."
+
+msgid "email-template-account-status-notification-activated"
+msgstr "geactiveerd"
+
+msgid "email-template-account-status-notification-deactivated"
+msgstr "gedeactiveerd"
+
+msgid "email-template-account-status-notification"
+msgstr "Uw account met gebruikersnaam ${user_username} is ${status}."
+
+msgid "email-template-if-you-have-questions"
+msgstr "Als u hier vragen over heeft, neem dan contact op met onze servicedesk via ${link}."
+
+msgid "email-template-account-status-notification-subject-activated"
+msgstr "Uw account is geactiveerd"
+
+msgid "email-template-account-status-notification-subject-deactivated"
+msgstr "Uw account is gedeactiveerd"
+
+msgid "email-template-app-access-change-notification-granted-1"
+msgstr "Uw account ${tenant_name} heeft nu toegang tot de applicatie '${application}'."
+
+msgid "email-template-app-access-change-notification-granted-2"
+msgstr "U kunt deze applicatie nu kiezen vanuit het Softwear Connect hoofdmenu (${link_1})."
+
+msgid "email-template-app-access-change-notification-revoked-1"
+msgstr "Uw account ${tenant_name} heeft geen toegang meer tot de applicatie '${application}'."
+
+msgid "email-template-account-status-notification-access-granted-subject"
+msgstr "Account ${tenant_name} heeft nu toegang tot de applicatie ${application}"
+
+msgid "email-template-account-status-notification-access-revoked-subject"
+msgstr "Account ${tenant_name} heeft geen toegang meer tot de applicatie ${application}"
+
+msgid "email-template-change-confirmation-1"
+msgstr "Met dit e-mailbericht bevestigen wij dat het e-mailadres voor gebruiker ${user_username} is gewijzigd naar ${new_email_address}. U kunt onze applicaties blijven gebruiken zoals u gewend bent."
+
+msgid "email-template-change-confirmation-2"
+msgstr "Klik alstublieft op onderstaande knop om te bevestigen u dat dit inderdaad uw e-mailadres is."
+
+msgid "email-template-change-confirmation-button"
+msgstr "Bevestig Email-adres"
+
+msgid "email-template-change-confirmation-subject"
+msgstr "Uw E-mailadres is gewijzigd"
+
+msgid "email-template-change-confirmation-resend-subject"
+msgstr "Bevestig uw e-mailadres"
+
+msgid "email-template-removal-notification-1"
+msgstr "Dit emailadres wordt niet meer gebruikt voor gebruikersaccount ${user_username}. Emails, zoals bijvoorbeeld een wachtwoordresetcode, worden voortaan naar de eigenaren van de bedrijfsaccount ${tenant_name} gestuurd."
+
+msgid "email-template-change-notification-1"
+msgstr "Het e-mailadres voor gebruiker ${user_username} is zojuist gewijzigd van dit e-mailadres naar ${new_email_address}."
+
+msgid "email-template-change-notification-2"
+msgstr "Als u dit niet zelf heeft gedaan, bestaat de mogelijkheid dat iemand het e-mailadres zonder uw toestemming heeft gewijzigd. Neem dan direct contact op met onze servicedesk via ${contact}"
+
+msgid "email-template-removal-notification-subject"
+msgstr "Dit emailadres wordt niet meer gebruikt voor gebruikersaccount ${user_username}"
+
+msgid "email-template-change-notification-subject"
+msgstr "E-mailadres gewijzigd"
+
+msgid "email-template-removal-owners-notification-1"
+msgstr "Het emailadres ${removed_email} wordt niet meer gebruikt voor gebruikersaccount ${user_username}. Voortaan worden alle emailberichten, zoals bijvoorbeeld wachtwoordresetverzoeken, aan u gestuurd, als eigenaar van bedrijfsaccount ${tenant_name}."
+
+msgid "email-template-removal-owners-notification-2"
+msgstr "Uw mede-eigenaren zullen deze berichten ook ontvangen."
+
+msgid "email-template-removal-owner-notification-subject"
+msgstr "Het emailadres voor gebruikersaccount ${user_username} is verwijderd."
+
+msgid "email-template-invitation-to-connect"
+msgstr "Als u de connectie wilt accepteren, kunt u op onderstaande knop klikken."
+
+msgid "email-template-invitation-to-connect-button"
+msgstr "Accepteer Connectie"
+
+msgid "email-template-invitation-to-connect-subject"
+msgstr "${user} wil gegevens met u delen"
+
+msgid "email-greeting"
+msgstr "Beste ${user_greeting},"
+
+msgid "With kind regards,"
+msgstr "Met vriendelijke groet,"
+
+msgid "The Softwear Team"
+msgstr "het Softwear Team"
+
+msgid "email-template-ownership-notification-ownership-given"
+msgstr "Bij deze willen we u graag laten weten dat gebruiker ${user_username} nu (mede)eigenaar is van account '${tenant}'."
+
+msgid "email-template-ownership-notification-revoked-ownership"
+msgstr "Bij deze willen we u laten weten dat gebruiker ${user_username} nu geen (mede)eigenaar meer is van account '${tenant}'."
+
+msgid "email-template-ownership-notification-given-subject"
+msgstr "Gebruiker ${user_username} is nu eigenaar van ${tenant}"
+
+msgid "email-template-ownership-notification-revoked-subject"
+msgstr "Gebruiker ${user_username} is geen eigenaar meer van ${tenant}"
+
+msgid "email-template-password-change-notification-1"
+msgstr "Met dit e-mailbericht bevestigen wij dat het wachtwoord voor gebruiker ${user_username} is gewijzigd op Softwear Connect."
+
+msgid "email-template-password-change-notification-2"
+msgstr "Wanneer u zelf niet het wachtwoord heeft veranderd, bestaat de mogelijkheid dat iemand het wachtwoord zonder uw toestemming heeft gewijzigd. Neem dan meteen contact op met onze servicedesk via:"
+
+msgid "email-template-password-change-notification-subject"
+msgstr "Uw wachtwoord is gewijzigd."
+
+msgid "email-template-password-first-reset-heading"
+msgstr "Welkom bij Softwear Connect"
+
+msgid "email-template-password-first-reset-1"
+msgstr "Dank u dat u een account heeft aangemaakt voor Softwear Connect."
+
+msgid "email-template-password-first-reset-2"
+msgstr "Om gebruik te maken van de mogelijkheden het platform kan u via onderstaande knop uw account activeren en een wachtwoord instellen."
+
+msgid "email-template-password-first-reset-3"
+msgstr "Welkom bij Softwear Connect!"
+
+msgid "email-template-password-first-button"
+msgstr "Activeer uw Account"
+
+msgid "email-template-password-reset-1"
+msgstr "U heeft een wachtwoordresetverzoek gedaan voor Softwear Connect account ${username}. Klik op onderstaande knop om een nieuw wachtwoord aan te maken."
+
+msgid "email-template-password-reset-button"
+msgstr "Verander Wachtwoord"
+
+msgid "email-template-password-reset-2"
+msgstr "Als u uw wachtwoord niet wilt veranderen, kunt u dit e-mailbericht negeren. Als u misbruik van uw account vermoedt, neem dan contact op met onze servicedesk:"
+
+msgid "email-template-password-first-reset-subject"
+msgstr "Welkom bij Softwear Connect"
+
+msgid "email-template-passoword-not-first-reset-subject"
+msgstr "Wachtwoordresetverzoek"
+
+msgid "email-template-username-change-notification-1"
+msgstr "Met dit e-mailbericht bevestigen wij dat uw gebruikersnaam is veranderd van ${old_username} naar ${new_username}."
+
+msgid "email-template-username-change-notification-2"
+msgstr "Wanneer u zelf niet uw gebruikersnaam heeft veranderd, bestaat de mogelijkheid dat iemand het wachtwoord zonder uw toestemming heeft gewijzigd. Neem dan meteen contact op met onze servicedesk via:"
+
+msgid "username-change-notification-subject"
+msgstr "Uw gebruikersnaam is gewijzigd naar ${new_username}."
+
+msgid "existing-user-by-username"
+msgstr "De gebruikersnaam '${username}' wordt al gebruikt. Kies een andere."
+
+msgid "existing-user-by-email"
+msgstr "Het e-mailadres '${email}' wordt al gebruikt voor een ander account."
+
+msgid "user-does-not-exist"
+msgstr "Gebruiker '${user}' bestaat niet."
+
+msgid "customer-already-exists"
+msgstr "Deze klant bestaat al."
+
+msgid "user-should-have-email"
+msgstr "Gebruikersaccount ${username} heeft een geldig emailadres nodig. ${message} Probeer opnieuw als ${username} een emailadres heeft toegevoegd."
+
+msgid "resend-email-verification-key-email-is-not-set"
+msgstr "U hoeft uw e-mailadres niet te bevestigen omdat er geen e-mailadres is opgegeven voor dit account. U kunt een emailadres toevoegen in uw gebruikersprofiel."
+
+msgid "duplicate-order-terms"
+msgstr "Er bestaan al bestellingsvoorwaarden in taal: ${language} voor het land: ${country}."
+
+msgid "document-not-found"
+msgstr "Het gekozen document kan niet worden gevonden."
+
+msgid "only-current-account"
+msgstr "Dit endpoint mag alleen voor de ingeloggde account worden gebruikt."
+
+msgid "change-user-settings-not-allowed"
+msgstr "U heeft geen toestemming om de instellingen van deze gebruiker te wijzigen."
+
+msgid "user-settings-updated"
+msgstr "Gebruiker instellingen zijn bijgewerkt."
+
+msgid "invalid-settings-format"
+msgstr "Ongeldige instellingen formaat, verwacht wordt JSON."
+
+msgid "illegal-period-end-over-start"
+msgstr "Einddatum mag niet voor begindatum liggen."
+
+msgid "campaign-overlap"
+msgstr "Spaarpuntacties mogen niet overlappen."
+
+msgid "no-applicable-settings"
+msgstr "Geen toepasselijke instellingen ontvangen. Misschien ontbreekt u toestemming om deze instellingen te mogen veranderen."
+
+msgid "cannot-delete-currencies"
+msgstr "Het is niet toegestaan ​​om een ​​valuta te verwijderen of het label te wijzigen (${label})"
+
+msgid "regions-still-in-use"
+msgstr "De volgende rayons zijn nog steeds in gebruik op klanten of gebruikers: ${regions}. Verwijder de rayons van alle klanten en gebruikers voordat u het nog een keer probeert."
+
+msgid "account-settings-updated"
+msgstr "Account instellingen zijn bijgewerkt."
+
+msgid "duplicate-upload-directory"
+msgstr "Er bestaat al een upload directory met deze naam."
+
+msgid "upload-directory-updated"
+msgstr "Uw instellingen zijn bijgewerkt."
+
+msgid "edit-tenant-error-1"
+msgstr "ongeldig ID"
+
+msgid "edit-tenant-error-2"
+msgstr "De data-eigenschap moet een \"Object\" zijn."
+
+msgid "edit-tenant-error-3"
+msgstr "Dit mag niet leeg zijn."
+
+msgid "edit-tenant-error-5"
+msgstr "Je hebt geen rechten dit aan te passen."
+
+msgid "edit-tenant-return-1"
+msgstr "Account ${tenant_id} is geüpdatet."
+
+msgid "edit-tenant-return-2"
+msgstr "Niet alle eigenschappen in het verzoek zijn aangepast."
+
+msgid "change-app-access-unknown"
+msgstr "Dit is niet een van onze applicaties: ${app}"
+
+msgid "change-app-access-default"
+msgstr "Toegang tot een standaard applicatie kan niet worden aangepast."
+
+msgid "change-app-access-internal"
+msgstr "Toegang tot een interne applicatie kan niet worden aangepast."
+
+msgid "change-app-access-link"
+msgstr ""
+
+msgid "change-app-access-return-1"
+msgstr "Dit account heeft al toegang tot deze applicatie."
+
+msgid "change-app-access-return-2"
+msgstr "Dit account heeft geen toegang tot deze applicatie."
+
+msgid "change-app-access-given"
+msgstr "gegeven aan"
+
+msgid "change-app-access-revoked"
+msgstr "ingetrokken van"
+
+msgid "change-app-access-return-3"
+msgstr "Toegang tot de applicatie \"${app}\" is ${verb} voor account \"${tenant_id}\"."
+
+msgid "change-ownership-return-no-change"
+msgstr "De gebruiker is al eigenaar."
+
+msgid "change-ownership-return-2"
+msgstr "De gebruiker staat niet in de lijst van eigenaars."
+
+msgid "change-ownership-no-email"
+msgstr "Een eigenaar heeft altijd een emailadres nodig."
+
+msgid "owner-email-not-verified"
+msgstr "Het emailadres van de nieuwe eigenaar is nog niet bevestigd. Zorg ervoor dat de nieuwe eigenaar zijn of haar emailadres bevestigt voordat u het opnieuw probeert."
+
+msgid "change-ownership-given"
+msgstr "gegeven aan"
+
+msgid "change-ownership-removed"
+msgstr "verwijderd van"
+
+msgid "change-ownership-return-3"
+msgstr "Account \"${tenant_id}\" is ${verb} aan gebruiker \"${username}\" overgedragen."
+
+msgid "no-owner-on-tenant"
+msgstr "Account \"${tenant_id}\" heeft geen owner. Voeg een owner toe en probeer het nogmaals."
+
+msgid "cant-revoke-token"
+msgstr "Kan de token niet herroepen. De token bestaat niet of is al eerder heroept."
+
+msgid "add-user-return-1"
+msgstr "Gebruiker is aangemaakt. Een verificatie-e-mail is gestuurd naar ${sent_to}."
+
+msgid "add-user-return-2"
+msgstr "Gebruiker is aangemaakt. Fout bij versturen verificatie-e-mail."
+
+msgid "update-user-error-1"
+msgstr "Het ID moet een string of dictionary zijn."
+
+msgid "update-user-error-2"
+msgstr "De data moet een dictionary zijn."
+
+msgid "update-user-error-3"
+msgstr "Het kenmerk mag niet leeg zijn."
+
+msgid "update-user-error-4"
+msgstr "Het kenmerk bevatte geen toegestane velden."
+
+msgid "update-user-return-ok"
+msgstr "Gebruiker ${user_id} is geüpdatet."
+
+msgid "update-user-return-not-all-fields-affected"
+msgstr "Niet alle velden in het verzoek zijn aangepast."
+
+msgid "request-pwd-reset-return-ok"
+msgstr "Er is een herstellink gestuurd naar het e-mailadres dat bij dit account hoort."
+
+msgid "request-pwd-reset-error"
+msgstr "Er is een fout ontstaan tijdens het verzenden. Probeer het later nogmaals."
+
+msgid "reset-pwd-expired-key"
+msgstr "Sorry, deze code is verlopen."
+
+msgid "reset-pwd-invalid-key"
+msgstr "Sorry, dit is een ongeldige code."
+
+msgid "reset-pwd-unmatched-password"
+msgstr "Wachtwoord komt niet overeen."
+
+msgid "reset-pwd-return"
+msgstr "Het wachtwoord is aangepast. Gebruik het nieuwe wachtwoord de volgende keer dat ingelogd moet worden."
+
+msgid "change-pwd-incorrect-password"
+msgstr "Sorry, het huidige wachtwoord klopt niet."
+
+msgid "change-pwd-return"
+msgstr "Het wachtwoord is succesvol gewijzigd. Gebruik het nieuwe wachtwoord de volgende keer dat ingelogd moet worden."
+
+msgid "change-email-incorrect-password"
+msgstr "Sorry, het wachtwoord klopt niet."
+
+msgid "change-to-empty-email-with-one-tenant"
+msgstr "Dit emailadres kan niet worden verwijderd: deze gebruikersaccount is gekoppeld aan meerdere bedrijfsaccounts."
+
+msgid "change-email-already-used"
+msgstr "Het e-mailadres ${address} hoort bij een ander account."
+
+msgid "change-email-mail-changed"
+msgstr "Het e-mailadres is succesvol gewijzigd."
+
+msgid "email-change-mail-sent"
+msgstr "Een bevestigingse-mailbericht is verstuurd."
+
+msgid "change-email-mail-removed"
+msgstr "Het emailadres is verwijderd. Emailberichten worden voortaan gestuurd aan de eigenaar(s) van de bedrijfsaccount."
+
+msgid "verify-email-user-not-found"
+msgstr "Er kan geen gebruiker worden gevonden met e-mailadres email ${email}."
+
+msgid "verify-email-not-required"
+msgstr "Account ${email} heeft geen e-mailverificatie nodig."
+
+msgid "verify-email-return"
+msgstr "E-mailverificatie was successvol."
+
+msgid "resend-mail-verification-user-not-found"
+msgstr "Gebruiker met gebruikersnaam ${username} kan niet worden gevonden."
+
+msgid "resend-mail-verification-no-verification-required"
+msgstr "Account heeft geen verificatie nodig."
+
+msgid "resend-mail-verification-email-sent"
+msgstr "E-mailverificatielink is verstuurd naar ${email}."
+
+msgid "resend-mail-verification-no-key-sent"
+msgstr "E-mailverificatielink is niet verstuurd. Probeer het later nog eens."
+
+msgid "invalid-locale"
+msgstr "De gegeven taal is niet ondersteund. Selecteer  één van: ${locales}."
+
+msgid "update-profile-return-ok"
+msgstr "Gebruikersgegevens opgeslagen."
+
+msgid "update-nothing-return-ok"
+msgstr "Niets om te bewerken."
+
+msgid "update-tenant-roles-not-dict"
+msgstr "De \"roles\" parameter is geen \"dictionary\"."
+
+msgid "update-tenant-roles-no-access"
+msgstr "Gebruikers van account ${tenant_id} kunnen rol ${role} niet krijgen. Het account heeft geen toegang tot applicatie \"${app}\"."
+
+msgid "update-tenant-roles-return-warning"
+msgstr "De rollen zijn ingesteld bij gebruiker ${user} naar [${roles}]. Gebruiker heeft geen email address."
+
+msgid "update-tenant-roles-return"
+msgstr "De rollen zijn ingesteld bij gebruiker ${user} naar [${roles}]."
+
+msgid "change-active-no-change"
+msgstr "Gebruikersstatus is al ${active_status}."
+
+msgid "change-active-activated"
+msgstr "geactiveerd"
+
+msgid "change-active-deactivated"
+msgstr "gede-activeerd"
+
+msgid "change_active-return-ok"
+msgstr "Het account van gebruiker ${username} is nu ${active_status}."
+
+msgid "may-not-start-with"
+msgstr "Een gebruikersnaam mag niet beginnen met deze symbolen: ${characters}"
+
+msgid "username-too-long"
+msgstr "Een gebruikersnaam mag niet langer dan 64 karakters zijn."
+
+msgid "username-too-short"
+msgstr "Een gebruikersnaam mag niet korter dan 5 karakters zijn."
+
+msgid "invalid-username-characters"
+msgstr "Een gebruikersnaam mag alleen alfanumerieke, en ${characters} karakters bevatten. Meerdere punten achter elkaar is niet toegestaan."
+
+msgid "validate-device-id-exists-for-different-tenant"
+msgstr "Het apparaat-ID ${device_id} is al in gebruik voor deze account. Gebruik een uniek apparaat-ID."
+
+msgid "no-email-found"
+msgstr "We konden geen emailadress vinden voor deze gebruiker."
+
+msgid "cannot-find-next-incremental-id"
+msgstr "We konden het volgende Id niet vinden."
+
+msgid "add-not-allowed"
+msgstr "Met dit endpoint mag geen nieuwe locatie aan worden gemaakt."
+
+msgid "order-completed"
+msgstr "Een bestelling met status \"complete\" kan niet geedit worden."
+
+msgid "no-packing-list-shipping"
+msgstr "Deze pakbon bestaat niet, of is nog niet klaar om verzonden te worden."
+
+msgid "only-ship-within-europe"
+msgstr "Verzending buiten Europa wordt niet ondersteund."
+
+msgid "sendcloud-error"
+msgstr "Er is iets misgegaan met SendCloud."
+
+msgid "no-packing-list-labels"
+msgstr "Deze pakbon bestaat niet, of wordt nog niet verzonden."
+
+msgid "no-parcels-for-packing-list"
+msgstr "Er zijn geen paketten geregistreert voor deze pakbon."
+
+msgid "sendcloud-not-configured"
+msgstr "SendCloud is niet geconfigureerd voor deze account."
+
+msgid "printq-error"
+msgstr ""
+
+msgid "document-does-not-exist"
+msgstr "Het document dat u heeft opgevraagd, kan niet worden gevonden."
+
+msgid "permission-denial"
+msgstr "'${permission}' toegang is geweigerd voor ${context}."
+
+msgid "order-number"
+msgstr "ordernummer"
+
+msgid "custom-reference"
+msgstr "aangepaste referentie"
+
+msgid "order-type"
+msgstr "type"
+
+msgid "name"
+msgstr "naam"
+
+msgid "address"
+msgstr "adres"
+
+msgid "zipcode"
+msgstr "postcode"
+
+msgid "city"
+msgstr "plaats"
+
+msgid "country"
+msgstr "land"
+
+msgid "article-code"
+msgstr "artikelcode"
+
+msgid "article-description"
+msgstr "Artikelomschrijving"
+
+msgid "price"
+msgstr "prijs"
+
+msgid "suggested-retail-price"
+msgstr "adviesprijs"
+
+msgid "barcode"
+msgstr "barcode"
+
+msgid "quantity"
+msgstr "aantal"
+
+msgid "sizeLabel"
+msgstr "maat"
+
+msgid "color-code"
+msgstr "kleurcode"
+
+msgid "color-description"
+msgstr "kleur"
+
+msgid "no-document-found"
+msgstr "Het gekozen item kan niet worden gevonden."
+
+msgid "editing-without-mongodb-operator"
+msgstr "Bewerken onder een operator (bijv. $set, $unset, $inc, $min, ...) is niet toegestaan."
+
+msgid "db-connection-health"
+msgstr "Er kan geen verbinding met de database worden gemaakt, of de database is leeg."
+
+msgid "duplicate-transaction"
+msgstr "Er zijn al transacties met de volgende bonnummers: ${numbers}."
+
+msgid "cannot-find-linked-data"
+msgstr "De data (${data}) bestaat niet.)"
+
+msgid "filter-not-indexed"
+msgstr "De opdracht kan niet worden uitgevoerd, omdat er ongeïndexeerde velden worden gebruikt."
+
+msgid "sort-not-indexed"
+msgstr "De sortering moet een geïndexeerde sleutel hebben als eerste argument."
+
+msgid "excluded-mongodb-operator"
+msgstr "De operator \"${operator}\" is niet toegestaan."
+
+msgid "malformed-field-not-list"
+msgstr "${fieldname}[${okey}] moet een array zijn."
+
+msgid "malformed-field-not-string-or-dict"
+msgstr "Het \"${fieldname}\" veld is geen tekst of object."
+
+msgid "decode-date-value-error"
+msgstr "De waarde '${value} voor sleutel '${sleutel} is geen geldige datum string van de vorm ${date_fmt}."
+
+msgid "incorrect-filter-type"
+msgstr "Het filter moet een object zijn."
+
+msgid "eos-must-be-completed"
+msgstr "De kasopmaak moet uitgevoerd zijn voordat hij kan worden heropend."
+
+msgid "no-open-shifts"
+msgstr "De kasopmaak is al gedaan voor de gekozen periode."
+
+msgid "previous-rectification-found"
+msgstr "Deze handeling mag maar een keer per 24 uur uitgevoerd worden."
+
+msgid "invalid-parameter"
+msgstr "Deze parameter is ongeldig: ${param}"
+
+msgid "illegal-period"
+msgstr "Deze periode kan niet worden gebruikt: ${period}"
+
+msgid "transaction-error-duplicate-transaction"
+msgstr "De gegeven transactie is al opgeslagen. Neem contact op met de servicedesk als dit blijft gebeuren."
+
+msgid "warehouse-not-found"
+msgstr "We konden dit magazijn niet vinden."
+
+msgid "no-data-to-export"
+msgstr "Er waren geen gegevens om te exporteren. Pas uw zoekcriteria aan en probeer het opnieuw."
+
+msgid "illegal-warehouse"
+msgstr "Uw account heeft geen toegang tot deze gegevens."
+
+msgid "invalid-group_by-parameter"
+msgstr "Kies een van de volgende waardes: ${values}."
+
+msgid "minute-group_by"
+msgstr "De startdatum kan niet meer dan ${days} dagen in het verleden liggen. Pas de startdatum of de schaal aan."
+
+msgid "non-existent-warehouse"
+msgstr "Het filiaal met Id ${warehouse} bestaat niet."
+
+msgid "about-message"
+msgstr "Dit is een Spynl web applicatie. U kunt meer informatie vinden op about/versions en about/build."
+
+msgid "validation-error"
+msgstr "Er was een probleem met uw verzoek. Neem contact op met de servicedesk als dit blijft gebeuren. Onze excuses voor het ongemak."
+
+msgid "no-endpoint-for-path"
+msgstr "Geen endpoint gevonden voor pad '${path}'."
+
+msgid "internal-server-error"
+msgstr "Interne serverfout."
+
+msgid "bad-origin"
+msgstr "Requests naar Spynl zijn niet toegestaan vanaf origin '${origin}'."
+
+msgid "missing-parameter"
+msgstr "Er ontbreekt een verplichte parameter: ${param}."
+
+msgid "illegal-parameter"
+msgstr "Ongeldige parameter: ${param}."
+
+msgid "invalid-response"
+msgstr "Spynl kon helaas geen valide response genereren: ${error}"
+
+msgid "email-tmpl-not-found"
+msgstr "De e-mailtemplate <${template}> kan niet worden gevonden."
+
+msgid "email-recipient-not-given"
+msgstr "De ontvanger van de email mist."
+
+msgid "undetermined-content-type-exception"
+msgstr "De request heeft een body maar de content type is niet herkent."
+
+msgid "unsupported-content-type-exception"
+msgstr "Content type is niet ondersteund: \"${type}\""
+
+msgid "deserialization-unsupported-exception"
+msgstr "Deserialisation van content type \"${type}\" is niet ondersteund."
+
+msgid "serialization-unsupported-exception"
+msgstr "Serialisation van content type \"${type}\" is niet ondersteund."
+
+msgid "malformed-request-exception-type"
+msgstr "Misvormd \"${type}\" request: ${request}"
+
+msgid "malformed-request-exception"
+msgstr "Misvormd request: ${request}"
+
+msgid "date-decode-value-error"
+msgstr "De waarde '${value}' voor key '${key}' lijkt geen geldige datastring te zijn wat past binnen ${format}."
+
+msgid "unexpected-end-of-input"
+msgstr "Onverwacht einde van input."
+
+msgid "parse-value-exception-as-class"
+msgstr "\"${value}\" kon niet worden ontleed naar ${class}."
+
+msgid "parse-value-exception-not-class"
+msgstr "${class} is geen class. Kan waarde \"${value}\" niet ontleden."
+
+msgid "parse-value-exception-any-class"
+msgstr "\"${value}\" kon niet worden ontleed in een class in ${classes}."
+
+msgid "no-message-available"
+msgstr "Geen bericht beschikbaar."
+
+msgid "label-needs-complete-receiving"
+msgstr "U kunt alleen etiketten aanmaken voor een voltooide binnenmelding. Maak uw binnenmelding af en probeer het opnieuw."
+
+msgid "from-price"
+msgstr "van"
+
+msgid "email-eos-document-info"
+msgstr "Deze email bevat de kasopmaak van kassa ${device} van de periode ${periodStart} - ${periodEnd} en het filiaal ${location}. Deze pdf is gegenereerd op ${now} door ${fullname}."
+
+msgid "eos-email-subject"
+msgstr "Kasopmaak ${periodStart} - ${periodEnd} ${device}"
+
+msgid "transit-from-to"
+msgstr "Transitorder van filiaal ${from_warehouse} naar filiaal ${to_warehouse}."
+
+msgid "pdf-needs-complete-receiving"
+msgstr "U kunt alleen een pdf aanmaken voor een voltooide binnenmelding. Maak uw binnenmelding af en probeer het opnieuw."
+
+msgid "pdf-needs-complete-eos"
+msgstr "U kunt alleen een pdf aanmaken voor een voltooide kasopmaak. Maak uw binnenmelding af en probeer het opnieuw."
+
+msgid "end-of-shift"
+msgstr "Kasopmaak"
+
+msgid "turnover"
+msgstr "Dagomzet"
+
+msgid "consignment"
+msgstr "Op zicht"
+
+msgid "vat-zero"
+msgstr "btw 0"
+
+msgid "vat-low"
+msgstr "btw laag"
+
+msgid "vat-high"
+msgstr "btw hoog"
+
+msgid "payment-methods"
+msgstr "Betaalwijze"
+
+msgid "original"
+msgstr "orginele waarden"
+
+msgid "modified"
+msgstr "opgeslagen waarden"
+
+msgid "cash"
+msgstr "Contant"
+
+msgid "credit-receipt-in"
+msgstr "Tegoedbon in"
+
+msgid "credit-receipt-out"
+msgstr "Tegoedbon uit"
+
+msgid "coupon-in"
+msgstr "Cadeaubon in"
+
+msgid "coupon-out"
+msgstr "Cadeaubon uit"
+
+msgid "store-credit"
+msgstr "Op rekening"
+
+msgid "store-credit-paid"
+msgstr "Op rekening afbetaald"
+
+msgid "pin"
+msgstr "Pin"
+
+msgid "credit-card"
+msgstr "Creditcard"
+
+msgid "total"
+msgstr "totaal"
+
+msgid "opening-balance"
+msgstr "Beginsaldo"
+
+msgid "cash-in"
+msgstr "Contant in"
+
+msgid "change"
+msgstr "Wisselgeld"
+
+msgid "deposit"
+msgstr "Kasstorting"
+
+msgid "withdrawal"
+msgstr "Kasopname"
+
+msgid "deposit-to-bank"
+msgstr "Afstorten"
+
+msgid "difference"
+msgstr "Verschil"
+
+msgid "end-balance"
+msgstr "Eindsaldo"
+
+msgid "cash-plural"
+msgstr "Contanten"
+
+msgid "remarks"
+msgstr "Opmerkingen"
+
+msgid "receipt"
+msgstr "bon"
+
+msgid "you-were-helped"
+msgstr "U bent geholpen door ${cashier}"
+
+msgid "loyalty-nr"
+msgstr "klantnummer"
+
+msgid "loyalty-points"
+msgstr "spaarpunten"
+
+msgid "coupon-ka"
+msgstr "waardecheque"
+
+msgid "coupon-kc"
+msgstr "cashbackbon"
+
+msgid "coupon-k"
+msgstr "kortingsbon"
+
+msgid "coupon-ki"
+msgstr "verkoop cadeaubon"
+
+msgid "coupon-ku"
+msgstr "cadeaubon"
+
+msgid "credit-receipt"
+msgstr "tegoedbon"
+
+msgid "storecredit"
+msgstr "op rekening"
+
+msgid "creditcard"
+msgstr "creditcard"
+
+msgid "couponin"
+msgstr "cadeaubon in"
+
+msgid "webshop"
+msgstr "webshop"
+
+msgid "article"
+msgstr "artikel"
+
+msgid "discount"
+msgstr "korting"
+
+msgid "pay-off-store-credit"
+msgstr "aflossing op rekening"
+
+msgid "value"
+msgstr "waarde"
+
+msgid "total-discount"
+msgstr "Totaalkorting"
+
+msgid "round-off-difference"
+msgstr "afronden"
+
+msgid "vat-high-over"
+msgstr "btw hoog (${percentage}% over ${amount})"
+
+msgid "vat-low-over"
+msgstr "btw laag (${percentage}% over ${amount})"
+
+msgid "vat-zero-over"
+msgstr "btw 0 (${percentage}% over ${amount})"
+
+msgid "cashback-coupon"
+msgstr "cashbackbon"
+
+msgid "coupon-value-is"
+msgstr "De waarde van deze cashbackbon bedraagt"
+
+msgid "coupon-t-value-is"
+msgstr "De waarde van deze tegoedbon bedraagt"
+
+msgid "total-items"
+msgstr "totaal aantal items"
+
+msgid "file-generated-info"
+msgstr "Dit rapport is gegenereerd op ${now} door ${fullname}."
+
+msgid "applied-filters"
+msgstr "Toegepaste filters"
+
+msgid "start-date"
+msgstr "Begindatum"
+
+msgid "end-date"
+msgstr "Einddatum"
+
+msgid "transit"
+msgstr "transitorder"
+
+msgid "transit-done-by"
+msgstr "Transitorder uitgevoerd door ${cashier}."
+
+msgid "from"
+msgstr "van"
+
+msgid "to"
+msgstr "naar"
+
+msgid "articleDescription"
+msgstr "omschrijving"
+
+msgid "brand"
+msgstr "merk"
+
+msgid "email-receipt-default-subject"
+msgstr "Uw kassabon"
+
+msgid "email-receipt-default-subject-wholesale"
+msgstr "Uw order"
+
+msgid "pipe-timeout-error"
+msgstr "Er was een probleem met uw verzoek. Probeer het nogmaals."
+
+msgid "article-status-report-heading"
+msgstr "Artikelstatus"
+
+msgid "article-status-email-info"
+msgstr "Deze email bevat het ${report_name} rapport beginnend op ${start_date} en eindigend op ${end_date}. Dit rapport is gegenereerd door ${username} op ${now}."
+
+msgid "customer-sales-report-heading"
+msgstr "Verkopen per klant"
+
+msgid "stock-report-heading"
+msgstr "voorraad"
+
+msgid "trtype-0"
+msgstr "Start"
+
+msgid "trtype-1"
+msgstr "Ontv"
+
+msgid "trtype-2"
+msgstr "Verk"
+
+msgid "trtype-3"
+msgstr "Trans"
+
+msgid "trtype-4"
+msgstr "Mut"
+
+msgid "trtype-5"
+msgstr "Ret l"
+
+msgid "trtype-6"
+msgstr "Kreditnota voorraad"
+
+msgid "trtype-7"
+msgstr "Kreditnota korting"
+
+msgid "trtype-14"
+msgstr "Inkooporder"
+
+msgid "trtype-15"
+msgstr "Totaal binnen"
+
+msgid "trtype-18"
+msgstr "Minimumvoorraad"
+
+msgid "trtype-93"
+msgstr "Gefactureerd voorverkoop"
+
+msgid "trtype-94"
+msgstr "Pakbon"
+
+msgid "trtype-95"
+msgstr "Loopbon"
+
+msgid "trtype-96"
+msgstr "Order nabestelling"
+
+msgid "trtype-97"
+msgstr "Voorverkoop"
+
+msgid "trtype-98"
+msgstr "Offerte"
+
+msgid "color-supplier"
+msgstr "Kleur leverancier"
+
+msgid "color"
+msgstr "Kleur"
+
+msgid "location"
+msgstr "Locatie"
+
+msgid "time"
+msgstr "Tijd"
+
+msgid "user"
+msgstr "Gebruiker"
+
+msgid "type"
+msgstr "Type"
+
+msgid "reference"
+msgstr "Referentie"
+
+msgid "end-stock"
+msgstr "Eindvoorraad"
+
+msgid "redshift-connection-error"
+msgstr "Er kon geen verbinding worden gemaakt met de database."
+
+msgid "upload-complete"
+msgstr "De upload is voltooid."
+
+msgid "upload-logo-removed"
+msgstr "Het logo is verwijderd."
+
+msgid "only-POST-allowed"
+msgstr "Alleen verzoeken van het type POST worden geaccepteerd."
+
+msgid "s3-connection"
+msgstr "De verbinding met S3 is niet gelukt: ${error}"
+
+msgid "image-error"
+msgstr "Er waren problemen met het verwerken van de afbeelding: ${error}"
+
+msgid "image-not-found"
+msgstr "Kan geen afbeelding vinden op ${path}"
+
+msgid "no-base64-image"
+msgstr "De afbeelding lijkt niet base64-encoded"
+
+msgid "not-image-file"
+msgstr "${filename} lijkt geen afbeelding te zijn."
+
+msgid "unsupported-image"
+msgstr "Dit bestandstype wordt niet ondersteund."
+
+msgid "img-error-shrinking"
+msgstr "Er is een probleem ontstaan bij het verkleinen van de afbeelding."
+
+msgid "img-err-oversized"
+msgstr "Het is niet gelukt de afbeelding genoeg te verkleinen."
+
+msgid "bucket-error"
+msgstr "De bucket '${bucket}' bestaat niet in S3"
+
+msgid "upload-dir-not-set"
+msgstr "Upload directory is niet ingesteld."
+

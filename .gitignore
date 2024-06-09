@@ -1,0 +1,36 @@
+*-key
+__pycache__
+builds
+*.egg-info
+venv
+.venv
+.env
+.environment
+.envrc
+*.pyc
+.cache/
+.eggs/
+
+# ignore compiled translations
+*.mo
+
+spynl_swagger/*.json
+
+syntax: regexp
+
+.coverage
+coverage.xml
+report.xml
+report_spynl_data.xml
+htmlcov
+
+.project
+.pydevproject
+
+*.pdf
+*.xlsx
+# used for testing 2fa:
+qr.png
+
+.vscode
+.idea

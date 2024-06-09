@@ -1,0 +1,42 @@
+{
+    "status": "open",
+    "customer": {
+        "id": "customer_9",
+        "custnum": "$123T"
+    },
+    "shop": {
+        "id": "51"
+    },
+    "device_id": "5IXY",
+    "receipt": [
+        {
+			"category": "barcode",
+            "barcode": "91",
+            "qty": 5,
+			"price": 10,
+			"vat": 21
+        },
+        {
+			"category": "barcode",
+            "barcode": "92",
+            "qty": 3,
+			"price": 17,
+			"vat": 21
+        }
+    ],
+    "type": 9,
+	"payments": {
+		"storecredit": 0.0,
+		"pin": 0.0,
+		"cash": 0.0,
+		"creditcard": 0.0,
+		"withdrawel": 0.0,
+        "creditreceipt": 0.0,
+        "consignment": 101
+	},
+    "cashier": {
+        "name": "TCN",
+        "id": "57d8fc582e3fef314efd050f"
+    },
+    "nr": "51-4584-314"
+}

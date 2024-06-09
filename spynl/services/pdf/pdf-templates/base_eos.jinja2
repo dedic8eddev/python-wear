@@ -1,0 +1,32 @@
+<html>
+    <!-- use free fontawesome icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <body>
+        <div class="header">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td>
+                            {% block document_info %} {% endblock %}
+                        </td>
+                        <td class="logo">
+                            <div style="float:right;"> {% block logo_space %} {% endblock %} </div>
+                        </td>
+                    </tr>
+                    <td colspan="2">
+                        {% block header_totals %} {% endblock %}
+                    </td>
+                </tbody>
+            </table>
+        </div>
+
+        {% block payments %} {% endblock %}
+
+        {% block totals %} {% endblock %}
+
+        {% block cash_count %} {% endblock %}
+
+        {% block remarks %} {% endblock %}
+
+    </body>
+</html>

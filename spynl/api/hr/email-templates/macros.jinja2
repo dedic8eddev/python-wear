@@ -1,0 +1,47 @@
+{% macro button(link, button_text) -%}
+{# This will probably be used inside a table, so we need to close a row and start it again. TODO: leave this to the template itself? #}
+</td>
+</tr>
+{# actual button #}
+<tr>
+  <td style="padding-top:20px;padding-bottom:20px" align="center">
+    <table border="0" cellspacing="0" cellpadding="0">
+      <tbody>
+        <tr>
+          <td style="border-radius: 3px; background-color: #3366ff;" align="center"><a style="display: inline-block; border: 1px solid #3366ff; font-family: 'Helvetica neue', Helvetica, Arial, Verdana, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 3px; padding: 15px 40px;" href="{{ link }}"><!-- [if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->{{ button_text }}<!-- [if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]--></a></td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+{# start row and cell again that were closed at the top #}
+<tr>
+<td>
+{%- endmacro %}
+
+{% macro greeting(user_greeting) -%}
+  <p>
+    {{
+      _('email-greeting',
+      mapping={'user_greeting': user_greeting})
+    }}
+  </p>
+{%- endmacro %}
+
+{% macro regards() -%}
+  <p>
+    {{ _('With kind regards,') }}
+  </p>
+  <p>
+    {{ _('The Softwear Team') }}
+  </p>
+{%- endmacro %}
+
+
+{% macro contact(type) -%}
+  {% if type == "phone" %}
+    +31 (0)20 229 29 29
+  {% else %}
+    <a href="https://www.softwearconnect.com/#/support">https://www.softwearconnect.com/#/support</a>
+  {% endif %}
+{%- endmacro %}

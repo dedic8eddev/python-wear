@@ -1,0 +1,65 @@
+.table {
+  width: 100%;
+  margin-bottom: 7mm;
+}
+
+.logo {
+  vertical-align: top;
+  overflow: hidden;
+}
+
+.logo img {
+  max-height: 2.5cm;
+  width: auto;
+  float: left;
+}
+
+.amounts {
+  text-align: right;
+}
+
+.left {
+  float: left;
+}
+
+.address {
+  line-height: 100%;
+}
+
+.table-address {
+  margin-top: 6mm;
+  margin-bottom: 6mm;
+}
+
+.address-label {
+  line-height: 100%;
+  vertical-align: top;
+  padding-right: 2mm;
+  font-weight: bold;
+}
+
+.table-header td {
+  padding-top: 4mm;
+}
+
+.table-highlight th {
+  border-bottom: 1pt solid grey;
+}
+.table-highlight tr:nth-child(even) {
+  background: #eee;
+}
+.table-highlight tr:nth-child(odd) {
+  background: #fff;
+}
+.table-highlight td {
+  padding-top: 1mm;
+  padding-bottom: 1mm;
+}
+.table-highlight td:last-child, .table-highlight th:last-child{
+  text-align: right;
+}
+
+.total-row td {
+  padding-bottom: inherit;
+  font-weight: bold;
+}

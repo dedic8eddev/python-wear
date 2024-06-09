@@ -1,0 +1,72 @@
+{
+    "shift": "1b2c2f189-486a-4cfc-a6f0-7daa364a0faf",
+    "customer": {
+        "id": "9db36a35-c4e9-4a3d-a430-67c0a5339f3a",
+        "custnum": "abcd"
+    },
+    "overallReceiptDiscount": 0.0,
+    "totalDiscountCoupon": 0.0,
+    "type": 2,
+    "nr": "50-12-19677",
+    "printed": "20-02-16 13:46",
+    "cashier": {
+        "id": "mios.04@softwear.nu",
+        "name": "Mylene"
+    },
+    "device_id": "KASSA",
+    "loyaltyPoints": 0,
+    "buffer_id": "buffer_8cadb3da-d48a-43f4-9931-af66ab72cadc",
+    "receiptNr": 19677.0,
+    "receipt": [
+        {
+            "sizeLabel": "ONE",
+            "qty": 1,
+            "rfid": null,
+            "color": "mult:multicolour",
+            "category": "barcode",
+            "vat": 21.0,
+            "group": null,
+            "barcode": "000698032678",
+            "articleCode": "diversen",
+            "articleDescription": "diversen",
+            "changeDisc": true,
+            "nettPrice": 29.99,
+            "price": 29.99
+        },
+        {
+            "sizeLabel": "ONE",
+            "qty": 1,
+            "rfid": null,
+            "color": "mult:multicolour",
+            "category": "barcode",
+            "vat": 21.0,
+            "group": null,
+            "barcode": "000698032677",
+            "articleCode": "diversen",
+            "articleDescription": "diversen",
+            "changeDisc": true,
+            "nettPrice": 49.99,
+            "price": 49.99
+        }
+    ],
+    "remark": "",
+    "payments": {
+        "pin": 0.0,
+        "consignment": 0.0,
+        "cash": 100.00,
+        "withdrawel": 0.0,
+        "storecredit": 0.0,
+        "creditreceipt": 0.0,
+        "couponin": 0.0,
+        "creditcard": 0.0
+    },
+    "shop": {
+        "id": "50",
+        "houseno": "",
+        "zipcode": "2611 RJ",
+        "street": "Molslaan 35-39",
+        "name": "A-Keuze",
+        "city": "Delft",
+        "phone": "015-2135004"
+    }
+}

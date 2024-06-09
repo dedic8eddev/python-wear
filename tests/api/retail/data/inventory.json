@@ -1,0 +1,16 @@
+{
+    "docNumber": "46f464d7-a063-4524-b052-386916475901",
+    "warehouseId": "1",
+    "products": [
+        {
+            "barcode": "91",
+            "articleCode": "1|2|3",
+            "qty": 5
+        },
+        {
+            "barcode": "92",
+            "articleCode": "4|5|6",
+            "qty": 3
+        }
+    ]
+}

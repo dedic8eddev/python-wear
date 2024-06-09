@@ -1,0 +1,65 @@
+{% extends "report_shared.jinja2" %}
+
+{% set groups = parameters['groups'] %}
+{% set fields = parameters['fields_'] %}
+{% set rows = data['data'] %}
+{% set totals = data['totals'] %}
+
+{% macro format_cell(value, column) %}
+    {% set metadata = column_metadata.get(column, {}) %}
+    {% if metadata.get('type') in ['money', 'number', 'quantity', 'percentage'] %}
+        <td class="right"> {{ format_value(value, column) }} </td>
+    {% else %}
+        <td> {{ format_value(value, column) }} </td>
+    {% endif %}
+{% endmacro %}
+
+{% macro format_header(column) %}
+    {% set metadata = column_metadata.get(column, {}) %}
+    {% if  metadata.get('type') in ['money', 'number', 'quantity', 'percentage'] %}
+        <th class="right"> {{ metadata.get('label', column) }} </th>
+    {% else %}
+        <th> <div> {{ metadata.get('label', column) }} </div> </th>
+    {% endif %}
+{% endmacro %}
+
+{% block additional_css %}
+    {# adding this here instead of css, so css does not need to become a jinja2 file #}
+    .report_table td:nth-child({{ groups | length }}) {border-right: 1pt solid grey;}
+    .report_table th:nth-child({{ groups | length }}) {border-right: 1pt solid grey;}
+    .totals td:nth-child({{ groups | length }}) {border-right: 0.3pt grey;}
+{% endblock %}
+
+
+{% block report_table %}
+    <table class="report_table">
+        <thead>
+            <tr>
+                {% for group in groups %}
+                    {{ format_header(group) }}
+                {% endfor %}
+                {% for field in fields %}
+                    {{ format_header(field) }}
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+                <tr>
+                    {% for group in groups %}
+                        {{ format_cell(row[group], group) }}
+                    {% endfor %}
+                    {% for field in fields %}
+                        {{ format_cell(row[field], field) }}
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+            <tr class="totals">
+                <td colspan="{{ groups | length }}"> </td>
+                {% for field in fields %}
+                    {{ format_cell(totals[field], field) }}
+                {% endfor %}
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

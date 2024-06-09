@@ -1,0 +1,389 @@
+-               -       -                       -        -   116    128    140    152    164    176
+20191105085235  cloud   A-Keuze                 Janssen  1   None   None   190.0  None   None   None
+20191105085242  cloud   A-Keuze                 Meijer   1   104.0  None   None   None   None   None
+20191105085253  cloud   A-Keuze                 Vries    1   None   None   None   None   None   51.0
+20191105085258  cloud   A-Keuze                 Bakker   1   None   None   None   175.0  None   None
+20191105085309  cloud   A-Keuze                 Laan     1   None   138.0  None   None   None   None
+20191105085320  cloud   A-Keuze                 Janssen  1   None   None   None   None   124.0  None
+20191129115501  cloud   A-Keuze                 Dijk     93  -1.0   None   None   None   None   None
+20191129115501  cloud   A-Keuze                 Meijer   93  None   -1.0   None   None   None   None
+20191129115501  cloud   A-Keuze                 Visser   93  None   None   None   None   -1.0   None
+20191129115501  cloud   A-Keuze                 Vries    93  None   None   -2.0   -1.0   None   None
+20191129115504  cloud   A-Keuze                 Bakker   93  None   None   None   None   None   -1.0
+20191129115504  cloud   A-Keuze                 Berg     93  None   None   None   None   -1.0   None
+20191129115504  cloud   A-Keuze                 Janssen  93  -1.0   None   None   None   None   None
+20191129115504  cloud   A-Keuze                 Laan     93  None   None   -1.0   None   None   None
+20191129115504  cloud   A-Keuze                 Vries    93  None   -1.0   None   None   None   None
+20191129115504  cloud   A-Keuze                 Wal      93  None   None   None   -1.0   None   None
+20191129115506  cloud   A-Keuze                 Berg     93  None   None   None   None   -1.0   None
+20191129115506  cloud   A-Keuze                 Meijer   93  None   None   -1.0   None   None   None
+20191129115506  cloud   A-Keuze                 Visser   93  -1.0   None   None   None   None   None
+20191129115506  cloud   A-Keuze                 Vries    93  None   -1.0   None   -2.0   None   None
+20191129115507  cloud   A-Keuze                 Bakker   93  None   None   None   -5.0   None   None
+20191129115507  cloud   A-Keuze                 Laan     93  None   None   None   None   None   -3.0
+20191129115507  cloud   A-Keuze                 Meijer   93  None   None   -3.0   None   None   None
+20191129115507  cloud   A-Keuze                 Visser   93  None   None   None   None   -5.0   None
+20191129115509  cloud   A-Keuze                 Bakker   93  None   None   -1.0   None   None   -1.0
+20191129115509  cloud   A-Keuze                 Janssen  93  None   None   None   None   -1.0   None
+20191129115509  cloud   A-Keuze                 Meijer   93  None   -1.0   None   None   None   None
+20191129115509  cloud   A-Keuze                 Smit     93  None   None   None   -1.0   None   None
+20191129115510  cloud   A-Keuze                 Bakker   93  None   None   None   -2.0   None   None
+20191129115510  cloud   A-Keuze                 Vries    93  -2.0   -2.0   -2.0   None   None   None
+20191129115512  cloud   A-Keuze                 Meijer   93  None   None   -2.0   None   None   None
+20191129115512  cloud   A-Keuze                 Visser   93  None   None   None   -2.0   None   None
+20191129115512  cloud   A-Keuze                 Vries    93  -1.0   -2.0   None   None   None   None
+20191129115513  cloud   A-Keuze                 Laan     93  None   None   -2.0   None   None   None
+20191129115513  cloud   A-Keuze                 Meijer   93  -1.0   None   None   -2.0   None   None
+20191129115513  cloud   A-Keuze                 Smit     93  None   -2.0   None   None   None   None
+20191129115515  cloud   A-Keuze                 Berg     93  -1.0   None   None   None   None   None
+20191129115515  cloud   A-Keuze                 Meijer   93  None   None   None   -2.0   None   None
+20191129115515  cloud   A-Keuze                 Smit     93  None   None   -2.0   None   None   None
+20191129115515  cloud   A-Keuze                 Visser   93  None   -2.0   None   None   None   None
+20191129115517  cloud   A-Keuze                 Meijer   93  None   -1.0   None   -1.0   None   None
+20191129115517  cloud   A-Keuze                 Visser   93  None   None   -1.0   None   None   None
+20191129115517  cloud   A-Keuze                 Wal      93  -1.0   None   None   None   None   None
+20191129115519  cloud   A-Keuze                 Bakker   93  None   None   -1.0   None   None   None
+20191129115519  cloud   A-Keuze                 Meijer   93  -1.0   None   None   None   None   None
+20191129115519  cloud   A-Keuze                 Visser   93  None   None   None   -1.0   None   None
+20191129115519  cloud   A-Keuze                 Vries    93  None   -1.0   None   None   None   None
+20191129115520  cloud   A-Keuze                 Berg     93  None   None   None   None   None   -1.0
+20191129115520  cloud   A-Keuze                 Janssen  93  None   None   None   None   -1.0   None
+20191129115520  cloud   A-Keuze                 Laan     93  None   None   -1.0   -2.0   None   None
+20191129115520  cloud   A-Keuze                 Meijer   93  None   -1.0   None   None   None   None
+20191129115522  cloud   A-Keuze                 Dijk     93  None   None   -2.0   None   None   None
+20191129115522  cloud   A-Keuze                 Janssen  93  None   None   None   -2.0   None   None
+20191129115522  cloud   A-Keuze                 Meijer   93  None   None   None   None   -1.0   None
+20191129115522  cloud   A-Keuze                 Vries    93  None   -1.0   None   None   None   None
+20191129115525  cloud   A-Keuze                 Bakker   93  None   -1.0   None   None   None   None
+20191129115525  cloud   A-Keuze                 Dijk     93  None   None   -1.0   None   -1.0   None
+20191129115525  cloud   A-Keuze                 Wal      93  None   None   None   -1.0   None   None
+20191129115526  cloud   A-Keuze                 Berg     93  -1.0   None   None   None   -1.0   None
+20191129115526  cloud   A-Keuze                 Dijk     93  None   None   None   -1.0   None   None
+20191129115526  cloud   A-Keuze                 Vries    93  None   -1.0   -2.0   None   None   None
+20191129115528  cloud   A-Keuze                 Meijer   93  None   None   None   -3.0   None   None
+20191129115528  cloud   A-Keuze                 Visser   93  None   -3.0   None   None   -3.0   -3.0
+20191129115528  cloud   A-Keuze                 Vries    93  None   None   -3.0   None   None   None
+20191129115529  cloud   A-Keuze                 Berg     93  None   None   -2.0   None   None   None
+20191129115529  cloud   A-Keuze                 Dijk     93  None   None   None   None   -1.0   None
+20191129115529  cloud   A-Keuze                 Meijer   93  None   -1.0   None   -1.0   None   None
+20191129115529  cloud   A-Keuze                 Visser   93  -1.0   None   None   None   None   None
+20191129115530  cloud   A-Keuze                 Laan     93  -1.0   None   None   None   None   None
+20191129115530  cloud   A-Keuze                 Meijer   93  None   None   -2.0   -1.0   -1.0   None
+20191129115530  cloud   A-Keuze                 Wal      93  None   -1.0   None   None   None   None
+20191129115531  cloud   A-Keuze                 Berg     93  None   None   None   -2.0   None   None
+20191129115531  cloud   A-Keuze                 Janssen  93  None   None   -2.0   None   None   None
+20191129115531  cloud   A-Keuze                 Meijer   93  None   None   None   None   None   -2.0
+20191129115531  cloud   A-Keuze                 Wal      93  None   None   None   None   -2.0   None
+20191129115533  cloud   A-Keuze                 Meijer   93  None   None   -2.0   None   None   None
+20191129115533  cloud   A-Keuze                 Visser   93  -1.0   None   None   -1.0   None   None
+20191129115533  cloud   A-Keuze                 Vries    93  None   -2.0   None   None   None   None
+20191129115534  cloud   A-Keuze                 Dijk     93  -1.0   None   None   None   None   None
+20191129115534  cloud   A-Keuze                 Meijer   93  None   -1.0   None   None   None   None
+20191129115534  cloud   A-Keuze                 Vries    93  None   None   None   -2.0   -1.0   None
+20191129115534  cloud   A-Keuze                 Wal      93  None   None   -1.0   None   None   None
+20191129115535  cloud   A-Keuze                 Dijk     93  -1.0   None   None   None   None   None
+20191129115535  cloud   A-Keuze                 Janssen  93  None   None   -2.0   None   None   None
+20191129115535  cloud   A-Keuze                 Smit     93  None   -2.0   None   None   None   None
+20191129115535  cloud   A-Keuze                 Visser   93  None   None   None   -1.0   None   None
+20191129115536  cloud   A-Keuze                 Dijk     93  -1.0   None   None   None   None   None
+20191129115536  cloud   A-Keuze                 Meijer   93  None   None   None   None   -1.0   None
+20191129115536  cloud   A-Keuze                 Vries    93  None   -1.0   None   -1.0   None   None
+20191129115536  cloud   A-Keuze                 Wal      93  None   None   -2.0   None   None   None
+20191129115537  cloud   A-Keuze                 Janssen  93  None   None   None   -4.0   None   None
+20191129115537  cloud   A-Keuze                 Meijer   93  None   None   None   None   None   -4.0
+20191129115537  cloud   A-Keuze                 Smit     93  None   None   None   None   -4.0   None
+20191129115537  cloud   A-Keuze                 Visser   93  None   None   -4.0   None   None   None
+20191129115537  cloud   A-Keuze                 Wal      93  None   -4.0   None   None   None   None
+20191129115538  cloud   A-Keuze                 Bakker   93  None   None   None   -1.0   None   None
+20191129115538  cloud   A-Keuze                 Meijer   93  -1.0   None   None   None   None   None
+20191129115538  cloud   A-Keuze                 Visser   93  None   None   -2.0   None   None   None
+20191129115538  cloud   A-Keuze                 Vries    93  None   -1.0   None   None   -1.0   None
+20191129115540  cloud   A-Keuze                 Dijk     93  None   None   None   -2.0   None   None
+20191129115540  cloud   A-Keuze                 Janssen  93  None   None   -1.0   None   None   None
+20191129115540  cloud   A-Keuze                 Meijer   93  None   -1.0   None   None   None   None
+20191129115540  cloud   A-Keuze                 Wal      93  -1.0   None   None   None   -1.0   None
+20191129115541  cloud   A-Keuze                 Bakker   93  None   None   -2.0   None   None   None
+20191129115541  cloud   A-Keuze                 Berg     93  None   None   None   None   -1.0   None
+20191129115541  cloud   A-Keuze                 Janssen  93  None   None   None   -1.0   None   None
+20191129115541  cloud   A-Keuze                 Meijer   93  -1.0   None   None   None   None   None
+20191129115541  cloud   A-Keuze                 Vries    93  None   -1.0   None   None   None   None
+20191129115543  cloud   A-Keuze                 Laan     93  -1.0   None   None   None   None   None
+20191129115543  cloud   A-Keuze                 Meijer   93  None   None   None   None   -1.0   None
+20191129115543  cloud   A-Keuze                 Smit     93  None   None   -2.0   None   None   None
+20191129115543  cloud   A-Keuze                 Vries    93  None   -2.0   None   -2.0   None   None
+20191129115544  cloud   A-Keuze                 Bakker   93  -1.0   None   None   None   None   None
+20191129115544  cloud   A-Keuze                 Janssen  93  None   None   None   None   -1.0   None
+20191129115544  cloud   A-Keuze                 Meijer   93  None   None   None   None   None   -1.0
+20191129115544  cloud   A-Keuze                 Visser   93  None   None   -1.0   None   None   None
+20191129115544  cloud   A-Keuze                 Vries    93  None   None   None   -1.0   None   None
+20191129115544  cloud   A-Keuze                 Wal      93  None   -1.0   None   None   None   None
+20191129115546  cloud   A-Keuze                 Meijer   93  None   None   -2.0   None   None   None
+20191129115546  cloud   A-Keuze                 Visser   93  -1.0   None   None   -1.0   None   None
+20191129115546  cloud   A-Keuze                 Wal      93  None   -1.0   None   None   -1.0   None
+20191129115548  cloud   A-Keuze                 Dijk     93  None   None   None   None   -1.0   None
+20191129115548  cloud   A-Keuze                 Janssen  93  None   None   None   -2.0   None   None
+20191129115548  cloud   A-Keuze                 Meijer   93  None   -1.0   None   None   None   None
+20191129115548  cloud   A-Keuze                 Vries    93  None   None   -1.0   None   None   None
+20191129115548  cloud   A-Keuze                 Wal      93  -1.0   None   None   None   None   None
+20191129115549  cloud   A-Keuze                 Janssen  93  None   -1.0   -2.0   None   None   None
+20191129115549  cloud   A-Keuze                 Laan     93  None   None   None   -1.0   -1.0   None
+20191129115549  cloud   A-Keuze                 Smit     93  -1.0   None   None   None   None   None
+20191129115551  cloud   A-Keuze                 Meijer   93  None   -1.0   None   None   None   None
+20191129115551  cloud   A-Keuze                 Visser   93  -1.0   None   -1.0   None   -1.0   None
+20191129115551  cloud   A-Keuze                 Vries    93  None   None   None   -2.0   None   None
+20191129115552  cloud   A-Keuze                 Laan     93  None   -2.0   None   None   None   None
+20191129115552  cloud   A-Keuze                 Meijer   93  -2.0   None   -2.0   None   None   None
+20191129115552  cloud   A-Keuze                 Smit     93  None   None   None   None   -2.0   None
+20191129115552  cloud   A-Keuze                 Visser   93  None   None   None   None   None   -2.0
+20191129115552  cloud   A-Keuze                 Vries    93  None   None   None   -2.0   None   None
+20191129115554  cloud   A-Keuze                 Bakker   93  -1.0   None   None   None   None   None
+20191129115554  cloud   A-Keuze                 Laan     93  None   None   None   None   -1.0   None
+20191129115554  cloud   A-Keuze                 Meijer   93  None   None   -2.0   None   None   None
+20191129115554  cloud   A-Keuze                 Vries    93  None   -1.0   None   -1.0   None   None
+20191129115556  cloud   A-Keuze                 Bakker   93  -2.0   None   None   None   None   None
+20191129115556  cloud   A-Keuze                 Dijk     93  None   None   None   -4.0   -2.0   None
+20191129115556  cloud   A-Keuze                 Janssen  93  None   -3.0   None   None   None   None
+20191129115556  cloud   A-Keuze                 Meijer   93  None   None   -4.0   None   None   None
+20191129115559  cloud   A-Keuze                 Dijk     93  None   None   -1.0   None   None   None
+20191129115559  cloud   A-Keuze                 Laan     93  None   -1.0   None   None   None   -1.0
+20191129115559  cloud   A-Keuze                 Vries    93  None   None   None   -2.0   None   None
+20191129115559  cloud   A-Keuze                 Wal      93  None   None   None   None   -1.0   None
+20191129115600  cloud   A-Keuze                 Laan     93  None   None   None   None   -1.0   None
+20191129115600  cloud   A-Keuze                 Meijer   93  None   None   None   -1.0   None   None
+20191129115600  cloud   A-Keuze                 Smit     93  -1.0   None   None   None   None   None
+20191129115600  cloud   A-Keuze                 Vries    93  None   -1.0   None   None   None   None
+20191129115600  cloud   A-Keuze                 Wal      93  None   None   -2.0   None   None   None
+20191129115601  cloud   A-Keuze                 Berg     93  None   None   None   None   -1.0   None
+20191129115601  cloud   A-Keuze                 Janssen  93  -1.0   None   None   None   None   None
+20191129115601  cloud   A-Keuze                 Meijer   93  None   None   None   -1.0   None   None
+20191129115601  cloud   A-Keuze                 Visser   93  None   None   -2.0   None   None   None
+20191129115601  cloud   A-Keuze                 Vries    93  None   -1.0   None   None   None   None
+20191129115604  cloud   A-Keuze                 Berg     93  -1.0   None   None   None   None   None
+20191129115604  cloud   A-Keuze                 Laan     93  None   None   None   -1.0   None   -1.0
+20191129115604  cloud   A-Keuze                 Meijer   93  None   -1.0   -1.0   None   -1.0   None
+20191129115605  cloud   A-Keuze                 Bakker   93  None   None   None   -2.0   None   None
+20191129115605  cloud   A-Keuze                 Meijer   93  None   -1.0   None   None   None   None
+20191129115605  cloud   A-Keuze                 Visser   93  None   None   None   None   -1.0   None
+20191129115605  cloud   A-Keuze                 Vries    93  None   None   -2.0   None   None   None
+20191129115606  cloud   A-Keuze                 Berg     93  -1.0   None   None   None   None   None
+20191129115606  cloud   A-Keuze                 Meijer   93  None   -1.0   None   -2.0   -2.0   None
+20191129115606  cloud   A-Keuze                 Visser   93  None   None   -1.0   None   None   None
+20191129115606  cloud   A-Keuze                 Wal      93  None   None   None   None   None   -1.0
+20191129115607  cloud   A-Keuze                 Berg     93  None   None   None   -2.0   None   None
+20191129115607  cloud   A-Keuze                 Laan     93  -1.0   None   None   None   None   None
+20191129115607  cloud   A-Keuze                 Meijer   93  None   None   None   None   -1.0   None
+20191129115607  cloud   A-Keuze                 Wal      93  None   -1.0   -1.0   None   None   None
+20191129115608  cloud   A-Keuze                 Dijk     93  None   -1.0   None   None   None   None
+20191129115608  cloud   A-Keuze                 Janssen  93  None   None   None   None   None   -1.0
+20191129115608  cloud   A-Keuze                 Meijer   93  None   None   -2.0   -2.0   None   None
+20191129115608  cloud   A-Keuze                 Vries    93  None   None   None   None   -2.0   None
+20191129115610  cloud   A-Keuze                 Dijk     93  None   -1.0   None   None   None   -1.0
+20191129115610  cloud   A-Keuze                 Laan     93  None   None   -1.0   None   None   None
+20191129115610  cloud   A-Keuze                 Meijer   93  -1.0   None   None   -1.0   None   None
+20191129115610  cloud   A-Keuze                 Smit     93  None   None   None   None   -1.0   None
+20191129115612  cloud   A-Keuze                 Berg     93  None   None   None   None   -1.0   None
+20191129115612  cloud   A-Keuze                 Janssen  93  None   -1.0   None   None   None   None
+20191129115612  cloud   A-Keuze                 Smit     93  -1.0   None   None   None   None   None
+20191129115612  cloud   A-Keuze                 Visser   93  None   None   None   -1.0   None   None
+20191129115612  cloud   A-Keuze                 Wal      93  None   None   -2.0   None   None   None
+20191129115614  cloud   A-Keuze                 Berg     93  None   None   None   None   -1.0   None
+20191129115614  cloud   A-Keuze                 Janssen  93  -1.0   None   None   None   None   None
+20191129115614  cloud   A-Keuze                 Laan     93  None   -1.0   None   -2.0   None   None
+20191129115614  cloud   A-Keuze                 Meijer   93  None   None   -1.0   None   None   None
+20191129115616  cloud   A-Keuze                 Berg     93  -1.0   -1.0   None   None   None   None
+20191129115616  cloud   A-Keuze                 Janssen  93  None   None   -1.0   -1.0   None   None
+20191129115616  cloud   A-Keuze                 Meijer   93  None   None   None   None   -1.0   None
+20191129115616  cloud   A-Keuze                 Wal      93  None   None   None   None   None   -1.0
+20191129115618  cloud   A-Keuze                 Bakker   93  -1.0   None   None   None   None   None
+20191129115618  cloud   A-Keuze                 Berg     93  None   None   -3.0   None   None   None
+20191129115618  cloud   A-Keuze                 Meijer   93  None   -2.0   None   None   None   None
+20191129115618  cloud   A-Keuze                 Visser   93  None   None   None   -2.0   -1.0   None
+20191129115620  cloud   A-Keuze                 Bakker   93  None   None   None   -1.0   None   None
+20191129115620  cloud   A-Keuze                 Janssen  93  None   None   -1.0   None   None   -1.0
+20191129115620  cloud   A-Keuze                 Meijer   93  None   None   None   None   -1.0   None
+20191129115620  cloud   A-Keuze                 Smit     93  -1.0   None   None   None   None   None
+20191129115620  cloud   A-Keuze                 Vries    93  None   -1.0   None   None   None   None
+20191129115621  cloud   A-Keuze                 Laan     93  -2.0   -2.0   -2.0   None   None   None
+20191129115621  cloud   A-Keuze                 Meijer   93  None   None   None   -2.0   None   None
+20191129115621  cloud   A-Keuze                 Visser   93  None   None   None   None   -1.0   None
+20191129115622  cloud   A-Keuze                 Janssen  93  None   -1.0   None   None   None   None
+20191129115622  cloud   A-Keuze                 Meijer   93  None   None   -2.0   None   None   None
+20191129115622  cloud   A-Keuze                 Vries    93  None   None   None   -2.0   None   None
+20191129115622  cloud   A-Keuze                 Wal      93  None   None   None   None   -1.0   None
+20191129115625  cloud   A-Keuze                 Janssen  93  None   None   None   -2.0   -1.0   None
+20191129115625  cloud   A-Keuze                 Laan     93  None   -1.0   -1.0   None   None   None
+20191129115625  cloud   A-Keuze                 Smit     93  -1.0   None   None   None   None   None
+20191129115626  cloud   A-Keuze                 Dijk     93  None   -1.0   None   None   None   None
+20191129115626  cloud   A-Keuze                 Meijer   93  -2.0   None   None   None   None   None
+20191129115626  cloud   A-Keuze                 Visser   93  None   None   -2.0   None   None   None
+20191129115626  cloud   A-Keuze                 Vries    93  None   None   None   -1.0   None   None
+20191129115627  cloud   A-Keuze                 Berg     93  None   None   None   -1.0   None   None
+20191129115627  cloud   A-Keuze                 Janssen  93  -1.0   None   None   None   None   None
+20191129115627  cloud   A-Keuze                 Meijer   93  None   None   -2.0   None   None   None
+20191129115627  cloud   A-Keuze                 Wal      93  None   -2.0   None   None   None   None
+20191129115629  cloud   A-Keuze                 Janssen  93  None   None   None   None   None   -1.0
+20191129115629  cloud   A-Keuze                 Laan     93  None   None   -1.0   None   None   None
+20191129115629  cloud   A-Keuze                 Meijer   93  None   None   None   -2.0   -1.0   None
+20191129115629  cloud   A-Keuze                 Visser   93  None   -1.0   None   None   None   None
+20191129115630  cloud   A-Keuze                 Berg     93  -1.0   None   None   None   None   None
+20191129115630  cloud   A-Keuze                 Janssen  93  None   -2.0   -2.0   None   None   None
+20191129115630  cloud   A-Keuze                 Smit     93  None   None   None   -1.0   None   None
+20191129115631  cloud   A-Keuze                 Berg     93  None   None   None   None   None   -1.0
+20191129115631  cloud   A-Keuze                 Dijk     93  None   -1.0   None   None   None   None
+20191129115631  cloud   A-Keuze                 Janssen  93  None   None   -1.0   None   None   None
+20191129115631  cloud   A-Keuze                 Smit     93  None   None   None   None   -2.0   None
+20191129115631  cloud   A-Keuze                 Vries    93  None   None   None   -1.0   None   None
+20191129115632  cloud   A-Keuze                 Janssen  93  None   None   -2.0   None   None   None
+20191129115632  cloud   A-Keuze                 Laan     93  None   -1.0   None   None   None   None
+20191129115632  cloud   A-Keuze                 Meijer   93  None   None   None   -2.0   None   None
+20191129115632  cloud   A-Keuze                 Vries    93  None   None   None   None   -1.0   -1.0
+20191129115634  cloud   A-Keuze                 Bakker   93  -1.0   None   None   None   None   None
+20191129115634  cloud   A-Keuze                 Meijer   93  None   None   -1.0   -1.0   None   None
+20191129115634  cloud   A-Keuze                 Visser   93  None   None   None   None   -1.0   None
+20191129115634  cloud   A-Keuze                 Vries    93  None   -1.0   None   None   None   -1.0
+20191129115635  cloud   A-Keuze                 Berg     93  -1.0   -1.0   None   None   None   None
+20191129115635  cloud   A-Keuze                 Janssen  93  None   None   None   None   None   -1.0
+20191129115635  cloud   A-Keuze                 Meijer   93  None   None   None   -1.0   None   None
+20191129115635  cloud   A-Keuze                 Visser   93  None   None   -1.0   None   None   None
+20191129115635  cloud   A-Keuze                 Vries    93  None   None   None   None   -1.0   None
+20191129115636  cloud   A-Keuze                 Bakker   93  None   None   None   -2.0   None   None
+20191129115636  cloud   A-Keuze                 Dijk     93  None   None   None   None   -1.0   None
+20191129115636  cloud   A-Keuze                 Visser   93  None   None   -2.0   None   None   None
+20191129115636  cloud   A-Keuze                 Vries    93  None   -1.0   None   None   None   None
+20191129115637  cloud   A-Keuze                 Bakker   93  None   None   None   None   -1.0   None
+20191129115637  cloud   A-Keuze                 Janssen  93  None   None   None   -1.0   None   None
+20191129115637  cloud   A-Keuze                 Meijer   93  None   -1.0   None   None   None   None
+20191129115637  cloud   A-Keuze                 Visser   93  None   None   -2.0   None   None   None
+20191129115637  cloud   A-Keuze                 Vries    93  -1.0   None   None   None   None   None
+20191129115639  cloud   A-Keuze                 Janssen  93  None   None   -1.0   None   None   None
+20191129115639  cloud   A-Keuze                 Meijer   93  -1.0   -1.0   None   None   None   None
+20191129115639  cloud   A-Keuze                 Vries    93  None   None   None   None   -1.0   -1.0
+20191129115639  cloud   A-Keuze                 Wal      93  None   None   None   -1.0   None   None
+20191129115640  cloud   A-Keuze                 Bakker   93  -1.0   None   None   None   None   None
+20191129115640  cloud   A-Keuze                 Dijk     93  None   None   -2.0   None   None   None
+20191129115640  cloud   A-Keuze                 Meijer   93  None   None   None   -1.0   None   None
+20191129115640  cloud   A-Keuze                 Smit     93  None   -1.0   None   None   None   None
+20191129115640  cloud   A-Keuze                 Visser   93  None   None   None   None   -1.0   None
+20191129115641  cloud   A-Keuze                 Dijk     93  None   -1.0   None   None   None   None
+20191129115641  cloud   A-Keuze                 Janssen  93  None   None   None   -2.0   None   None
+20191129115641  cloud   A-Keuze                 Laan     93  None   None   -2.0   None   None   None
+20191129115641  cloud   A-Keuze                 Meijer   93  None   None   None   None   -1.0   None
+20191129115641  cloud   A-Keuze                 Wal      93  None   None   None   None   None   -1.0
+20191129115643  cloud   A-Keuze                 Janssen  93  None   -2.0   None   -1.0   None   None
+20191129115643  cloud   A-Keuze                 Vries    93  -1.0   None   None   None   None   None
+20191129115643  cloud   A-Keuze                 Wal      93  None   None   -2.0   None   None   None
+20191129115645  cloud   A-Keuze                 Janssen  93  None   -1.0   None   None   -1.0   None
+20191129115645  cloud   A-Keuze                 Meijer   93  None   None   -2.0   None   None   None
+20191129115645  cloud   A-Keuze                 Smit     93  None   None   None   -2.0   None   None
+20191129115647  cloud   A-Keuze                 Berg     93  None   None   -2.0   None   None   None
+20191129115647  cloud   A-Keuze                 Janssen  93  None   -1.0   None   None   None   None
+20191129115647  cloud   A-Keuze                 Meijer   93  None   None   None   None   -1.0   None
+20191129115647  cloud   A-Keuze                 Vries    93  -1.0   None   None   None   None   None
+20191129115647  cloud   A-Keuze                 Wal      93  None   None   None   -1.0   None   None
+20191129115649  cloud   A-Keuze                 Bakker   93  None   None   -2.0   None   None   None
+20191129115649  cloud   A-Keuze                 Berg     93  None   -1.0   None   None   None   None
+20191129115649  cloud   A-Keuze                 Dijk     93  None   None   None   None   -1.0   None
+20191129115649  cloud   A-Keuze                 Laan     93  None   None   None   -1.0   None   None
+20191129115649  cloud   A-Keuze                 Smit     93  -1.0   None   None   None   None   None
+20191129115650  cloud   A-Keuze                 Bakker   93  None   -2.0   None   None   None   None
+20191129115650  cloud   A-Keuze                 Dijk     93  None   None   -2.0   None   None   None
+20191129115650  cloud   A-Keuze                 Meijer   93  -1.0   None   None   None   None   None
+20191129115650  cloud   A-Keuze                 Vries    93  None   None   None   -1.0   None   None
+20191129120340  cloud   A-Keuze                 Berg     93  None   None   None   -6.0   None   None
+20191129120340  cloud   A-Keuze                 Dijk     93  None   None   -6.0   None   None   None
+20191129120340  cloud   A-Keuze                 Janssen  93  None   None   None   None   None   -3.0
+20191129120340  cloud   A-Keuze                 Vries    93  -3.0   None   None   None   -5.0   None
+20191129120340  cloud   A-Keuze                 Wal      93  None   -3.0   None   None   None   None
+20191129120341  cloud   A-Keuze                 Bakker   93  None   -3.0   None   None   None   None
+20191129120341  cloud   A-Keuze                 Janssen  93  None   None   None   None   -5.0   None
+20191129120341  cloud   A-Keuze                 Laan     93  -3.0   None   -6.0   None   None   None
+20191129120341  cloud   A-Keuze                 Meijer   93  None   None   None   -6.0   None   -3.0
+20191202091215  cloud   A-Keuze                 Visser   2   None   None   -1.0   None   None   None
+20191202091216  cloud   A-Keuze                 Laan     2   None   None   None   -1.0   None   None
+20191202091216  cloud   A-Keuze                 Vries    2   None   None   -1.0   None   -1.0   None
+20191203091252  cloud   A-Keuze                 Janssen  93  None   None   None   -2.0   None   None
+20191203091252  cloud   A-Keuze                 Smit     93  None   None   -2.0   None   None   None
+20191203091252  cloud   A-Keuze                 Visser   93  None   None   None   None   -1.0   None
+20191203091252  cloud   A-Keuze                 Wal      93  None   None   None   None   None   -1.0
+20191203091253  cloud   A-Keuze                 Dijk     93  None   -1.0   None   None   None   -1.0
+20191203091253  cloud   A-Keuze                 Janssen  93  -1.0   None   None   None   None   None
+20191203091253  cloud   A-Keuze                 Meijer   93  None   None   None   None   -1.0   None
+20191203091253  cloud   A-Keuze                 Visser   93  None   None   None   -1.0   None   None
+20191203091253  cloud   A-Keuze                 Vries    93  None   None   -1.0   None   None   None
+20191203091255  cloud   A-Keuze                 Dijk     93  None   -1.0   None   None   -1.0   -1.0
+20191203091255  cloud   A-Keuze                 Janssen  93  None   None   -1.0   None   None   None
+20191203091255  cloud   A-Keuze                 Meijer   93  -1.0   None   None   None   None   None
+20191203091255  cloud   A-Keuze                 Visser   93  None   None   None   -1.0   None   None
+20191203091257  cloud   A-Keuze                 Dijk     93  -1.0   None   None   None   None   None
+20191203091257  cloud   A-Keuze                 Laan     93  None   None   -1.0   -1.0   None   None
+20191203091257  cloud   A-Keuze                 Visser   93  None   -1.0   None   None   -1.0   -1.0
+20191203091258  cloud   A-Keuze                 Dijk     93  None   None   None   None   -1.0   None
+20191203091258  cloud   A-Keuze                 Janssen  93  None   None   None   None   None   -1.0
+20191203091258  cloud   A-Keuze                 Laan     93  None   None   None   -1.0   None   None
+20191203091258  cloud   A-Keuze                 Smit     93  -1.0   -1.0   None   None   None   None
+20191203091258  cloud   A-Keuze                 Visser   93  None   None   -1.0   None   None   None
+20191203115326  cloud   A-Keuze                 Visser   6   None   None   2.0    2.0    None   None
+20191203115326  cloud   A-Keuze                 Vries    6   None   None   None   None   1.0    1.0
+20191205084425  cloud   A-Keuze                 Vries    3   None   None   None   1.0    None   None
+20191205084425  cloud   Promese tussenmagazijn  Meijer   3   None   None   None   -1.0   None   None
+20191205084524  cloud   A-Keuze                 Wal      3   None   None   None   1.0    None   None
+20191205084524  cloud   Promese tussenmagazijn  Meijer   3   None   None   None   -1.0   None   None
+20191205084627  cloud   A-Keuze                 Vries    3   None   None   None   None   None   1.0
+20191205084627  cloud   Promese tussenmagazijn  Visser   3   None   None   None   None   None   -1.0
+20191205084701  cloud   A-Keuze                 Dijk     3   None   None   1.0    None   None   None
+20191205084701  cloud   Promese tussenmagazijn  Laan     3   None   None   -1.0   None   None   None
+20191205084753  cloud   A-Keuze                 Dijk     3   None   None   1.0    None   None   None
+20191205084753  cloud   Promese tussenmagazijn  Janssen  3   None   None   -1.0   None   None   None
+20191205084805  cloud   A-Keuze                 Laan     3   None   None   None   None   1.0    None
+20191205084805  cloud   Promese tussenmagazijn  Janssen  3   None   None   None   None   -1.0   None
+20191206133511  cloud   Promese tussenmagazijn  Bakker   6   None   None   1.0    None   None   None
+20191206133511  cloud   Promese tussenmagazijn  Berg     6   None   None   None   None   None   1.0
+20191206133511  cloud   Promese tussenmagazijn  Meijer   6   None   None   None   1.0    None   None
+20191206133511  cloud   Promese tussenmagazijn  Visser   6   None   1.0    None   None   None   None
+20191206133511  cloud   Promese tussenmagazijn  Vries    6   1.0    None   None   None   1.0    None
+20191206133555  cloud   Promese tussenmagazijn  Bakker   6   None   None   None   None   1.0    None
+20191206133555  cloud   Promese tussenmagazijn  Dijk     6   None   None   None   1.0    None   None
+20191206133555  cloud   Promese tussenmagazijn  Janssen  6   None   None   1.0    None   None   None
+20191206133555  cloud   Promese tussenmagazijn  Laan     6   None   1.0    None   None   None   None
+20191206133555  cloud   Promese tussenmagazijn  Vries    6   1.0    None   None   None   None   1.0
+20191206133630  cloud   Promese tussenmagazijn  Berg     6   None   1.0    None   None   None   None
+20191206133630  cloud   Promese tussenmagazijn  Meijer   6   1.0    None   1.0    1.0    None   1.0
+20191206133630  cloud   Promese tussenmagazijn  Wal      6   None   None   None   None   1.0    None
+20191206133719  cloud   TOFF kids               Dijk     6   None   None   None   1.0    None   None
+20191206133719  cloud   TOFF kids               Laan     6   None   1.0    None   None   None   None
+20191206133719  cloud   TOFF kids               Smit     6   1.0    None   None   None   None   None
+20191206133719  cloud   TOFF kids               Vries    6   None   None   None   None   1.0    1.0
+20191206133719  cloud   TOFF kids               Wal      6   None   None   1.0    None   None   None
+20191206140827  cloud   Promese tussenmagazijn  Berg     3   None   None   None   -3.0   None   None
+20191206140827  cloud   Promese tussenmagazijn  Janssen  3   -3.0   None   None   None   -3.0   None
+20191206140827  cloud   Promese tussenmagazijn  Laan     3   None   None   None   None   None   -3.0
+20191206140827  cloud   Promese tussenmagazijn  Meijer   3   None   None   -3.0   None   None   None
+20191206140827  cloud   Promese tussenmagazijn  Vries    3   None   -3.0   None   None   None   None
+20191206140827  cloud   TOFF kids               Bakker   3   3.0    None   None   None   None   None
+20191206140827  cloud   TOFF kids               Dijk     3   None   None   3.0    None   None   None
+20191206140827  cloud   TOFF kids               Meijer   3   None   3.0    None   None   None   None
+20191206140827  cloud   TOFF kids               Vries    3   None   None   None   3.0    3.0    3.0
+20191206152115  cloud   TOFF kids               Wal      2   None   None   -1.0   None   None   None
+20191210091459  cloud   Promese tussenmagazijn  Janssen  6   None   None   1.0    None   None   None
+20191210091459  cloud   Promese tussenmagazijn  Meijer   6   None   None   None   1.0    None   None
+20191211084430  cloud   A-Keuze                 Meijer   3   None   None   1.0    None   None   None
+20191211084430  cloud   Promese tussenmagazijn  Meijer   3   None   None   -1.0   None   None   None
+20191211084524  cloud   A-Keuze                 Wal      3   None   None   None   1.0    None   None
+20191211084524  cloud   Promese tussenmagazijn  Laan     3   None   None   None   -1.0   None   None
+20191211120308  cloud   A-Keuze                 Bakker   2   None   None   None   -1.0   None   None
+20191213102504  cloud   A-Keuze                 Wal      2   None   None   -1.0   None   None   None
+20191216104729  cloud   A-Keuze                 Vries    2   None   None   None   -1.0   None   None
+20191216104736  cloud   A-Keuze                 Janssen  2   None   None   None   -1.0   None   None
+20191216104736  cloud   A-Keuze                 Visser   2   None   None   None   None   -1.0   None
+20191217114013  cloud   A-Keuze                 Berg     2   None   None   None   -1.0   None   None
+20191217114013  cloud   A-Keuze                 Janssen  2   None   None   -3.0   None   None   None
+20191217114013  cloud   A-Keuze                 Laan     2   None   -1.0   None   None   -1.0   None
+20191217114022  cloud   A-Keuze                 Meijer   2   None   -1.0   -1.0   None   None   None
+20191217114022  cloud   A-Keuze                 Vries    2   None   None   None   -1.0   None   None
+20191220122425  cloud   A-Keuze                 Vries    3   None   None   None   None   1.0    None
+20191220122425  cloud   Promese tussenmagazijn  Visser   3   None   None   None   None   -1.0   None
+20191220122502  cloud   A-Keuze                 Vries    3   None   None   1.0    None   None   None
+20191220122502  cloud   Promese tussenmagazijn  Janssen  3   None   None   -1.0   None   None   None
+20191231083044  cloud   A-Keuze                 Janssen  2   -1.0   None   -1.0   None   None   None
+20191231083044  cloud   A-Keuze                 Wal      2   None   -1.0   None   None   None   None
+20191231083047  cloud   A-Keuze                 Bakker   2   None   None   None   -1.0   None   None

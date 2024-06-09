@@ -1,0 +1,350 @@
+{% extends "base_eos.jinja2" %}
+
+{% macro show_original(key) -%}
+    {% if document['final'][key] != document['original'][key] %}
+        {{ document['original'][key] | format_currency(currency, locale=locale) }}
+    {% endif %}
+{%- endmacro %}
+
+
+
+{% block logo_space %}
+    <img class="logo" src="{{ tenant_logo_url(request) }}"/>
+{% endblock %}
+
+{% block document_info %}
+    <h1 class="top">{{ _('end-of-shift') }}</h1>
+    <div> <i class="fas fa-calendar"></i>
+        {{ document['periodStart'] | format_datetime(locale=locale, tzinfo=tz) }} - {{ document['periodEnd'] | format_datetime(locale=locale, tzinfo=tz) }}
+    </div>
+    <div> <i class="fas fa-map-marker-alt"></i> {{ document['shop']['name'] }}</div>
+    <div> <i class="fas fa-desktop"></i> {{ document['device']['name'] }}</div>
+    <div> <i class="fas fa-user"></i> {{ document['cashier']['fullname'] }}</div>
+{% endblock %}
+
+{% block header_totals %}
+    <table class="table-summary">
+        <tbody>
+            <tr>
+                <td> {{ _('turnover') }}: </td>
+                <td> {{ document['turnover'] | format_currency(currency, locale=locale) }} </td>
+            </tr>
+            <tr>
+                <td> {{ _('consignment') }}: </td>
+                <td>
+                    {{ document['final']['consignment'] | format_currency(currency, locale=locale) }}
+                </td>
+            </tr>
+            {# VAT amounts will not show if they are 0. #}
+            {% if document.get('vat', {}).get('zeroAmount') %}
+                <tr>
+                    <td> {{ _('vat-zero') | change_case}}: </td>
+                    <td>
+                        {{ document['vat']['zeroAmount'] | format_currency(currency, locale=locale) }}
+                    </td>
+                </tr>
+            {% endif %}
+            {% if document.get('vat', {}).get('lowAmount') %}
+                <tr>
+                    <td> {{ _('vat-low') | change_case }}: </td>
+                    <td>
+                        {{ document['vat']['lowAmount'] | format_currency(currency, locale=locale) }}
+                    </td>
+                </tr>
+            {% endif %}
+            {% if document.get('vat', {}).get('highAmount') %}
+                <tr>
+                    <td> {{ _('vat-high') | change_case }}: </td>
+                    <td>
+                        {{ document['vat']['highAmount'] | format_currency(currency, locale=locale) }}
+                    </td>
+                </tr>
+            {% endif %}
+        </tbody>
+    </table>
+{% endblock %}
+
+{% block payments %}
+    {# The breakdown of the payments and coupons during a shift #}
+    <table class="table table-highlight">
+        <thead>
+            <tr>
+                <th style="width:50%">{{ _('payment-methods') }}</th>
+                {% if document.get('print_modified_headers', False) %}
+                    <th style="width:25%"> {{ _('original') }} </th>
+                    <th style="width:25%"> {{ _('modified') }} </th>
+                {% else %}
+                    <th style="width:25%"></th>
+                    <th style="width:25%"></th>
+                {% endif %}
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>
+                    {{ _('cash') }}
+                </td>
+                <td class="amounts"> {{ show_original('net_cash') }} </td>
+                <td class="amounts">
+                    {{ document['final']['net_cash'] | format_currency(currency, locale=locale) }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ _('credit-receipt-in') }}
+                </td>
+                <td class="amounts"> {{ show_original('creditreceiptin') }} </td>
+                <td class="amounts">
+                    {{ document['final']['creditreceiptin'] | format_currency(currency, locale=locale) }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ _('credit-receipt-out') }}
+                </td>
+                <td class="amounts"> {{ show_original('creditreceipt') }} </td>
+                <td class="amounts">
+                    {{ document['final']['creditreceipt'] | format_currency(currency, locale=locale) }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ _('coupon-in') }}
+                </td>
+                <td class="amounts"> {{ show_original('couponin') }} </td>
+                <td class="amounts">
+                    {{ document['final']['couponin'] | format_currency(currency, locale=locale) }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ _('coupon-out') }}
+                <td class="amounts"> {{ show_original('couponout') }} </td>
+                </td>
+                <td class="amounts">
+                    {{ document['final']['couponout'] | format_currency(currency, locale=locale) }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ _('store-credit') }}
+                </td>
+                <td class="amounts"> {{ show_original('storecredit') }} </td>
+                <td class="amounts">
+                    {{ document['final']['storecredit'] | format_currency(currency, locale=locale) }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ _('store-credit-paid') }}
+                </td>
+                <td class="amounts"> {{ show_original('storecreditin') }} </td>
+                <td class="amounts">
+                    {{ document['final']['storecreditin'] | format_currency(currency, locale=locale) }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ _('pin') }}
+                </td>
+                <td class="amounts"> {{ show_original('pin') }} </td>
+                <td class="amounts">
+                    {{ document['final']['pin'] | format_currency(currency, locale=locale) }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ _('credit-card') }}
+                </td>
+                <td class="amounts"> {{ show_original('creditcard') }} </td>
+                <td class="amounts">
+                    {{ document['final']['creditcard'] | format_currency(currency, locale=locale) }}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
+
+{% block totals %}
+    {# The important final totals for the shift #}
+    <table class="table table-highlight">
+        <thead>
+            <tr>
+                <th style="width:50%">{{ _('total') | title }}</th>
+                <th style="width:25%">&nbsp;</th>
+                <th style="width:25%">&nbsp;</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                {# The amount of money in the cash drawer at the start of the shift #}
+                <td>
+                    {{ _('opening-balance') }}
+                </td>
+                <td></td>
+                <td class="amounts">
+                    {{ document['openingBalance'] | format_currency(currency, locale=locale) }}
+                </td>
+            </tr>
+            <tr>
+                {# Amount of physical cash accepted from consumers #}
+                <td>
+                    {{ _('cash-in') }}
+                </td>
+                <td class="amounts"> {{ show_original('cash') }} </td>
+                <td class="amounts">
+                    {{ document['final']['cash'] | format_currency(currency, locale=locale) }}
+                </td>
+            </tr>
+            <tr>
+                {# Amount of change given to consumers #}
+                <td>
+                    {{ _('change') }}
+                </td>
+                <td class="amounts"> {{ show_original('change') }} </td>
+                <td class="amounts">
+                    {{ document['final']['change'] | format_currency(currency, locale=locale) }}
+                </td>
+            </tr>
+            <tr>
+                {# Cash deposited to the POS #}
+                <td>
+                    {{ _('deposit') }}
+                </td>
+                <td class="amounts"> {{ show_original('deposit') }} </td>
+                <td class="amounts">
+                    {{ document['final']['deposit'] | format_currency(currency, locale=locale) }}
+                </td>
+            </tr>
+            <tr>
+                {# Cash withdrawn from the POS #}
+                <td>
+                    {{ _('withdrawal') }}
+                </td>
+                <td class="amounts"> {{ show_original('withdrawel') }} </td>
+                <td class="amounts">
+                    {{ document['final']['withdrawel'] | format_currency(currency, locale=locale) }}
+                </td>
+            </tr>
+            <tr>
+                {# Deposit to the bank #}
+                <td>
+                    {{ _('deposit-to-bank') }}
+                </td>
+                <td></td>
+                <td class="amounts">
+                    {{ document['deposit'] | format_currency(currency, locale=locale) }}
+                </td>
+            </tr>
+            <tr>
+                {# The amount that is different from what the POS calculated vs what was actually in the cash drawer #}
+                <td>
+                    {{ _('difference') }}
+                </td>
+                <td></td>
+                <td class="amounts">
+                    {{ document['difference'] | format_currency(currency, locale=locale) }}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="table no-margin">
+        <tbody>
+            <tr>
+                {# The amount of money in the cash drawer at the start of the shift #}
+                <td>
+                    <strong>{{ _('end-balance') }}</strong>
+                </td>
+                <td class="amounts">
+                    <strong>{{ document['endBalance'] | format_currency(currency, locale=locale) }}</strong>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
+
+{% block cash_count %}
+    {% if document['totalCashInDrawer'] > 0 and document.get('cashInDrawer') %}
+        <table class="table table-highlight">
+            <thead>
+                <tr>
+                    <th colspan="2">{{ _('cash-plural') }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="vertical-align: top; width: 50%; padding-right: 3mm;"> <table class="cash-table">
+                        {% for key in [0.01, 0.02, 0.05, 0.1, 0.2, 0.5, 1, 2] %}
+                            <tr>
+                                <td style="padding-left:0;">
+                                    {{ key | format_currency(currency, locale=locale) }}
+                                </td>
+                                <td> x </td>
+                                <td> {{ document['cashInDrawer'][key] }} </td>
+                                <td>
+                                    {{ (key * document['cashInDrawer'][key])
+                                    | format_currency(currency, locale=locale) }}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </table> </td>
+                    <td style="vertical-align: top; padding-left: 3mm;"> <table class="cash-table">
+                        {% for key in [5, 10, 20, 50, 100, 200, 500] %}
+                            <tr>
+                                <td> {{ key | format_currency(currency, locale=locale) }} </td>
+                                <td> x </td>
+                                <td> {{ document['cashInDrawer'][key] }} </td>
+                                <td style="padding-right:0;">
+                                    {{ (key * document['cashInDrawer'][key])
+                                    | format_currency(currency, locale=locale) }}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </table> </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="table no-margin">
+            <tbody>
+                <tr>
+                    {# The amount of money in the cash drawer at the start of the shift #}
+                    <td>
+                        <strong>{{ _('total') | title }}</strong>
+                    </td>
+                    <td class="amounts">
+                        <strong>{{ document['totalCashInDrawer'] | format_currency(currency, locale=locale) }}</strong>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+
+    {% endif %}
+
+{% endblock %}
+
+{% block remarks %}
+
+    {% if document['remarks'] %}
+
+        <table class="table table-remarks">
+            <thead>
+                <tr>
+                    <th>{{ _('remarks') }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="white-space: pre-wrap;">{{ document['remarks'] }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+    {% endif %}
+
+{% endblock %}

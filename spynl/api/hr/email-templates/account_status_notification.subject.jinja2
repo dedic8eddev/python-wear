@@ -1,0 +1,9 @@
+{% if activated %}
+  {{
+    _('email-template-account-status-notification-subject-activated')
+  }}
+{% else %}
+  {{
+    _('email-template-account-status-notification-subject-deactivated')
+  }}
+{% endif %}

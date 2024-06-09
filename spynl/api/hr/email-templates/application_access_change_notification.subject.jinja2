@@ -1,0 +1,11 @@
+{% if was_given %}
+  {{
+    _("email-template-account-status-notification-access-granted-subject",
+    mapping={'tenant_name': tenant_name, 'application': application['name']})|safe
+  }}
+{% else %}
+  {{
+    _("email-template-account-status-notification-access-revoked-subject",
+    mapping={'tenant_name': tenant_name, 'application': application['name']})|safe
+  }}
+{% endif %}

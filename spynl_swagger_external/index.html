@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Softwear API Documentation</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css"
+    />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+  </head>
+  <body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="https://docs.dev.swcloud.nl/">
+          <img src="/images/SoftwearLogo.png" />
+        </a>
+      </div>
+    </nav>
+    <section class="hero is-medium is-primary is-bold">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            Retail Documentation
+          </h1>
+          <h2 class="subtitle">
+            Our retail API documentation is for connecting webshops to the
+            Softwear retail platform. This API provides stock, product, and
+            sales information.
+          </h2>
+          <a href="/retail/index.html" target="_blank" class="button is-info"
+            >Documentation</a
+          >
+        </div>
+      </div>
+    </section>
+    <section class="hero is-medium is-info is-bold">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            Wholesale Documentation
+          </h1>
+          <h2 class="subtitle">
+            Our wholesale API documentation is for interfacing with the Softwear
+            wholesale platform. This API provides interfaces with sales-orders,
+            stock, and product information for a wholesale environment.
+          </h2>
+          <a
+            href="/wholesale/index.html"
+            target="_blank"
+            class="button is-success"
+            >Documentation</a
+          >
+        </div>
+      </div>
+    </section>
+    <footer class="footer has-background-dark has-text-light">
+      <div class="content has-text-centered">
+        <p>
+          Copyright Softwear, BV. Documentation contained in this site is
+          confidential and protected under copyright laws of The Netherlands.
+        </p>
+      </div>
+    </footer>
+    <script>
+      window.intercomSettings = {
+        app_id: "hykd9kkf"
+      };
+    </script>
+
+    <script>
+      (function() {
+        var w = window;
+        var ic = w.Intercom;
+        if (typeof ic === "function") {
+          ic("reattach_activator");
+          ic("update", w.intercomSettings);
+        } else {
+          var d = document;
+          var i = function() {
+            i.c(arguments);
+          };
+          i.q = [];
+          i.c = function(args) {
+            i.q.push(args);
+          };
+          w.Intercom = i;
+          var l = function() {
+            var s = d.createElement("script");
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://widget.intercom.io/widget/hykd9kkf";
+            var x = d.getElementsByTagName("script")[0];
+            x.parentNode.insertBefore(s, x);
+          };
+          if (w.attachEvent) {
+            w.attachEvent("onload", l);
+          } else {
+            w.addEventListener("load", l, false);
+          }
+        }
+      })();
+    </script>
+  </body>
+</html>

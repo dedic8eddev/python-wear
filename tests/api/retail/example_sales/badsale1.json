@@ -1,0 +1,95 @@
+{
+    "shift": "10abbed58-81bd-497a-8efc-2b08bf369a3e",
+    "customer": null,
+    "totalDiscount": 0.0,
+    "type": 3,
+    "nr": "50-14-7919",
+    "device": "569bf0583209e90e021214d4",
+    "printed": "19-02-16 12:34",
+    "cashier": {
+        "id": "fl.0051.08@softwear.nu",
+        "fullname": "Rita"
+    },
+    "loyaltyPoints": 0,
+    "buffer_id": "buffer_272adb3e-e937-4f3a-b485-5776bc90b20e",
+    "receiptNr": 7919.0,
+    "receipt": [
+        {
+            "sizeLabel": "ONE",
+            "qty": 1,
+            "rfid": null,
+            "color": "Grijs",
+            "category": "barcode",
+            "vat": 21.0,
+            "reason": {
+                "key": "1",
+                "desc": "01: Opruiming"
+            },
+            "group": "01811",
+            "barcode": "010051059964",
+            "articleCode": "XZH003",
+            "articleDescription": "DOEK UNI",
+            "changeDisc": true,
+            "nettPrice": 39.95,
+            "price": 11.980000000000004
+        },
+        {
+            "sizeLabel": "-",
+            "qty": 1,
+            "rfid": null,
+            "color": "Grijs",
+            "category": "barcode",
+            "vat": 21.0,
+            "reason": {
+                "key": "1",
+                "desc": "01: Opruiming"
+            },
+            "group": "01811",
+            "barcode": "010051059404",
+            "articleCode": "5256",
+            "articleDescription": "SJAAL",
+            "changeDisc": true,
+            "nettPrice": 19.95,
+            "price": 5.979999999999999
+        }
+    ],
+    "remark": "",
+    "payments": {
+        "cash": 0.0,
+        "consignment": 0.0,
+        "pin": 17.96,
+        "withdrawel": 0.0,
+        "storecredit": 0.0,
+        "creditreceipt": 0.0,
+        "couponin": 0.0,
+        "creditcard": 0.0
+    },
+    "shop": {
+        "id": "50",
+        "houseno": "",
+        "zipcode": "8102 CN",
+        "street": "Herenstraat 9",
+        "name": "Embrace",
+        "city": "Raalte",
+        "phone": "0572-351276"
+    },
+    "totalAmount": 17.96,
+    "totalStoreCreditPaid": 0.0,
+    "totalNumber": 2.0,
+    "totalPaid": 17.96,
+    "totalCoupon": 0.0,
+    "totalDiscountCoupon": 0.0,
+    "vat": {
+        "zerovalue": 0.0,
+        "zerototal": 0.0,
+        "zeroamount": 0.0,
+        "lowvalue": 6.0,
+        "lowtotal": 0.0,
+        "lowamount": 0.0,
+        "highvalue": 21.0,
+        "hightotal": 17.96,
+        "highamount": 3.12
+    },
+    "difference": 0,
+    "change": 0.0
+}

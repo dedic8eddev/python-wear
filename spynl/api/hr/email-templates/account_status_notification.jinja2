@@ -1,0 +1,29 @@
+{% extends "base.jinja2" %}
+{% import 'macros.jinja2' as macros %}
+
+{% set softwear_logo = True %}
+
+{% if activated %}
+  {% set _status = _('email-template-account-status-notification-activated') %}
+{% else %}
+  {% set _status = _('email-template-account-status-notification-deactivated') %}
+{% endif %}
+
+{% block content %}
+  {{ macros.greeting(user_fullname) }}
+  <p>
+    {{
+      _('email-template-account-status-notification',
+      mapping={'user_username': user_username, 'status': _status})
+    }}
+  </p>
+  {% if not activated %}
+    <p>
+      {{
+        _('email-template-if-you-have-questions',
+        mapping={'link': macros.contact('link')})|safe
+      }}
+    </p>
+  {% endif %}
+  {{ macros.regards() }}
+{% endblock %}

@@ -1,0 +1,1343 @@
+# English translations for spynl.main.
+# Copyright (C) 2018 "Softwear BV"
+# This file is distributed under the same license as the spynl.main project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: spynl.main 6.1.9\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2022-02-15 09:27+0100\n"
+"PO-Revision-Date: 2018-08-10 19:16-0400\n"
+"Last-Translator: \n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+msgid "pos-app-name"
+msgstr "Point of Sale"
+
+msgid "pos-app-description"
+msgstr "Die von Händlern zur Verfolgung von Verkaufstransaktionen genutzte „Point of Sale (POS)“-Anwendung."
+
+msgid "email-receipt-option-name"
+msgstr "Verkaufsbeleg per E-Mail"
+
+msgid "email-receipt-option-description"
+msgstr "Aktivieren Sie einen POS-Account, um einem Konsumenten zum Zeitpunkt des Verkaufs per E-Mail einen Verkaufsbeleg zu senden."
+
+msgid "integrated-payment-solution-option-name"
+msgstr "Integrierte Zahlungslösung."
+
+msgid "integrated-payment-solution-option-description"
+msgstr "Ermöglicht es einem Nutzer ein Zahlungsterminal mit dem POS-System zu verbinden, damit es die Zahlungsdaten automatisch an das elektronische Zahlungsterminal sendet."
+
+msgid "dashboard-app-name"
+msgstr "Dashboard"
+
+msgid "dashboard-app-description"
+msgstr "Bei dem Dashboard handelt es sich um eine Anwendung zur Anzeige von Verkaufsdaten wie z. B. nach Standort und Marke geordnete Gewinne und verkaufte Artikel."
+
+msgid "account-app-name"
+msgstr "Mein Account"
+
+msgid "account-app-description"
+msgstr "Die „Mein Account“-Anwendung gibt Account-Administratoren Funktionen an die Hand, die sie eigenständig ausführen können. Dazu zählen z. B. die Hinzufügung von Nutzern zu dem Account und die Aufsicht über den Account-Zugang."
+
+msgid "photos-app-name"
+msgstr "Fotos"
+
+msgid "photos-app-description"
+msgstr "Die Foto-App kann dazu verwendet werden, um alle Ihre Produktfotos zu verwalten und hochzuladen."
+
+msgid "products-app-name"
+msgstr "Latest Collection"
+
+msgid "products-app-description"
+msgstr "Die Produktmanagement-Anwendung ermöglicht Einzel- und Großhändlern die Verwaltung von Produktkatalog, Inventar und Lagerbestand."
+
+msgid "purchase-app-name"
+msgstr "Einkaufen"
+
+msgid "purchase-app-description"
+msgstr "Einkauf Management"
+
+msgid "crm-app-name"
+msgstr "Kundenbeziehungsmanagement"
+
+msgid "crm-app-description"
+msgstr "Die Anwendung zum Kundenbeziehungsmanagement gestattet es den Nutzern, die Beziehungen mit ihren Kunden und Zulieferern zu verwalten."
+
+msgid "secondscreen-app-name"
+msgstr "Play für POS"
+
+msgid "secondscreen-app-description"
+msgstr "Diese Anwendung bietet einen auf den Konsumenten ausgerichteten Bildschirm, auf dem Marketingfotos und optionale Ansichten von Verkaufsbelegen angezeigt werden. POS-Kunden können die Play-Anwendung kostenlos nutzen, allerdings haben die Kunden auch die Möglichkeit, sich für eine zahlungspflichtige Version zu entscheiden."
+
+msgid "customer-entry-option-name"
+msgstr "Konsumenten-Anmeldung"
+
+msgid "customer-entry-option-description"
+msgstr "Diese in der Play-Anwendung vorhandene Option gestattet es Konsumenten, sich für den Erhalt von Neuigkeiten und Belohnungen anzumelden, während sie sich am POS befinden."
+
+msgid "custom-playlist-option-name"
+msgstr "Playlist anpassen"
+
+msgid "custom-playlist-option-description"
+msgstr "Mit dieser Option können Nutzer der Play-Anwendung Kunden-Content hinzufügen."
+
+msgid "inventory-app-name"
+msgstr "Bestandsverwaltung"
+
+msgid "inventory-app-description"
+msgstr "Mit der Bestandsanwendung hat der Nutzer die Möglichkeit, eine Inventur durchzuführen und seine Produktbestände zu erfassen."
+
+msgid "webshop-app-name"
+msgstr "B2B-Webshop"
+
+msgid "webshop-app-description"
+msgstr "Die B2B-Webshop-Anwendung gestattet es Großhandelskunden, Produkte für den Großeinkauf durch Einzelhändler zu hosten."
+
+msgid "sales-app-name"
+msgstr "Vertriebsanwendung"
+
+msgid "sales-app-description"
+msgstr "Vertriebsanwendung"
+
+msgid "logistics-app-name"
+msgstr "Logistik"
+
+msgid "logistics-app-description"
+msgstr "Logistik besteht aus einer Reihe von Anwendungen zur Handhabung von Bestand und Eingang."
+
+msgid "picking-app-name"
+msgstr "Kommissionierung"
+
+msgid "picking-app-description"
+msgstr "Antrag auf papierlose Kommissionierung."
+
+msgid "admin-app-description"
+msgstr "Admin-Anwendung."
+
+msgid "ecwid_link-app-name"
+msgstr "Webshop"
+
+msgid "ecwid_link-app-description"
+msgstr "Ihr Webshop."
+
+msgid "foxpro_backoffice-app-name"
+msgstr "Backoffice"
+
+msgid "foxpro_backoffice-app-description"
+msgstr "Softwear Backoffice."
+
+msgid "hardwearshop-app-name"
+msgstr "Hardwear Shop"
+
+msgid "hardwearshop-app-description"
+msgstr ""
+
+msgid "lc-demo-app-name"
+msgstr "Latest Collection Demo"
+
+msgid "lc-demo-app-description"
+msgstr ""
+
+msgid "pos-device-description"
+msgstr "POS-Gerät"
+
+msgid "account-admin-description"
+msgstr "„Mein Account“-Administrator"
+
+msgid "dashboard-user-description"
+msgstr "Kann das Dashboard sehen"
+
+msgid "dashboard-report-user-description"
+msgstr "The dashboard report_user is the user who is allowed to view the advanced reporting features of the dashboard. This is usually the owner or an administrative power user of the company."
+
+msgid "products-admin-description"
+msgstr "Produkte Administrator"
+
+msgid "products-admin-user"
+msgstr "Administrator"
+
+msgid "purchase-admin-description"
+msgstr "Administrator"
+
+msgid "purchase-admin-user"
+msgstr "Administrator kaufen"
+
+msgid "secondscreen-user-description"
+msgstr "Kann die kostenpflichtigen Funktionen der Play-Anwendung benutzen. Diese Rolle würde ein Nutzer-Account, der speziell für Endverbraucheranmeldungen verwendet wird, erhalten."
+
+msgid "secondscreen-admin-description"
+msgstr "Kann Änderungen an den Einstellungen der Play-Anwendung vornehmen."
+
+msgid "inventory-user-description"
+msgstr "Kann zur Bestandsaufnahme Softwear 6 verwenden."
+
+msgid "sales-user-description"
+msgstr "Rolle für einen Nutzer der Vertriebsanwendung."
+
+msgid "sales-admin-description"
+msgstr "Rolle für einen Admin der Vertriebsanwendung."
+
+msgid "logistics-inventory-user-description"
+msgstr "Rolle für einen Nutzer der Bestandsanwendung."
+
+msgid "logistics-receivings-user-description"
+msgstr "Rolle für einen Nutzer des in der Logistik-Anwendung vorhandenen Bereichs ‚Eingang‘."
+
+msgid "picking-user-description"
+msgstr "Rolle für einen Benutzer der Kommissionier-App."
+
+msgid "picking-admin-description"
+msgstr "Rolle für einen Administrator der Kommissionier-App."
+
+msgid "owner-description"
+msgstr "Diese Rolle wird während der Autorisierung dynamisch hinzugefügt, wenn der Nutzer auf der Liste der Mandanten mit Inhaberrechten steht. Die Mandantenrollen des Nutzers werden nicht um diese Rolle erweitert."
+
+msgid "sw-account_manager-description"
+msgstr "Rolle für einen Softwear-Mitarbeiter, der zur Account-Bereitstellung berechtigt ist."
+
+msgid "sw-admin-description"
+msgstr "Rolle für einen Softwear-Mitarbeiter mit höchstem Servicedesk-Zugang. Dieser Nutzer kann z. B. einem Mandanten Inhaberrechte verleihen."
+
+msgid "sw-consultant-description"
+msgstr "Eine Rolle für Berater."
+
+msgid "sw-developer-description"
+msgstr "Eine Rolle für Software-Ingenieure"
+
+msgid "spynl-developer-description"
+msgstr "Diese Rolle ist für die ‚Über‘-Ressource erforderlich. Die ‚Über‘-Ressource wird in spynl.main definiert, was Softwear-unabhängig ist. Wir weisen Nutzern, die bereits die SW-Entwickler-Rolle besitzen, diese Rolle automatisch in get_tenant_roles zu."
+
+msgid "sw-finance-description"
+msgstr "Eine Rolle für Mitarbeiter des Finanzwesens"
+
+msgid "sw-servicedesk-description"
+msgstr "Rolle für einen Softwear-Servicedesk-Mitarbeiter. Diese Rolle verfügt über weniger Zugang als die SW-Admin-Rolle, welche für höherstehende Servicedesk-Mitarbeiter vorgesehen ist."
+
+msgid "sw-reporting_admin-description"
+msgstr "Softwear-Mitarbeiter, Admin für Berichtsanwendung."
+
+msgid "sw-marketing-description"
+msgstr "Softwear-Marketing-Mitarbeiter; kann vom Kontaktformular aus Nachrichten beantworten."
+
+msgid "sww-api-description"
+msgstr "Rolle für den API-Nutzer von Softwear-Synchronisierungsverfahren"
+
+msgid "webshop-admin-description"
+msgstr "Administrator für den Webshop."
+
+msgid "password-does-not-meet-requirements-already-used"
+msgstr "Sie haben dieses Passwort bereits zuvor benutzt. Passwörter sollten nicht wiederverwendet werden."
+
+msgid "auth-pre-flight-requests-allowed"
+msgstr "OPTIONEN (Pre-Flight-)Anfragen sind erlaubt."
+
+msgid "auth-anonymous-access"
+msgstr "Anonymer Zugang auf diese Ressource ist nicht gestattet."
+
+msgid "auth-authenticated-allowed"
+msgstr "Authentifizierte Nutzer können auf diese Ressource zugreifen."
+
+msgid "auth-tenant-not-allowed-for-user"
+msgstr "Sie haben zu diesem Account keinen Zugang. Bitte sprechen Sie mit Ihrem Account-Administrator, um Zugriff zu beantragen."
+
+msgid "auth-no-active-tenant"
+msgstr "Der derzeitige Account (${tenant}) ist nicht aktiv."
+
+msgid "auth-not-a-b2b-context"
+msgstr "Sie können auf diesen Endpunkt für gemeinschaftliche Daten nicht zugreifen."
+
+msgid "auth-requested-tenant-not-active"
+msgstr "Der aufgerufene Account (${tenant}) ist nicht aktiv."
+
+msgid "auth-requested-tenant-no-access"
+msgstr "Sie haben keinen Zugang zu den gemeinschaftlichen Daten von Account ${tenant}."
+
+msgid "auth-do-not-change-master-tenant"
+msgstr "Sie sind nicht dazu berechtigt, diese Ressource für den Hauptmandanten zu ändern."
+
+msgid "not-allowed-public-doc-edit"
+msgstr "Keine Mandanten-ID: keine Berechtigung zur Arbeit an öffentlichen Dokumenten."
+
+msgid "not-allowed-edit-tenant-id"
+msgstr "Eine Änderung der Mandanten-ID ist nicht gestattet."
+
+msgid "missing-tenant-id"
+msgstr "Für den Zugriff auf diese Ressource ist die Einstellung einer Mandanten-ID erforderlich."
+
+msgid "wrong-credentials"
+msgstr "Nutzername oder Passwort ist falsch."
+
+msgid "expired-credentials"
+msgstr "Zwischen dem Protokollieren und der Eingabe Ihres Codes verging zu viel Zeit. Bitte loggen Sie sich erneut ein."
+
+msgid "user-not-active"
+msgstr "Ihr Nutzer-Account '${user}' wurde deaktiviert. Bitte setzen Sie sich zu dessen Reaktivierung mit unserem Servicedesk in Verbindung."
+
+msgid "tenant-does-not-exist"
+msgstr "Der Account '${tenant}' ließ sich nicht finden."
+
+msgid "forbidden-tenant"
+msgstr "Sie verfügen über keinen Zugang zu diesem Account. Bitte sprechen Sie mit Ihrem Account-Administrator für eine Zugangsbeantragung."
+
+msgid "tenant-not-active"
+msgstr "Der Account '${tenant}' ist nicht aktiv."
+
+msgid "no-active-tenant-found"
+msgstr "Ihr Nutzer verfügt derzeit über keinen Zugang zu aktiven Konten. Bitte setzten Sie sich mit dem Vertrieb oder Support für eine Zugangsbeantragung in Verbindung."
+
+msgid "cannot-retrieve-user"
+msgstr "Der gewünschte Nutzer lässt sich nicht finden."
+
+msgid "unrecognise-hash-type"
+msgstr "Ungültige Nutzersicherheitsdaten."
+
+msgid "password-does-not-meet-requirements"
+msgstr "Das Passwort entspricht nicht unseren Anforderungen."
+
+msgid "invalid-jwt-token"
+msgstr "Ungültiges Zwei-Faktor-Authentifizierungs-Token Bitte melden Sie sich erneut an und wenden Sie sich an Softwear, falls das Problem weiterhin besteht."
+
+msgid "invalid-session"
+msgstr "Nicht authentifiziert"
+
+msgid "old-style-session"
+msgstr ""
+
+msgid "no-tenant-id-in-filter"
+msgstr "Der tenant_id-Parameter darf nicht Null sein. Bitte prüfen Sie Ihre Anfrage und versuchen Sie es erneut."
+
+msgid "no-search-by-tenant-id"
+msgstr "Die Suche nach tenant_id ist nicht gestattet. Bitte entfernen Sie dies aus Ihrer Anfrage und versuchen Sie es erneut."
+
+msgid "tenant-id-not-string"
+msgstr "Der angegebene tenant_id-Parameter muss vom Typ <String> sein, gehört aber stattdessen zum Typ <${type}>. Bitte prüfen Sie Ihre Anfrage und versuchen Sie es erneut."
+
+msgid "tenant-id-null"
+msgstr "Der genannte tenant_id-Parameter ist leer. Bitte stellen Sie den zutreffenden tenant_id-Parameter zur Verfügung."
+
+msgid "no-foxpro-url"
+msgstr "Plugin-Konfigurationsfehler: Keine Foxpro-URL in Einstellungen."
+
+msgid "default-token-error"
+msgstr "Leider gab es in Zusammenhang mit Ihrer Anfrage ein Problem. Sollte es fortbestehen, setzen Sie sich bitte mit unserem Support-Team in Verbindung. Für die dadurch entstandenen Unannehmlichkeiten bitten wir um Entschuldigung."
+
+msgid "illegal-filter"
+msgstr "Ihr Nutzer-Account hat keinen Zugriff auf die aufgerufenen Daten."
+
+msgid "password-does-not-meet-requirements-min-length"
+msgstr "Das Passwort muss mindestens ${min_length} Zeichen enthalten."
+
+msgid "password-does-not-meet-requirements-max-length"
+msgstr "Das Passwort darf nicht mehr als ${max_length} Zeichen enthalten."
+
+msgid "email-template-account-status-notification-activated"
+msgstr "aktiviert"
+
+msgid "email-template-account-status-notification-deactivated"
+msgstr "deaktiviert"
+
+msgid "email-template-account-status-notification"
+msgstr "Der Account ${user_username} wurde ${status}."
+
+msgid "email-template-if-you-have-questions"
+msgstr "Sollten Sie diesbezüglich Fragen haben, setzen Sie sich bitte mit unserem Support-Team in Verbindung. Gehen Sie dazu auf unsere Support-Seite: ${link}."
+
+msgid "email-template-account-status-notification-subject-activated"
+msgstr "aktiviert"
+
+msgid "email-template-account-status-notification-subject-deactivated"
+msgstr "deaktiviert"
+
+msgid "email-template-app-access-change-notification-granted-1"
+msgstr "Hiermit informieren wir Sie darüber, dass der Account ${tenant_name} Zugriff auf die Anwendung '${application}‘ erhalten hat."
+
+msgid "email-template-app-access-change-notification-granted-2"
+msgstr "Sie können diese Anwendung jetzt vom „Softwear Connect“-Hauptmenü (${link_1}) auswählen."
+
+msgid "email-template-app-access-change-notification-revoked-1"
+msgstr "Hiermit informieren wir Sie darüber, dass der Account ${tenant_name} keinen Zugriff mehr auf die Anwendung '${application}‘ hat."
+
+msgid "email-template-account-status-notification-access-granted-subject"
+msgstr "Mandant ${tenant_name} hat jetzt Zugriff auf die Anwendung ${application}"
+
+msgid "email-template-account-status-notification-access-revoked-subject"
+msgstr "Mandant ${tenant_name} hat keinen Zugriff mehr auf die Anwendung ${application}."
+
+msgid "email-template-change-confirmation-1"
+msgstr "Diese Nachricht wurde versandt, um die gerade erfolgte Änderung der E-Mail-Adresse des Nutzers ${user_username} zu ${new_email_address} zu bestätigen. Sie können unsere Anwendung weiterhin wie üblich benutzen."
+
+msgid "email-template-change-confirmation-2"
+msgstr "Bitte verifizieren Sie Ihre E-Mail-Adresse, indem Sie dazu die nachfolgende Schaltfläche anklicken."
+
+msgid "email-template-change-confirmation-button"
+msgstr "Bestätigen Sie die E-Mail-Adresse"
+
+msgid "email-template-change-confirmation-subject"
+msgstr "Bestätigung der E-Mail-Adressenänderung"
+
+msgid "email-template-change-confirmation-resend-subject"
+msgstr "Bitte bestätigen Sie Ihre E-Mail-Adresse"
+
+msgid "email-template-removal-notification-1"
+msgstr "Diese E-Mail-Adresse ist nicht mehr mit dem Nutzer-Account ${user_username} verbunden. Alle E-Mails – wie z. B. Anfragen zur Passwortrücksetzung – werden dem/n Inhaber(n) des Firmen-Accounts ${tenant_name} zugesandt."
+
+msgid "email-template-change-notification-1"
+msgstr "Die E-Mail-Adresse für Nutzer ${user_username} wurde gerade geändert. Die neue lautet ${new_email_address}."
+
+msgid "email-template-change-notification-2"
+msgstr "Sollten Sie darüber nicht informiert sein und vermuten, dass diese E-Mail-Adressenänderung von einer nicht autorisierten Person vorgenommen wurde, setzen Sie sich bitte umgehend mit unserem Kundensupport unter ${contact} in Verbindung."
+
+msgid "email-template-removal-notification-subject"
+msgstr "Diese E-Mail-Adresse ist nicht mehr mit dem Nutzer-Account ${user_username} verbunden."
+
+msgid "email-template-change-notification-subject"
+msgstr "Benachrichtigung zur Änderung der E-Mail-Adresse"
+
+msgid "email-template-removal-owners-notification-1"
+msgstr "Die E-Mail-Adresse ${removed_email} ist nicht mehr mit dem Nutzer-Account ${user_username} verbunden. Alle E-Mails – wie z. B. Anfragen zur Passwortrücksetzung – werden Ihnen als Inhaber des Firmen-Accounts ${tenant_name} zugesandt."
+
+msgid "email-template-removal-owners-notification-2"
+msgstr "Ihre Mitinhaber erhalten ebenfalls diese Nachricht."
+
+msgid "email-template-removal-owner-notification-subject"
+msgstr "Die mit dem Nutzer-Account ${user_username} verbundene E-Mail-Adresse wurde entfernt."
+
+msgid "email-template-invitation-to-connect"
+msgstr "Zur Annahme der Einladung klicken Sie bitte auf die nachfolgende Schaltfläche:"
+
+msgid "email-template-invitation-to-connect-button"
+msgstr "Verbindung akzeptieren"
+
+msgid "email-template-invitation-to-connect-subject"
+msgstr "${user} hat Ihnen eine Einladung gesandt, um sich mit Ihnen zu verbinden."
+
+msgid "email-greeting"
+msgstr "Hallo ${user_greeting},"
+
+msgid "With kind regards,"
+msgstr "Mit freundlichen Grüßen"
+
+msgid "The Softwear Team"
+msgstr "Das Softwear-Team"
+
+msgid "email-template-ownership-notification-ownership-given"
+msgstr "Hiermit informieren wir Sie darüber, dass der Nutzer-Account ${user_username} jetzt über Inhaberrechte für den Account ${tenant}‘ verfügt."
+
+msgid "email-template-ownership-notification-revoked-ownership"
+msgstr "Hiermit informieren wir Sie darüber, dass der Nutzer-Account ${user_username} keine Inhaberrechte für den Account '${tenant}‘ mehr besitzt."
+
+msgid "email-template-ownership-notification-given-subject"
+msgstr "Nutzer ${user_username} ist jetzt Inhaber von ${tenant}."
+
+msgid "email-template-ownership-notification-revoked-subject"
+msgstr "Nutzer ${user_username} ist nicht mehr Inhaber von ${tenant}."
+
+msgid "email-template-password-change-notification-1"
+msgstr "Hiermit informieren wir Sie darüber, dass das Passwort für Nutzer (${user_username}) auf Softwear Connect geändert wurde."
+
+msgid "email-template-password-change-notification-2"
+msgstr "Sollten Sie den Verdacht haben, dass die Passwortänderung von einer nicht autorisierten Person vorgenommen wurde, setzen Sie sich bitte umgehend mit unserem Kundensupport in Verbindung."
+
+msgid "email-template-password-change-notification-subject"
+msgstr "Benachrichtigung über eine Passwortänderung"
+
+msgid "email-template-password-first-reset-heading"
+msgstr "Willkommen bei Softwear Connect"
+
+msgid "email-template-password-first-reset-1"
+msgstr "Vielen Dank für die Erstellung eines „Softwear Connect“-Accounts."
+
+msgid "email-template-password-first-reset-2"
+msgstr "Um von den Account-Vorteilen sofort zu profitieren, muss eine Aktivierung des neuen Nutzers erfolgen. Klicken Sie dazu bitte auf die nachfolgende Schaltfläche und richten Sie Ihr Passwort ein."
+
+msgid "email-template-password-first-reset-3"
+msgstr "Willkommen in der Community von Softwear Connect!"
+
+msgid "email-template-password-first-button"
+msgstr "Account aktivieren"
+
+msgid "email-template-password-reset-1"
+msgstr "Sie haben eine Passwortrücksetzung für den Account ${username} erbeten. Zur Einstellung eines neuen Passworts klicken Sie bitte auf die nachfolgende Schaltfläche."
+
+msgid "email-template-password-reset-button"
+msgstr "Passwort ändern"
+
+msgid "email-template-password-reset-2"
+msgstr "Sollten Sie nicht versucht haben, Ihr Passwort zurückzusetzen, ignorieren Sie einfach diese E-Mail. Wir sorgen dafür, dass Ihr Account auch weiterhin sicher bleibt."
+
+msgid "email-template-password-first-reset-subject"
+msgstr "Willkommen bei Softwear Connect"
+
+msgid "email-template-passoword-not-first-reset-subject"
+msgstr "Bitte um Passwortrücksetzung"
+
+msgid "email-template-username-change-notification-1"
+msgstr "Hiermit benachrichtigen wir Sie darüber, dass Ihr Nutzername von ${old_username} zu ${new_username} geändert wurde."
+
+msgid "email-template-username-change-notification-2"
+msgstr "Sollten Sie den Verdacht haben, dass die Änderung des Nutzernamens von einer nicht autorisierten Person vorgenommen wurde, setzen Sie sich bitte umgehend mit unserem Kundensupport in Verbindung."
+
+msgid "username-change-notification-subject"
+msgstr "Ihr Nutzername wurde geändert zu ${new_username}"
+
+msgid "existing-user-by-username"
+msgstr "Der Nutzername '${username}' wird bereits verwendet. Bitte wählen Sie einen anderen."
+
+msgid "existing-user-by-email"
+msgstr "Die E-Mail-Adresse '${email}' dient bereits einem anderen Account."
+
+msgid "user-does-not-exist"
+msgstr "Der Nutzer '${user}' existiert nicht."
+
+msgid "customer-already-exists"
+msgstr "Dieser Kunde existiert bereits."
+
+msgid "user-should-have-email"
+msgstr "Der Nutzer-Account ${username} benötigt eine mit ihm verbundene E-Mail-Adresse. ${message} Bitte sorgen Sie dafür, dass ${username} vor einem erneuten Versuch eine E-Mail-Adresse hinzufügt."
+
+msgid "resend-email-verification-key-email-is-not-set"
+msgstr "Sie müssen Ihre E-Mail-Adresse nicht verifizieren, da mit diesem Nutzer-Account keine E-Mail-Adresse verbunden ist. Falls Sie eine solche hinzufügen möchten, gehen Sie dazu bitte auf Ihr Nutzerprofil."
+
+msgid "duplicate-order-terms"
+msgstr "Ihr Account verfügt bereits über Auftragsbedingungen in ${language} für das folgende Land: ${country}"
+
+msgid "document-not-found"
+msgstr "Der von Ihnen gesuchte Artikel wurde nicht gefunden."
+
+msgid "only-current-account"
+msgstr "Dieser Endpunkt lässt sich nur zusammen mit dem derzeitigen Account verwenden."
+
+msgid "change-user-settings-not-allowed"
+msgstr "You are not allowed to change the settings of this user."
+
+msgid "user-settings-updated"
+msgstr "Die Nutzereinstellungen wurden aktualisiert."
+
+msgid "invalid-settings-format"
+msgstr "Ungültiges Einstellungsformat; voraussichtlich JSON."
+
+msgid "illegal-period-end-over-start"
+msgstr "Endtermin kann nicht vor dem Starttermin liegen. Der Endtermin kann nicht vor dem Starttermin liegen."
+
+msgid "campaign-overlap"
+msgstr "Kampagnen überschneiden sich zeitlich eventuell nicht."
+
+msgid "no-applicable-settings"
+msgstr "Es wurden keine gültigen Einstellungen empfangen. Eventuell fehlen Ihnen zu deren Änderung die nötige Berechtigungen."
+
+msgid "cannot-delete-currencies"
+msgstr "Sie dürfen keine Währung entfernen oder das Label ändern"
+
+msgid "regions-still-in-use"
+msgstr "The following regions are still in use on customers and/or users: ${regions}. Please remove them from all your customer and user records first and try again."
+
+msgid "account-settings-updated"
+msgstr "Die Account-Einstellungen wurden aktualisiert."
+
+msgid "duplicate-upload-directory"
+msgstr "An upload directory with this name already exists."
+
+msgid "upload-directory-updated"
+msgstr "Ihre Einstellungen wurden aktualisiert."
+
+msgid "edit-tenant-error-1"
+msgstr "Ungültige _id"
+
+msgid "edit-tenant-error-2"
+msgstr "Die Dateneigenschaft muss ein Objekt sein."
+
+msgid "edit-tenant-error-3"
+msgstr "Die Dateneigenschaft darf nicht leer sein."
+
+msgid "edit-tenant-error-5"
+msgstr "Sie verfügen nicht über die zur Bearbeitung dieser Eigenschaften nötige Berechtigung."
+
+msgid "edit-tenant-return-1"
+msgstr "Aktualisierter Account ${tenant_id}."
+
+msgid "edit-tenant-return-2"
+msgstr "Nicht alle mit der Anfrage empfangenen Eigenschaften waren betroffen."
+
+msgid "change-app-access-unknown"
+msgstr "Dies ist keine bekannte Anwendung: ${app}."
+
+msgid "change-app-access-default"
+msgstr "Der Zugang zu einer Standardanwendung lässt sich nicht ändern."
+
+msgid "change-app-access-internal"
+msgstr "Der Zugang zu einer internen Anwendung lässt sich nicht ändern."
+
+msgid "change-app-access-link"
+msgstr ""
+
+msgid "change-app-access-return-1"
+msgstr "Dieser Account verfügt bereits über Zugang zu dieser Anwendung."
+
+msgid "change-app-access-return-2"
+msgstr "Dieser Account hat keinen Zugang zu dieser Anwendung."
+
+msgid "change-app-access-given"
+msgstr "verliehen"
+
+msgid "change-app-access-revoked"
+msgstr "entzogen"
+
+msgid "change-app-access-return-3"
+msgstr "Zugang zur Anwendung \"${app}\\“ wurde dem Account \"${tenant_id}\\ ${verb}\"."
+
+msgid "change-ownership-return-no-change"
+msgstr "Der Nutzer ist bereits der Inhaber."
+
+msgid "change-ownership-return-2"
+msgstr "Der Nutzer befindet sich nicht auf der Inhaberliste."
+
+msgid "change-ownership-no-email"
+msgstr "Ein Inhaber muss stets über eine E-Mail-Adresse verfügen."
+
+msgid "owner-email-not-verified"
+msgstr "Die E-Mail-Adresse des neuen Inhabers wurde noch nicht verifiziert. Bitte sorgen Sie vor einem erneuten Versuch für eine Verifizierung der entsprechenden E-Mail-Adresse."
+
+msgid "change-ownership-given"
+msgstr "verliehen"
+
+msgid "change-ownership-removed"
+msgstr "entzogen"
+
+msgid "change-ownership-return-3"
+msgstr "Das Inhaberrecht für den Account \"${tenant_id}\" wurde Nutzer \"${username}\\“ ${verb}."
+
+msgid "no-owner-on-tenant"
+msgstr "Dem Konto \"${tenant-id}\" ist kein Eigentümer zugewiesen. Fügen Sie dem Konto einen Eigentümer hinzu und versuchen Sie es erneut."
+
+msgid "cant-revoke-token"
+msgstr "Anscheinend gibt es das Token nicht oder es wurde bereits widerrufen."
+
+msgid "add-user-return-1"
+msgstr "Nutzer wurde erstellt. Es wurde eine E-Mail zur Verifizierung an ${sent_to} versandt."
+
+msgid "add-user-return-2"
+msgstr "Nutzer wurde erstellt. Beim Versand der Verifizierungs-E-Mail ist ein Fehler aufgetreten."
+
+msgid "update-user-error-1"
+msgstr "_id muss ein String oder ein Verzeichnis sein."
+
+msgid "update-user-error-2"
+msgstr "Die Daten müssen ein Verzeichnis sein."
+
+msgid "update-user-error-3"
+msgstr "Die Dateneigenschaft darf nicht leer sein."
+
+msgid "update-user-error-4"
+msgstr "Die Dateneigenschaft enthielt keine zugelassenen Felder."
+
+msgid "update-user-return-ok"
+msgstr "Aktualisierter Nutzer ${user_id}"
+
+msgid "update-user-return-not-all-fields-affected"
+msgstr "Es sind nicht alle in der Anfrage gesandten Felder betroffen."
+
+msgid "request-pwd-reset-return-ok"
+msgstr "Es wurde ein Reset-Link an die mit diesem Account verbundene E-Mail-Adresse gesandt."
+
+msgid "request-pwd-reset-error"
+msgstr "Beim Versand des Schlüssels ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut."
+
+msgid "reset-pwd-expired-key"
+msgstr "Leider ist dieser Schlüssel abgelaufen."
+
+msgid "reset-pwd-invalid-key"
+msgstr "Leider ist dieser Schlüssel nicht gültig."
+
+msgid "reset-pwd-unmatched-password"
+msgstr "Das Bestätigungspasswort ist unzutreffend."
+
+msgid "reset-pwd-return"
+msgstr "Das Passwort wurde festgelegt. Bitte verwenden Sie bei Ihrer nächsten Anmeldung das neue Passwort."
+
+msgid "change-pwd-incorrect-password"
+msgstr "Leider ist das derzeitige Passwort nicht richtig."
+
+msgid "change-pwd-return"
+msgstr "Das Passwort wurde erfolgreich geändert. Bitte verwenden Sie bei Ihrer nächsten Anmeldung das neue Passwort."
+
+msgid "change-email-incorrect-password"
+msgstr "Leider ist das Passwort nicht richtig."
+
+msgid "change-to-empty-email-with-one-tenant"
+msgstr "Die E-Mail-Adresse lässt sich nicht löschen: Dieser Nutzer-Account wird von mehreren Firmen-Accounts verwendet."
+
+msgid "change-email-already-used"
+msgstr "Die E-Mail-Adresse ${address} ist bereits mit einem Account verbunden."
+
+msgid "change-email-mail-changed"
+msgstr "Die E-Mail-Adresse wurde erfolgreich geändert."
+
+msgid "email-change-mail-sent"
+msgstr "Es wurde eine E-Mail zur Bestätigung versandt."
+
+msgid "change-email-mail-removed"
+msgstr "Die E-Mail-Adresse wurde erfolgreich gelöscht. Zukünftige E-Mails werden an den/die Inhaber des Firmen-Accounts gesandt."
+
+msgid "verify-email-user-not-found"
+msgstr "Der Nutzer lässt sich nicht über die E-Mail-Adresse ${email} finden."
+
+msgid "verify-email-not-required"
+msgstr "Für den Account ${email} ist keine Verifizierung per E-Mail erforderlich."
+
+msgid "verify-email-return"
+msgstr "Die E-Mail-Verifizierung war erfolgreich."
+
+msgid "resend-mail-verification-user-not-found"
+msgstr "Der Nutzer lässt sich nicht über den Nutzernamen ${username} finden."
+
+msgid "resend-mail-verification-no-verification-required"
+msgstr "Für den Account ist keine Verifizierung erforderlich."
+
+msgid "resend-mail-verification-email-sent"
+msgstr "Es wurde per E-Mail ein Verifizierungsschlüssel an ${email} gesandt."
+
+msgid "resend-mail-verification-no-key-sent"
+msgstr "Der E-Mail-Verifizierungsschlüssel konnte nicht versandt werden. Bitte versuchen Sie es später erneut."
+
+msgid "invalid-locale"
+msgstr "Die bereitgestellte Sprache wird nicht unterstützt. Bitte wählen Sie eine der folgenden Optionen: ${locales}."
+
+msgid "update-profile-return-ok"
+msgstr "Nutzerprofil wurde aktualisiert."
+
+msgid "update-nothing-return-ok"
+msgstr "Nichts zu aktualisieren."
+
+msgid "update-tenant-roles-not-dict"
+msgstr "Der Rollenparameter ist kein Verzeichnis."
+
+msgid "update-tenant-roles-no-access"
+msgstr "Nutzer des Accounts ${tenant_id} können die Rolle ${role} nicht erhalten. Der Account hat keinen Zugang zur Anwendung \"${app}\"."
+
+msgid "update-tenant-roles-return-warning"
+msgstr "The roles have been set for user ${user} to [${roles}]. User does not have an email address."
+
+msgid "update-tenant-roles-return"
+msgstr "Die Rollen wurden für Nutzer ${user} als [${roles}] eingerichtet."
+
+msgid "change-active-no-change"
+msgstr "Der Nutzerstatus ist bereits ${active_status}."
+
+msgid "change-active-activated"
+msgstr "aktiviert"
+
+msgid "change-active-deactivated"
+msgstr "deaktiviert"
+
+msgid "change_active-return-ok"
+msgstr "Der Account von Nutzer ${username} ist jetzt ${active_status}."
+
+msgid "may-not-start-with"
+msgstr "Ein Nutzername darf mit keinem dieser Zeichen beginnen: ${characters}"
+
+msgid "username-too-long"
+msgstr "Ein Nutzername darf nicht mehr als 64 Zeichen umfassen."
+
+msgid "username-too-short"
+msgstr "Ein Nutzername darf nicht kürzer als 5 Zeichen sein."
+
+msgid "invalid-username-characters"
+msgstr "Ein Nutzername darf keine anderen Zeichen als alphanumerische und ${characters} enthalten. Mehrere aufeinanderfolgende Punkte sind ebenfalls nicht zulässig. "
+
+msgid "validate-device-id-exists-for-different-tenant"
+msgstr "Die Gerätekennung ${device_id} wird bereits für den entsprechenden Account benutzt. Bitte verwenden Sie eine einmalige Gerätekennung."
+
+msgid "no-email-found"
+msgstr "Wir konnten für diesen Nutzer keine E-Mail-Adresse finden."
+
+msgid "cannot-find-next-incremental-id"
+msgstr "Wir konnten die folgende ID nicht generieren."
+
+msgid "add-not-allowed"
+msgstr "You are not allowed to add a location this way."
+
+msgid "order-completed"
+msgstr "Ein abgeschlossener Auftrag kann nicht bearbeitet werden."
+
+msgid "no-packing-list-shipping"
+msgstr "Diese Packliste existiert nicht oder ist nicht bereit für den Versand."
+
+msgid "only-ship-within-europe"
+msgstr "Versand außerhalb Europas wird nicht unterstützt."
+
+msgid "sendcloud-error"
+msgstr "Etwas ist mit SendCloud schief gelaufen."
+
+msgid "no-packing-list-labels"
+msgstr "Diese Packliste existiert nicht oder befindet sich nicht im Versandprozess."
+
+msgid "no-parcels-for-packing-list"
+msgstr "Für diese Packliste sind keine Pakete bekannt"
+
+msgid "sendcloud-not-configured"
+msgstr "SendCloud ist nicht für dieses Konto konfiguriert"
+
+msgid "printq-error"
+msgstr ""
+
+msgid "document-does-not-exist"
+msgstr "Das von Ihnen angeforderte Dokument wurde nicht gefunden."
+
+msgid "permission-denial"
+msgstr "Genehmigung für '${permission}' ${context} wurde abgelehnt."
+
+msgid "order-number"
+msgstr "bestellung nummer"
+
+msgid "custom-reference"
+msgstr "benutzerdefinierte Referenz"
+
+msgid "order-type"
+msgstr "Art"
+
+msgid "name"
+msgstr "Name"
+
+msgid "address"
+msgstr "Adresse"
+
+msgid "zipcode"
+msgstr "Postleitzahl-Code"
+
+msgid "city"
+msgstr "Stadt"
+
+msgid "country"
+msgstr "Land"
+
+msgid "article-code"
+msgstr "Artikel-Code"
+
+msgid "article-description"
+msgstr "Artikelbeschreibung"
+
+msgid "price"
+msgstr "Preis"
+
+msgid "suggested-retail-price"
+msgstr "empfohlener Verkaufspreis"
+
+msgid "barcode"
+msgstr "Barcode"
+
+msgid "quantity"
+msgstr "Menge"
+
+msgid "sizeLabel"
+msgstr "Größe"
+
+msgid "color-code"
+msgstr "farbcode"
+
+msgid "color-description"
+msgstr "Beschreibung der Farbe"
+
+msgid "no-document-found"
+msgstr "Das von Ihnen gesuchte Objekt wurde nicht gefunden."
+
+msgid "editing-without-mongodb-operator"
+msgstr "Eine Bearbeitung ohne Operator (z. B. $set, $unset, $inc, $min ...) ist untersagt."
+
+msgid "db-connection-health"
+msgstr "Die Verbindung mit der Datenbank ist fehlgeschlagen oder die Datenbank ist leer."
+
+msgid "duplicate-transaction"
+msgstr "Es existieren bereits Transaktionen mit den folgenden Belegnummern: ${numbers}."
+
+msgid "cannot-find-linked-data"
+msgstr "Die Daten (${data}) existieren nicht."
+
+msgid "filter-not-indexed"
+msgstr "Die Anfrage wurde aufgrund der Verwendung nicht indizierter Felder abgelehnt."
+
+msgid "sort-not-indexed"
+msgstr "Der Sortierung fehlt ein Indexschlüssel als erstes Argument."
+
+msgid "excluded-mongodb-operator"
+msgstr "Der \"${operator}\\“-Operator ist nicht zulässig."
+
+msgid "malformed-field-not-list"
+msgstr "${fieldname}[${okey}] muss ein Array sein."
+
+msgid "malformed-field-not-string-or-dict"
+msgstr "Das \"${fieldname}\"-Feld ist kein String oder Objekt."
+
+msgid "decode-date-value-error"
+msgstr "Der Wert '${value}' für Schlüssel '${key}' ist anscheinend kein gültiger Datumsstring, der ${date_fmt} entspricht."
+
+msgid "incorrect-filter-type"
+msgstr "Der Filter muss ein Typobjekt sein."
+
+msgid "eos-must-be-completed"
+msgstr "Das Tagesabschluss muss zuerst abgeschlossen werden, bevor es erneut geöffnet werden kann."
+
+msgid "no-open-shifts"
+msgstr "Der Tagesabschluss für diesen Zeitraum wurde bereits durchgeführt."
+
+msgid "previous-rectification-found"
+msgstr "Dieser Vorgang kann nur einmal pro 24 Stunden abgeschlossen werden."
+
+msgid "invalid-parameter"
+msgstr "Der Parameter ist ungültig: ${param}"
+
+msgid "illegal-period"
+msgstr "Das Enddatum kann nicht vor dem Anfangsdatum liegen."
+
+msgid "transaction-error-duplicate-transaction"
+msgstr "Bei Ihrer Anfrage hat es ein Problem gegeben. Die angegebene Transaktion befindet sich bereits in unserem System. Sollte die Schwierigkeit fortbestehen, wenden Sie sich bitte an den Support."
+
+msgid "warehouse-not-found"
+msgstr "Das Lager wurde nicht gefunden."
+
+msgid "no-data-to-export"
+msgstr "Es gab keine Daten zum Exportieren. Bitte passen Sie Ihre Suchkriterien an und versuchen Sie es erneut."
+
+msgid "illegal-warehouse"
+msgstr "Ihr Nutzer-Account hat keinen Zugang zur Ansicht der aufgeforderten Daten."
+
+msgid "invalid-group_by-parameter"
+msgstr "Der ‚Gruppieren nach‘-Parameter muss zum Typ ${values} gehören."
+
+msgid "minute-group_by"
+msgstr "Der Starttermin darf nicht länger als ${days} Tage zurückliegen. Bitte ändern Sie den Zeitumfang oder den Startterming."
+
+msgid "non-existent-warehouse"
+msgstr "Es gibt kein Lager mit der Kennung ${warehouse}."
+
+msgid "about-message"
+msgstr "Dies ist eine Spynl Web-Anwendung. Weitere Informationen finden Sie unter about/versions und about/build."
+
+msgid "validation-error"
+msgstr "Leider ist bei Ihrer Anfrage ein Problem aufgetreten. Sollte es fortbestehen, setzen Sie sich bitte mit unserem Support-Team in Verbindung. Für die Unannehmlichkeit möchten wir uns entschuldigen."
+
+msgid "no-endpoint-for-path"
+msgstr "Für Pfad '${path}‘ wurde kein Endpunkt gefunden."
+
+msgid "internal-server-error"
+msgstr "Es ist ein interner Serverfehler aufgetreten."
+
+msgid "bad-origin"
+msgstr "Eine von '${origin}‘ ausgehende Anfrage an die Spynl-API ist nicht gestattet."
+
+msgid "missing-parameter"
+msgstr "Fehlender obligatorischer Parameter: ${param}"
+
+msgid "illegal-parameter"
+msgstr "Unzulässiger Parameter: ${param}"
+
+msgid "invalid-response"
+msgstr "Spynl konnte keine gültige Antwort generieren: ${error}"
+
+msgid "email-tmpl-not-found"
+msgstr "Die E-Mail-Vorlage <${template}> wurde nicht gefunden."
+
+msgid "email-recipient-not-given"
+msgstr "Sie haben bei dieser E-Mail keinen Empfänger angegeben."
+
+msgid "undetermined-content-type-exception"
+msgstr "Die Anfrage enthält einen Hauptteil, doch der Content-Typ kann nicht ermittelt werden."
+
+msgid "unsupported-content-type-exception"
+msgstr "Nicht unterstützter Content-Typ: \"${type}\""
+
+msgid "deserialization-unsupported-exception"
+msgstr "Deserialisierung für Content-Typ \"${type}\" wird nicht unterstützt."
+
+msgid "serialization-unsupported-exception"
+msgstr "Serialisierung für Content-Typ: \"${type}\" wird nicht unterstützt."
+
+msgid "malformed-request-exception-type"
+msgstr "Fehlerhafte \"${type}\" Anfrage: ${request}"
+
+msgid "malformed-request-exception"
+msgstr "Fehlerhafte Anfrage: ${type}"
+
+msgid "date-decode-value-error"
+msgstr "Der Wert '${value}' für den Schlüssel '${key}' ist anscheinend kein gültiger Datumsstring, der ${format} entspricht."
+
+msgid "unexpected-end-of-input"
+msgstr "Unerwartetes Eingabeende."
+
+msgid "parse-value-exception-as-class"
+msgstr "\"${value}\" konnte nicht als ${class} analysiert werden."
+
+msgid "parse-value-exception-not-class"
+msgstr "${class} ist keine Klasse. Die Analyse als \"${value}\\“ ist nicht möglich."
+
+msgid "parse-value-exception-any-class"
+msgstr "\"${value}\" konnte in ${classes} nicht als Klasse analysiert werden."
+
+msgid "no-message-available"
+msgstr "Keine Nachrichten verfügbar."
+
+msgid "label-needs-complete-receiving"
+msgstr "Ein Empfangsauftrag sollte zuerst abgeschlossen werden, bevor Etiketten generiert werden können. Bitte schließen Sie zuerst Ihre Bestellung ab und versuchen Sie es erneut."
+
+msgid "from-price"
+msgstr "von"
+
+msgid "email-eos-document-info"
+msgstr "Diese E-Mail enthält der Tagesabschluss der Registrierkasse ${device} der Periode ${periodStart} - ${periodEnd} und der Filiale ${location}. Dieses PDF wurde am ${now} von ${fullname} generiert"
+
+msgid "eos-email-subject"
+msgstr "Tagesabschluss ${periodStart} - ${periodEnd} ${device}"
+
+msgid "transit-from-to"
+msgstr "Interne Lieferung von Filiale ${from_warehouse} an Filiale ${to_warehouse}."
+
+msgid "pdf-needs-complete-receiving"
+msgstr "Ein Empfangsauftrag sollte zuerst abgeschlossen werden, bevor ein PDF generiert werden kann. Bitte schließen Sie zuerst Ihre Bestellung ab und versuchen Sie es erneut."
+
+msgid "pdf-needs-complete-eos"
+msgstr "Das Tagesende verfahren sollte zuerst abgeschlossen werden, bevor dieses Dokument angefordert werden kann. Bitte schließen Sie zuerst Ihre Bestellung ab und versuchen Sie es erneut."
+
+msgid "end-of-shift"
+msgstr "Tagesende"
+
+msgid "turnover"
+msgstr "Umsatz"
+
+msgid "consignment"
+msgstr "Ausleihe"
+
+msgid "vat-zero"
+msgstr "MwSt. 0"
+
+msgid "vat-low"
+msgstr "MwSt. niedrig"
+
+msgid "vat-high"
+msgstr "MwSt. hoch"
+
+msgid "payment-methods"
+msgstr "Zahlungsweise"
+
+msgid "original"
+msgstr "Ursprungswerte"
+
+msgid "modified"
+msgstr "gespeicherte Werte"
+
+msgid "cash"
+msgstr "Bar"
+
+msgid "credit-receipt-in"
+msgstr "Gutschriftsbeleg Eingang"
+
+msgid "credit-receipt-out"
+msgstr "Gutschriftsbeleg Abgang"
+
+msgid "coupon-in"
+msgstr "Gutschein Eingang"
+
+msgid "coupon-out"
+msgstr "Gutschein Abgang"
+
+msgid "store-credit"
+msgstr "Auf Kredit"
+
+msgid "store-credit-paid"
+msgstr "Auf Kredit ist bezahlt"
+
+msgid "pin"
+msgstr "PIN"
+
+msgid "credit-card"
+msgstr "Kreditkarte"
+
+msgid "total"
+msgstr "Gesamt"
+
+msgid "opening-balance"
+msgstr "Startsaldo"
+
+msgid "cash-in"
+msgstr "Bar Eingang"
+
+msgid "change"
+msgstr "Wechselgeld"
+
+msgid "deposit"
+msgstr "Anzahlungen bar"
+
+msgid "withdrawal"
+msgstr "Entnahme"
+
+msgid "deposit-to-bank"
+msgstr "Anzahlung"
+
+msgid "difference"
+msgstr "Differenz"
+
+msgid "end-balance"
+msgstr "Endsaldo"
+
+msgid "cash-plural"
+msgstr "Bargeld"
+
+msgid "remarks"
+msgstr "Anmerkungen"
+
+msgid "receipt"
+msgstr "Beleg"
+
+msgid "you-were-helped"
+msgstr "Es bediente Sie ${cashier}"
+
+msgid "loyalty-nr"
+msgstr "Treuenummer"
+
+msgid "loyalty-points"
+msgstr "Gesparte Punkte"
+
+msgid "coupon-ka"
+msgstr "Gutschein"
+
+msgid "coupon-kc"
+msgstr "Rueckgabegutschein"
+
+msgid "coupon-k"
+msgstr "Nachlassgutschein"
+
+msgid "coupon-ki"
+msgstr "Verkauf Gutschein"
+
+msgid "coupon-ku"
+msgstr "Gutschein"
+
+msgid "credit-receipt"
+msgstr "Wertgutschein"
+
+msgid "storecredit"
+msgstr "Kredit"
+
+msgid "creditcard"
+msgstr "Kreditkarte"
+
+msgid "couponin"
+msgstr "Gutschein Eingelöst"
+
+msgid "webshop"
+msgstr "Webshop"
+
+msgid "article"
+msgstr "Artikel"
+
+msgid "discount"
+msgstr "Rabatt"
+
+msgid "pay-off-store-credit"
+msgstr "Rückzahlung Kredit"
+
+msgid "value"
+msgstr "Wert"
+
+msgid "total-discount"
+msgstr "gesamt Rabatt"
+
+msgid "round-off-difference"
+msgstr "Abgerundet"
+
+msgid "vat-high-over"
+msgstr "MwSt. hoch (${percentage}% über ${amount})"
+
+msgid "vat-low-over"
+msgstr "MwSt. niedrig (${percentage}% über ${amount})"
+
+msgid "vat-zero-over"
+msgstr "MwSt. 0 (${percentage}% über ${amount})"
+
+msgid "cashback-coupon"
+msgstr "Geld-zurück-Gutschein"
+
+msgid "coupon-value-is"
+msgstr "Der Wert dieses Gutscheins ist"
+
+msgid "coupon-t-value-is"
+msgstr "Der Wert dieses Gutscheins ist"
+
+msgid "total-items"
+msgstr "Gesamtzahl der Artikel"
+
+msgid "file-generated-info"
+msgstr "Dieser Bericht wurde am ${now} von ${fullname} erstellt."
+
+msgid "applied-filters"
+msgstr "Angewandte Filter"
+
+msgid "start-date"
+msgstr "Startdatum"
+
+msgid "end-date"
+msgstr "Enddatum"
+
+msgid "transit"
+msgstr "Interne Lieferung"
+
+msgid "transit-done-by"
+msgstr "Interne Lieferung ausgeführt von ${cashier}."
+
+msgid "from"
+msgstr "von"
+
+msgid "to"
+msgstr "an"
+
+msgid "articleDescription"
+msgstr "Beschreibung"
+
+msgid "brand"
+msgstr "Marke"
+
+msgid "email-receipt-default-subject"
+msgstr "Ihr Beleg"
+
+msgid "email-receipt-default-subject-wholesale"
+msgstr "Your order"
+
+msgid "pipe-timeout-error"
+msgstr "Leider kann Ihre derzeitige Anfrage nicht bearbeitet werden. Bitte stellen Sie diese erneut."
+
+msgid "article-status-report-heading"
+msgstr "Artikelstatus"
+
+msgid "article-status-email-info"
+msgstr "Dieser E-Mail ist ein Dokument des Berichts ${report_name} beigefügt, die mit ${start_date} beginnt und mit ${end_date} endet. Dieser Bericht wurde von ${username} auf ${now} generiert."
+
+msgid "customer-sales-report-heading"
+msgstr "Verkauf pro Kunde"
+
+msgid "stock-report-heading"
+msgstr "Vorrat"
+
+msgid "trtype-0"
+msgstr ""
+
+msgid "trtype-1"
+msgstr ""
+
+msgid "trtype-2"
+msgstr ""
+
+msgid "trtype-3"
+msgstr ""
+
+msgid "trtype-4"
+msgstr ""
+
+msgid "trtype-5"
+msgstr ""
+
+msgid "trtype-6"
+msgstr ""
+
+msgid "trtype-7"
+msgstr ""
+
+msgid "trtype-14"
+msgstr ""
+
+msgid "trtype-15"
+msgstr ""
+
+msgid "trtype-18"
+msgstr ""
+
+msgid "trtype-93"
+msgstr ""
+
+msgid "trtype-94"
+msgstr ""
+
+msgid "trtype-95"
+msgstr ""
+
+msgid "trtype-96"
+msgstr ""
+
+msgid "trtype-97"
+msgstr ""
+
+msgid "trtype-98"
+msgstr ""
+
+msgid "color-supplier"
+msgstr ""
+
+msgid "color"
+msgstr ""
+
+msgid "location"
+msgstr ""
+
+msgid "time"
+msgstr ""
+
+msgid "user"
+msgstr ""
+
+msgid "type"
+msgstr ""
+
+msgid "reference"
+msgstr "Referenz"
+
+msgid "end-stock"
+msgstr "Schlussbestand"
+
+msgid "redshift-connection-error"
+msgstr "Could not establish a connection with the database."
+
+msgid "upload-complete"
+msgstr "Der Upload ist abgeschlossen."
+
+msgid "upload-logo-removed"
+msgstr "Das Logo wurde entfernt."
+
+msgid "only-POST-allowed"
+msgstr "Nur Post-Anfragen sind zulässig."
+
+msgid "s3-connection"
+msgstr "Es sind Probleme aufgetreten bei der Herstellung einer Verbindung mit S3: ${error}"
+
+msgid "image-error"
+msgstr "Es sind Probleme aufgetreten beim Umgang mit dem Bild: ${error}"
+
+msgid "image-not-found"
+msgstr "Der folgende Pfad bezieht sich auf kein Bild: ${path}"
+
+msgid "no-base64-image"
+msgstr "Das Bild verfügt anscheinend über keine base64-Verschlüsselung."
+
+msgid "not-image-file"
+msgstr "${filename} scheint kein Bild zu sein."
+
+msgid "unsupported-image"
+msgstr "Dieses Bildformat wird nicht unterstützt."
+
+msgid "img-error-shrinking"
+msgstr "Bei der Verkleinerung des Bildes ist ein Problem aufgetreten."
+
+msgid "img-err-oversized"
+msgstr "Die Bildgröße konnte nicht genug verringert werden, um unter dem entsprechenden Byte-Grenzwert zu liegen."
+
+msgid "bucket-error"
+msgstr "Der Bucket '${bucket}' existiert nicht in S3."
+
+msgid "upload-dir-not-set"
+msgstr "Upload-Verzeichnis ist nicht eingerichtet."
+

@@ -1,0 +1,109 @@
+{% extends "base_receivings.jinja2" %}
+
+{% block doc_header %}
+    {{ document['orderNumber'] }}
+{% endblock %}
+
+{% block logo_space %}
+    <img style="float:right;max-height:2.5cm;width:auto;" src="{{ tenant_logo_url(request) }}"/>
+{% endblock %}
+
+
+{% block document_info %}
+    <div> <i class="fas fa-map-marker-alt"></i> {{ document['warehouseName'] }}</div>
+    <div> <i class="fas fa-calendar"></i> {{ document['created']['date'] | format_datetime(locale=locale, tzinfo=tz) }}</div>
+    <div> <i class="fas fa-user"></i> {{ document['created']['user']['username'] }}</div>
+    <div> <i class="fas fa-hashtag"></i> {{ document['supplierOrderReference']|join(', ') }} </div>
+{% endblock %}
+
+{% block remarks %}
+    {{ document['remarks'] }}
+{% endblock %}
+
+{% block body %}
+    {% for product in document['products'] %}
+        <table class="product_table">
+            <tbody>
+                <tr>
+                    <td rowspan="0" style="width:23mm">
+                        <img class="thumbnail" src="{{ article_image_location }}{{ product['articleCode'] }}.jpg">
+                    </td>
+                    <td style="font-weight:bold"> {{ product['articleCode'] }} </td>
+                </tr>
+                <tr> <td> {{ product['articleDescription'] }} </td> </tr>
+                {% if product.get('brand') %}
+                    <tr> <td> {{ product['brand'] }} </td> </tr>
+                {% endif %}
+                {% if product.get('collection') %}
+                    <tr> <td> {{ product['collection'] }} </td> </tr>
+                {% endif %}
+                {% if product.get('articleGroup') %}
+                    <tr> <td> {{ product['articleGroup'] }} </td> </tr>
+                {% endif %}
+            </tbody>
+        </table>
+
+        {% set color_fields =  (
+            'colorDescription',
+            'colorCodeSupplier',
+            'colorFamily',
+            'colorSupplier',
+            'subColorDescription',
+        ) %}
+        <table class="sku_table">
+            <thead>
+                <tr>
+                    <th> {# color code #} </th>
+                    {% for field in color_fields %}
+                        <th> </th>
+                    {% endfor %}
+                    {% for size in product['skuTable']['available_sizes'] %}
+                        <th> {{ size }} </th>
+                    {% endfor %}
+                    <th> {{ _('total') }} </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in product['skuTable']['skuRows'] %}
+                    <tr>
+                        <td> {{ row['colorCode'] }} </td>
+                        {% for field in color_fields %}
+                            {% if row.get(field) %}
+                                <td> {{ row[field] }} </td>
+                            {% else %}
+                                <td class="empty"> </td>
+                            {% endif %}
+                        {% endfor %}
+                        {% for size in product['skuTable']['available_sizes'] %}
+                            <td>
+                                {% if row['quantities'][size] %}
+                                    {{ row['quantities'][size] }}
+                                {% endif %}
+                            </td>
+                        {% endfor %}
+                        <td> {{ row['totalQuantity'] }} </td>
+                    </tr>
+                {% endfor %}
+                <tr>
+                    <td> {# color code #} </td>
+                    {% for field in color_fields %}
+                        <td> </td>
+                    {% endfor %}
+                    {% for size in product['skuTable']['available_sizes'] %} <td> </td>
+                    {% endfor %}
+                    <td style="font-weight:bold"> {{ product['skuTable']['totalQuantity'] }} </td>
+                </tr>
+            </tbody>
+        </table>
+    {% endfor %}
+
+    <table class="summary">
+        <tbody>
+            <tr>
+                <td> {{ _('total-items') }}:</td>
+                <td style="text-align: right"> {{ document['totalQty'] }} </td>
+            </tr>
+        </tbody>
+    </table>
+
+{% endblock %}

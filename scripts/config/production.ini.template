@@ -1,0 +1,124 @@
+[app:main]
+use = egg:spynl.app
+filter-with = reverse-proxy
+
+pyramid.reload_templates = false
+pyramid.default_locale_name = nl
+pyramid.includes =
+    pyramid_exclog
+    pyramid_mailer
+
+spynl.pretty = ${SPYNL_PRETTY}
+
+# configuration for MongoDB
+spynl.mongo.url = ${MONGODB_URL}
+spynl.mongo.db = ${MONGODB_DATABASE}
+spynl.mongo.ssl = ${MONGODB_SSL}
+spynl.mongo.auth_mechanism = SCRAM-SHA-1
+spynl.mongo.max_limit = 1000
+spynl.mongo.max_agglimit = 5000
+spynl.swapi_usage_plan = ${SWAPI_USAGE_PLAN}
+
+# default postgres port is 5432 default redshift port is 5439
+spynl.redshift.url = ${REDSHIFT_URL}
+spynl.redshift.max_connections = ${REDSHIFT_MAX_CONNECTIONS}
+
+spynl.domain = ${SPYNL_DOMAIN}
+spynl.tld_origin_whitelist = softwear.nl,softwearconnect.com,latestcollection.com,swcloud.nl,softwearconnect.lc,sentia-route53.com
+spynl.dev_origin_whitelist = chrome-extension://,http://0.0.0.0:9000,http://0.0.0.0:9001,http://0.0.0.0:9002
+
+spynl.printq.url = https://pq2.${SPYNL_DOMAIN}
+spynl.printq.bucket = softwear.pdf
+spynl.printq.bucket.region = eu-west-1
+spynl.printq.bucket.aws_access_key_id = ${SPYNL_PRINTQ_AWS_ACCESS_KEY_ID}
+spynl.printq.bucket.aws_secret_access_key = ${SPYNL_PRINTQ_AWS_SECRET_ACCESS_KEY}
+
+spynl.auth.otp.issuer = ${SPYNL_2FA_ISSUER}
+spynl.auth.otp.jwt.secret_key = ${SPYNL_2FA_JWT_SECRET}
+
+# Sentry configration
+spynl.sentry_key = ${SENTRY_API_KEY}
+spynl.sentry_project = 59748
+
+# email addresses:
+spynl.pipe.marketing_email = ${MARKETING_EMAIL}
+spynl.hr.finance_email = ${FINANCE_EMAIL}
+
+# Foxpro support
+spynl.pipe.fp_web_url = ${FP_WEB_URL}
+
+# LatestCollection API
+spynl.latestcollection.url = ${LC_WEB_URL}
+spynl.latestcollection.master_token = ${LC_SPYNL_TOKEN}
+
+# VectorWise support
+spynl.pipe.vw_web_url = https://vector.softwear.nl/vector/resources/sql
+spynl.pipe.vw_access_token = 2d42fdb2-59so5-45vf-9eeb-01b328987e5a
+
+# Bitly Access Token
+spynl.pipe.bitly_access_token = c561a2bfb544515db94366f93381ae15dd166760
+
+# Pyramid Mail Config
+mail.host = ${EMAIL_HOST}
+mail.ssl = true
+mail.port = 465
+mail.username = ${SES_ACCESS_KEY_ID}
+mail.password = ${SES_SECRET_ACCESS_KEY}
+mail.sender = no-reply@${SPYNL_MAIL_DOMAIN}
+mail.dummy_recipient = softweardev@gmail.com
+
+# Build information
+spynl.app.function = ${SPYNL_FUNCTION}
+spynl.app.environment = ${SPYNL_ENVIRONMENT}
+spynl.app.build_number = ${SPYNL_BUILD_NR}
+spynl.app.build_time = ${SPYNL_BUILD_TIME}
+
+spynl.pay_nl.ip_whitelist = ${SPYNL_PAY_NL_IP_WHITELIST}
+
+[server:main]
+use = egg:gunicorn#main
+# host = 0.0.0.0
+# port = 6543
+# workers = ${WEB_CONCURRENCY}
+# accesslog = -
+# access_log_format = %%(t)s %%(U)s %%(s)s %%(m)s %%(h)s
+# timeout = 180
+# max_requests = 1000
+
+
+# see http://pythonpaste.org/deploy/class-paste.deploy.config.PrefixMiddleware.html
+[filter:reverse-proxy]
+use = egg:PasteDeploy#prefix
+prefix = /
+scheme = https
+
+
+# Begin logging configuration
+
+[loggers]
+keys = root
+
+[handlers]
+keys = errconsole, outconsole
+
+[formatters]
+keys = generic
+
+[logger_root]
+level = NOTSET
+handlers = errconsole, outconsole
+
+[handler_errconsole]
+class = StreamHandler
+args = (sys.stderr,)
+level = ERROR
+formatter = generic
+
+[handler_outconsole]
+class = StreamHandler
+args = (sys.stdout,)
+level = ${SPYNL_LOGGING_LEVEL}
+formatter = generic
+
+[formatter_generic]
+format = [%(asctime)s %(levelname)-5.5s] [%(name)s][%(threadName)s] %(message)s

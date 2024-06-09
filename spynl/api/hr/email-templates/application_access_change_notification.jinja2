@@ -1,0 +1,36 @@
+{% extends "base.jinja2" %}
+{% import 'macros.jinja2' as macros %}
+
+{% set softwear_logo = True %}
+
+{% block content %}
+  {{ macros.greeting(recipient_fullname) }}
+  {% if was_given %}
+    <p>
+      {{
+        _('email-template-app-access-change-notification-granted-1',
+        mapping={'tenant_name': tenant_name, 'application': application['name']})
+      }}
+    </p>
+    <p>
+      {{
+        _('email-template-app-access-change-notification-granted-2',
+        mapping={'link_1': '<a href="https://www.softwearconnect.com/#/home">https://www.softwearconnect.com/#/home</a>'})|safe
+      }}
+    </p>
+  {% else %}
+    <p>
+      {{
+        _('email-template-app-access-change-notification-revoked-1',
+        mapping={'tenant_name': tenant_name, 'application': application['name']})
+      }}
+    </p>
+    <p>
+      {{
+        _('email-template-if-you-have-questions',
+        mapping={'link': macros.contact('link')})|safe
+      }}
+    </p>
+  {% endif %}
+  {{ macros.regards() }}
+{% endblock %}

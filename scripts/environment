@@ -1,0 +1,15 @@
+# place this file or it's contents in the project root folder and source it
+
+SPYNL_APP_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
+# This will give you a db (mongo) and a conn (postgress) object in your python shell
+export PYTHONSTARTUP=$SPYNL_APP_DIR/scripts/mongopy_startup.py
+
+# this keeps a session file for when you login with httpie
+alias http="http --session $SPYNL_APP_DIR/.git/httpie.session"
+
+# To keep store a session for localhost you need to explicitly make a request
+# to 127.0.0.1
+login () {
+    http 127.0.0.1:6543/login username==$1 password==$2
+}

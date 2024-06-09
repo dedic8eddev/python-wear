@@ -1,0 +1,20 @@
+{% extends "base.jinja2" %}
+{% import 'macros.jinja2' as macros %}
+
+{% set softwear_logo = True %}
+
+{% block content %}
+  {{ macros.greeting(user_fullname) }}
+  <p>
+    {{
+      _('email-template-removal-owners-notification-1',
+      mapping={'user_username': user_username, 'tenant_name': tenant_name, 'removed_email': removed_email})
+    }}
+    {% if multiple_owners %}
+    {{
+      _('email-template-removal-owners-notification-2')
+    }}
+    {% endif %}
+  </p>
+  {{ macros.regards() }}
+{% endblock %}

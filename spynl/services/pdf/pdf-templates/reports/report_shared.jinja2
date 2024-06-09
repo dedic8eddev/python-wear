@@ -1,0 +1,80 @@
+{% extends "report_html_wrapper.jinja2" %}
+
+{% set column_metadata = parameters['columnMetadata'] %}
+{% set locale = user.get('language', 'nl')[0:2] %}
+{% set tz = user.get('tz', 'Europe/Amsterdam') %}
+{% set now = now | format_datetime(locale=locale, tzinfo=tz) %}
+
+
+{%- macro format_value(value, column) -%}
+    {% set metadata = column_metadata.get(column, {}) %}
+    {%- if metadata.get('type') == 'money' -%}
+        {{ value | format_currency('EUR', locale=locale) }}
+    {%- elif metadata.get('type') == 'number' and value is number -%}
+        {{ value | round(metadata.get('decimals', 2)) | format_decimal(locale=locale) }}
+    {%- elif metadata.get('type') == 'percentage' and value is number -%}
+        {{ value | round(metadata.get('decimals', 2)) | format_decimal(locale=locale) }}%
+    {%- elif metadata.get('type') == 'quantity' -%}
+        {{ value | int }}
+    {%- elif metadata.get('type') == 'datetime' -%}
+        {{ value | format_datetime(locale=locale, tzinfo=tz) }}
+    {%- else -%}
+        {{ value }}
+    {%- endif -%}
+{%- endmacro -%}
+
+{% block doc_header %}
+    {{ parameters['report_name'] | change_case }}
+{% endblock %}
+
+{% block logo_space %}
+    <img style="float:right;max-height:1.5cm;width:auto;" src="{{ tenant_logo_url(request) }}"/>
+{% endblock %}
+
+{% block cover_page %}
+    <h2> {{ tenant['name'] }} </h2>
+    {% set address = tenant.get('address', {}) %}
+    <div class ="address">
+        <div> {{ address.get('address') }} </div>
+        <div> {{ address.get('zipcode') }} {{ address.get('city') }} </div>
+        <div> {{ address.get('country') | format_country(locale) }} </div>
+    </div>
+    <p>
+        {{
+        _('file-generated-info',
+            mapping={'now': now, 'fullname': user.get('fullname', user['username'])})
+        }}
+    </p>
+    <h2> {{ _('applied-filters') }} </h2>
+    <table class="filter_table">
+        {%- if not ignore_start_date -%}
+            <tr>
+                <td> {{ _('start-date') }} </td>
+                <td> {{ parameters['filter']['startDate'] | format_datetime(locale=locale, tzinfo=tz) }} </td>
+            </tr>
+        {%- endif -%}
+        <tr>
+            <td> {{ _('end-date') }} </td>
+            <td>{{ parameters['filter']['endDate'] | format_datetime(locale=locale, tzinfo=tz) }} </td>
+        </tr>
+    {% for filter in parameters['filter'] %}
+        {% if filter not in ['startDate', 'endDate', 'tenant'] %}
+            <tr>
+                <td>{{ column_metadata.get(filter, {}).get('label', filter) }} </td>
+                <td>
+                    {%- if parameters['filter'][filter] is iterable -%}
+                        {%- for value in parameters['filter'][filter] -%}
+                            {{format_value(value, filter)}}
+                            {%- if not loop.last -%}
+                                ,
+                            {% endif %}
+                        {%- endfor -%}
+                    {%- else -%}
+                        {{format_value(parameters['filter'][filter], filter)}}
+                    {%- endif -%}
+                </td>
+            </tr>
+        {% endif %}
+    {% endfor %}
+    </table>
+{% endblock %}

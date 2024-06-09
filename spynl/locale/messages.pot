@@ -1,0 +1,1339 @@
+# Translations template for spynl.app.
+# Copyright (C) 2022 "Softwear BV"
+# This file is distributed under the same license as the spynl.app project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: spynl.app 22.6.0\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2022-02-15 09:27+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+msgid "pos-app-name"
+msgstr ""
+
+msgid "pos-app-description"
+msgstr ""
+
+msgid "email-receipt-option-name"
+msgstr ""
+
+msgid "email-receipt-option-description"
+msgstr ""
+
+msgid "integrated-payment-solution-option-name"
+msgstr ""
+
+msgid "integrated-payment-solution-option-description"
+msgstr ""
+
+msgid "dashboard-app-name"
+msgstr ""
+
+msgid "dashboard-app-description"
+msgstr ""
+
+msgid "account-app-name"
+msgstr ""
+
+msgid "account-app-description"
+msgstr ""
+
+msgid "photos-app-name"
+msgstr ""
+
+msgid "photos-app-description"
+msgstr ""
+
+msgid "products-app-name"
+msgstr ""
+
+msgid "products-app-description"
+msgstr ""
+
+msgid "purchase-app-name"
+msgstr ""
+
+msgid "purchase-app-description"
+msgstr ""
+
+msgid "crm-app-name"
+msgstr ""
+
+msgid "crm-app-description"
+msgstr ""
+
+msgid "secondscreen-app-name"
+msgstr ""
+
+msgid "secondscreen-app-description"
+msgstr ""
+
+msgid "customer-entry-option-name"
+msgstr ""
+
+msgid "customer-entry-option-description"
+msgstr ""
+
+msgid "custom-playlist-option-name"
+msgstr ""
+
+msgid "custom-playlist-option-description"
+msgstr ""
+
+msgid "inventory-app-name"
+msgstr ""
+
+msgid "inventory-app-description"
+msgstr ""
+
+msgid "webshop-app-name"
+msgstr ""
+
+msgid "webshop-app-description"
+msgstr ""
+
+msgid "sales-app-name"
+msgstr ""
+
+msgid "sales-app-description"
+msgstr ""
+
+msgid "logistics-app-name"
+msgstr ""
+
+msgid "logistics-app-description"
+msgstr ""
+
+msgid "picking-app-name"
+msgstr ""
+
+msgid "picking-app-description"
+msgstr ""
+
+msgid "admin-app-description"
+msgstr ""
+
+msgid "ecwid_link-app-name"
+msgstr ""
+
+msgid "ecwid_link-app-description"
+msgstr ""
+
+msgid "foxpro_backoffice-app-name"
+msgstr ""
+
+msgid "foxpro_backoffice-app-description"
+msgstr ""
+
+msgid "hardwearshop-app-name"
+msgstr ""
+
+msgid "hardwearshop-app-description"
+msgstr ""
+
+msgid "lc-demo-app-name"
+msgstr ""
+
+msgid "lc-demo-app-description"
+msgstr ""
+
+msgid "pos-device-description"
+msgstr ""
+
+msgid "account-admin-description"
+msgstr ""
+
+msgid "dashboard-user-description"
+msgstr ""
+
+msgid "dashboard-report-user-description"
+msgstr ""
+
+msgid "products-admin-description"
+msgstr ""
+
+msgid "products-admin-user"
+msgstr ""
+
+msgid "purchase-admin-description"
+msgstr ""
+
+msgid "purchase-admin-user"
+msgstr ""
+
+msgid "secondscreen-user-description"
+msgstr ""
+
+msgid "secondscreen-admin-description"
+msgstr ""
+
+msgid "inventory-user-description"
+msgstr ""
+
+msgid "sales-user-description"
+msgstr ""
+
+msgid "sales-admin-description"
+msgstr ""
+
+msgid "logistics-inventory-user-description"
+msgstr ""
+
+msgid "logistics-receivings-user-description"
+msgstr ""
+
+msgid "picking-user-description"
+msgstr ""
+
+msgid "picking-admin-description"
+msgstr ""
+
+msgid "owner-description"
+msgstr ""
+
+msgid "sw-account_manager-description"
+msgstr ""
+
+msgid "sw-admin-description"
+msgstr ""
+
+msgid "sw-consultant-description"
+msgstr ""
+
+msgid "sw-developer-description"
+msgstr ""
+
+msgid "spynl-developer-description"
+msgstr ""
+
+msgid "sw-finance-description"
+msgstr ""
+
+msgid "sw-servicedesk-description"
+msgstr ""
+
+msgid "sw-reporting_admin-description"
+msgstr ""
+
+msgid "sw-marketing-description"
+msgstr ""
+
+msgid "sww-api-description"
+msgstr ""
+
+msgid "webshop-admin-description"
+msgstr ""
+
+msgid "password-does-not-meet-requirements-already-used"
+msgstr ""
+
+msgid "auth-pre-flight-requests-allowed"
+msgstr ""
+
+msgid "auth-anonymous-access"
+msgstr ""
+
+msgid "auth-authenticated-allowed"
+msgstr ""
+
+msgid "auth-tenant-not-allowed-for-user"
+msgstr ""
+
+msgid "auth-no-active-tenant"
+msgstr ""
+
+msgid "auth-not-a-b2b-context"
+msgstr ""
+
+msgid "auth-requested-tenant-not-active"
+msgstr ""
+
+msgid "auth-requested-tenant-no-access"
+msgstr ""
+
+msgid "auth-do-not-change-master-tenant"
+msgstr ""
+
+msgid "not-allowed-public-doc-edit"
+msgstr ""
+
+msgid "not-allowed-edit-tenant-id"
+msgstr ""
+
+msgid "missing-tenant-id"
+msgstr ""
+
+msgid "wrong-credentials"
+msgstr ""
+
+msgid "expired-credentials"
+msgstr ""
+
+msgid "user-not-active"
+msgstr ""
+
+msgid "tenant-does-not-exist"
+msgstr ""
+
+msgid "forbidden-tenant"
+msgstr ""
+
+msgid "tenant-not-active"
+msgstr ""
+
+msgid "no-active-tenant-found"
+msgstr ""
+
+msgid "cannot-retrieve-user"
+msgstr ""
+
+msgid "unrecognise-hash-type"
+msgstr ""
+
+msgid "password-does-not-meet-requirements"
+msgstr ""
+
+msgid "invalid-jwt-token"
+msgstr ""
+
+msgid "invalid-session"
+msgstr ""
+
+msgid "old-style-session"
+msgstr ""
+
+msgid "no-tenant-id-in-filter"
+msgstr ""
+
+msgid "no-search-by-tenant-id"
+msgstr ""
+
+msgid "tenant-id-not-string"
+msgstr ""
+
+msgid "tenant-id-null"
+msgstr ""
+
+msgid "no-foxpro-url"
+msgstr ""
+
+msgid "default-token-error"
+msgstr ""
+
+msgid "illegal-filter"
+msgstr ""
+
+msgid "password-does-not-meet-requirements-min-length"
+msgstr ""
+
+msgid "password-does-not-meet-requirements-max-length"
+msgstr ""
+
+msgid "email-template-account-status-notification-activated"
+msgstr ""
+
+msgid "email-template-account-status-notification-deactivated"
+msgstr ""
+
+msgid "email-template-account-status-notification"
+msgstr ""
+
+msgid "email-template-if-you-have-questions"
+msgstr ""
+
+msgid "email-template-account-status-notification-subject-activated"
+msgstr ""
+
+msgid "email-template-account-status-notification-subject-deactivated"
+msgstr ""
+
+msgid "email-template-app-access-change-notification-granted-1"
+msgstr ""
+
+msgid "email-template-app-access-change-notification-granted-2"
+msgstr ""
+
+msgid "email-template-app-access-change-notification-revoked-1"
+msgstr ""
+
+msgid "email-template-account-status-notification-access-granted-subject"
+msgstr ""
+
+msgid "email-template-account-status-notification-access-revoked-subject"
+msgstr ""
+
+msgid "email-template-change-confirmation-1"
+msgstr ""
+
+msgid "email-template-change-confirmation-2"
+msgstr ""
+
+msgid "email-template-change-confirmation-button"
+msgstr ""
+
+msgid "email-template-change-confirmation-subject"
+msgstr ""
+
+msgid "email-template-change-confirmation-resend-subject"
+msgstr ""
+
+msgid "email-template-removal-notification-1"
+msgstr ""
+
+msgid "email-template-change-notification-1"
+msgstr ""
+
+msgid "email-template-change-notification-2"
+msgstr ""
+
+msgid "email-template-removal-notification-subject"
+msgstr ""
+
+msgid "email-template-change-notification-subject"
+msgstr ""
+
+msgid "email-template-removal-owners-notification-1"
+msgstr ""
+
+msgid "email-template-removal-owners-notification-2"
+msgstr ""
+
+msgid "email-template-removal-owner-notification-subject"
+msgstr ""
+
+msgid "email-template-invitation-to-connect"
+msgstr ""
+
+msgid "email-template-invitation-to-connect-button"
+msgstr ""
+
+msgid "email-template-invitation-to-connect-subject"
+msgstr ""
+
+msgid "email-greeting"
+msgstr ""
+
+msgid "With kind regards,"
+msgstr ""
+
+msgid "The Softwear Team"
+msgstr ""
+
+msgid "email-template-ownership-notification-ownership-given"
+msgstr ""
+
+msgid "email-template-ownership-notification-revoked-ownership"
+msgstr ""
+
+msgid "email-template-ownership-notification-given-subject"
+msgstr ""
+
+msgid "email-template-ownership-notification-revoked-subject"
+msgstr ""
+
+msgid "email-template-password-change-notification-1"
+msgstr ""
+
+msgid "email-template-password-change-notification-2"
+msgstr ""
+
+msgid "email-template-password-change-notification-subject"
+msgstr ""
+
+msgid "email-template-password-first-reset-heading"
+msgstr ""
+
+msgid "email-template-password-first-reset-1"
+msgstr ""
+
+msgid "email-template-password-first-reset-2"
+msgstr ""
+
+msgid "email-template-password-first-reset-3"
+msgstr ""
+
+msgid "email-template-password-first-button"
+msgstr ""
+
+msgid "email-template-password-reset-1"
+msgstr ""
+
+msgid "email-template-password-reset-button"
+msgstr ""
+
+msgid "email-template-password-reset-2"
+msgstr ""
+
+msgid "email-template-password-first-reset-subject"
+msgstr ""
+
+msgid "email-template-passoword-not-first-reset-subject"
+msgstr ""
+
+msgid "email-template-username-change-notification-1"
+msgstr ""
+
+msgid "email-template-username-change-notification-2"
+msgstr ""
+
+msgid "username-change-notification-subject"
+msgstr ""
+
+msgid "existing-user-by-username"
+msgstr ""
+
+msgid "existing-user-by-email"
+msgstr ""
+
+msgid "user-does-not-exist"
+msgstr ""
+
+msgid "customer-already-exists"
+msgstr ""
+
+msgid "user-should-have-email"
+msgstr ""
+
+msgid "resend-email-verification-key-email-is-not-set"
+msgstr ""
+
+msgid "duplicate-order-terms"
+msgstr ""
+
+msgid "document-not-found"
+msgstr ""
+
+msgid "only-current-account"
+msgstr ""
+
+msgid "change-user-settings-not-allowed"
+msgstr ""
+
+msgid "user-settings-updated"
+msgstr ""
+
+msgid "invalid-settings-format"
+msgstr ""
+
+msgid "illegal-period-end-over-start"
+msgstr ""
+
+msgid "campaign-overlap"
+msgstr ""
+
+msgid "no-applicable-settings"
+msgstr ""
+
+msgid "cannot-delete-currencies"
+msgstr ""
+
+msgid "regions-still-in-use"
+msgstr ""
+
+msgid "account-settings-updated"
+msgstr ""
+
+msgid "duplicate-upload-directory"
+msgstr ""
+
+msgid "upload-directory-updated"
+msgstr ""
+
+msgid "edit-tenant-error-1"
+msgstr ""
+
+msgid "edit-tenant-error-2"
+msgstr ""
+
+msgid "edit-tenant-error-3"
+msgstr ""
+
+msgid "edit-tenant-error-5"
+msgstr ""
+
+msgid "edit-tenant-return-1"
+msgstr ""
+
+msgid "edit-tenant-return-2"
+msgstr ""
+
+msgid "change-app-access-unknown"
+msgstr ""
+
+msgid "change-app-access-default"
+msgstr ""
+
+msgid "change-app-access-internal"
+msgstr ""
+
+msgid "change-app-access-link"
+msgstr ""
+
+msgid "change-app-access-return-1"
+msgstr ""
+
+msgid "change-app-access-return-2"
+msgstr ""
+
+msgid "change-app-access-given"
+msgstr ""
+
+msgid "change-app-access-revoked"
+msgstr ""
+
+msgid "change-app-access-return-3"
+msgstr ""
+
+msgid "change-ownership-return-no-change"
+msgstr ""
+
+msgid "change-ownership-return-2"
+msgstr ""
+
+msgid "change-ownership-no-email"
+msgstr ""
+
+msgid "owner-email-not-verified"
+msgstr ""
+
+msgid "change-ownership-given"
+msgstr ""
+
+msgid "change-ownership-removed"
+msgstr ""
+
+msgid "change-ownership-return-3"
+msgstr ""
+
+msgid "no-owner-on-tenant"
+msgstr ""
+
+msgid "cant-revoke-token"
+msgstr ""
+
+msgid "add-user-return-1"
+msgstr ""
+
+msgid "add-user-return-2"
+msgstr ""
+
+msgid "update-user-error-1"
+msgstr ""
+
+msgid "update-user-error-2"
+msgstr ""
+
+msgid "update-user-error-3"
+msgstr ""
+
+msgid "update-user-error-4"
+msgstr ""
+
+msgid "update-user-return-ok"
+msgstr ""
+
+msgid "update-user-return-not-all-fields-affected"
+msgstr ""
+
+msgid "request-pwd-reset-return-ok"
+msgstr ""
+
+msgid "request-pwd-reset-error"
+msgstr ""
+
+msgid "reset-pwd-expired-key"
+msgstr ""
+
+msgid "reset-pwd-invalid-key"
+msgstr ""
+
+msgid "reset-pwd-unmatched-password"
+msgstr ""
+
+msgid "reset-pwd-return"
+msgstr ""
+
+msgid "change-pwd-incorrect-password"
+msgstr ""
+
+msgid "change-pwd-return"
+msgstr ""
+
+msgid "change-email-incorrect-password"
+msgstr ""
+
+msgid "change-to-empty-email-with-one-tenant"
+msgstr ""
+
+msgid "change-email-already-used"
+msgstr ""
+
+msgid "change-email-mail-changed"
+msgstr ""
+
+msgid "email-change-mail-sent"
+msgstr ""
+
+msgid "change-email-mail-removed"
+msgstr ""
+
+msgid "verify-email-user-not-found"
+msgstr ""
+
+msgid "verify-email-not-required"
+msgstr ""
+
+msgid "verify-email-return"
+msgstr ""
+
+msgid "resend-mail-verification-user-not-found"
+msgstr ""
+
+msgid "resend-mail-verification-no-verification-required"
+msgstr ""
+
+msgid "resend-mail-verification-email-sent"
+msgstr ""
+
+msgid "resend-mail-verification-no-key-sent"
+msgstr ""
+
+msgid "invalid-locale"
+msgstr ""
+
+msgid "update-profile-return-ok"
+msgstr ""
+
+msgid "update-nothing-return-ok"
+msgstr ""
+
+msgid "update-tenant-roles-not-dict"
+msgstr ""
+
+msgid "update-tenant-roles-no-access"
+msgstr ""
+
+msgid "update-tenant-roles-return-warning"
+msgstr ""
+
+msgid "update-tenant-roles-return"
+msgstr ""
+
+msgid "change-active-no-change"
+msgstr ""
+
+msgid "change-active-activated"
+msgstr ""
+
+msgid "change-active-deactivated"
+msgstr ""
+
+msgid "change_active-return-ok"
+msgstr ""
+
+msgid "may-not-start-with"
+msgstr ""
+
+msgid "username-too-long"
+msgstr ""
+
+msgid "username-too-short"
+msgstr ""
+
+msgid "invalid-username-characters"
+msgstr ""
+
+msgid "validate-device-id-exists-for-different-tenant"
+msgstr ""
+
+msgid "no-email-found"
+msgstr ""
+
+msgid "cannot-find-next-incremental-id"
+msgstr ""
+
+msgid "add-not-allowed"
+msgstr ""
+
+msgid "order-completed"
+msgstr ""
+
+msgid "no-packing-list-shipping"
+msgstr ""
+
+msgid "only-ship-within-europe"
+msgstr ""
+
+msgid "sendcloud-error"
+msgstr ""
+
+msgid "no-packing-list-labels"
+msgstr ""
+
+msgid "no-parcels-for-packing-list"
+msgstr ""
+
+msgid "sendcloud-not-configured"
+msgstr ""
+
+msgid "printq-error"
+msgstr ""
+
+msgid "document-does-not-exist"
+msgstr ""
+
+msgid "permission-denial"
+msgstr ""
+
+msgid "order-number"
+msgstr ""
+
+msgid "custom-reference"
+msgstr ""
+
+msgid "order-type"
+msgstr ""
+
+msgid "name"
+msgstr ""
+
+msgid "address"
+msgstr ""
+
+msgid "zipcode"
+msgstr ""
+
+msgid "city"
+msgstr ""
+
+msgid "country"
+msgstr ""
+
+msgid "article-code"
+msgstr ""
+
+msgid "price"
+msgstr ""
+
+msgid "suggested-retail-price"
+msgstr ""
+
+msgid "barcode"
+msgstr ""
+
+msgid "quantity"
+msgstr ""
+
+msgid "sizeLabel"
+msgstr ""
+
+msgid "color-code"
+msgstr ""
+
+msgid "color-description"
+msgstr ""
+
+msgid "no-document-found"
+msgstr ""
+
+msgid "editing-without-mongodb-operator"
+msgstr ""
+
+msgid "db-connection-health"
+msgstr ""
+
+msgid "duplicate-transaction"
+msgstr ""
+
+msgid "cannot-find-linked-data"
+msgstr ""
+
+msgid "filter-not-indexed"
+msgstr ""
+
+msgid "sort-not-indexed"
+msgstr ""
+
+msgid "excluded-mongodb-operator"
+msgstr ""
+
+msgid "malformed-field-not-list"
+msgstr ""
+
+msgid "malformed-field-not-string-or-dict"
+msgstr ""
+
+msgid "decode-date-value-error"
+msgstr ""
+
+msgid "incorrect-filter-type"
+msgstr ""
+
+msgid "eos-must-be-completed"
+msgstr ""
+
+msgid "no-open-shifts"
+msgstr ""
+
+msgid "previous-rectification-found"
+msgstr ""
+
+msgid "invalid-parameter"
+msgstr ""
+
+msgid "illegal-period"
+msgstr ""
+
+msgid "transaction-error-duplicate-transaction"
+msgstr ""
+
+msgid "warehouse-not-found"
+msgstr ""
+
+msgid "no-data-to-export"
+msgstr ""
+
+msgid "illegal-warehouse"
+msgstr ""
+
+msgid "invalid-group_by-parameter"
+msgstr ""
+
+msgid "minute-group_by"
+msgstr ""
+
+msgid "non-existent-warehouse"
+msgstr ""
+
+msgid "about-message"
+msgstr ""
+
+msgid "validation-error"
+msgstr ""
+
+msgid "no-endpoint-for-path"
+msgstr ""
+
+msgid "internal-server-error"
+msgstr ""
+
+msgid "bad-origin"
+msgstr ""
+
+msgid "missing-parameter"
+msgstr ""
+
+msgid "illegal-parameter"
+msgstr ""
+
+msgid "invalid-response"
+msgstr ""
+
+msgid "email-tmpl-not-found"
+msgstr ""
+
+msgid "email-recipient-not-given"
+msgstr ""
+
+msgid "undetermined-content-type-exception"
+msgstr ""
+
+msgid "unsupported-content-type-exception"
+msgstr ""
+
+msgid "deserialization-unsupported-exception"
+msgstr ""
+
+msgid "serialization-unsupported-exception"
+msgstr ""
+
+msgid "malformed-request-exception-type"
+msgstr ""
+
+msgid "malformed-request-exception"
+msgstr ""
+
+msgid "date-decode-value-error"
+msgstr ""
+
+msgid "unexpected-end-of-input"
+msgstr ""
+
+msgid "parse-value-exception-as-class"
+msgstr ""
+
+msgid "parse-value-exception-not-class"
+msgstr ""
+
+msgid "parse-value-exception-any-class"
+msgstr ""
+
+msgid "no-message-available"
+msgstr ""
+
+msgid "label-needs-complete-receiving"
+msgstr ""
+
+msgid "from-price"
+msgstr ""
+
+msgid "email-eos-document-info"
+msgstr ""
+
+msgid "eos-email-subject"
+msgstr ""
+
+msgid "transit-from-to"
+msgstr ""
+
+msgid "pdf-needs-complete-receiving"
+msgstr ""
+
+msgid "pdf-needs-complete-eos"
+msgstr ""
+
+msgid "end-of-shift"
+msgstr ""
+
+msgid "turnover"
+msgstr ""
+
+msgid "consignment"
+msgstr ""
+
+msgid "vat-zero"
+msgstr ""
+
+msgid "vat-low"
+msgstr ""
+
+msgid "vat-high"
+msgstr ""
+
+msgid "payment-methods"
+msgstr ""
+
+msgid "original"
+msgstr ""
+
+msgid "modified"
+msgstr ""
+
+msgid "cash"
+msgstr ""
+
+msgid "credit-receipt-in"
+msgstr ""
+
+msgid "credit-receipt-out"
+msgstr ""
+
+msgid "coupon-in"
+msgstr ""
+
+msgid "coupon-out"
+msgstr ""
+
+msgid "store-credit"
+msgstr ""
+
+msgid "store-credit-paid"
+msgstr ""
+
+msgid "pin"
+msgstr ""
+
+msgid "credit-card"
+msgstr ""
+
+msgid "total"
+msgstr ""
+
+msgid "opening-balance"
+msgstr ""
+
+msgid "cash-in"
+msgstr ""
+
+msgid "change"
+msgstr ""
+
+msgid "deposit"
+msgstr ""
+
+msgid "withdrawal"
+msgstr ""
+
+msgid "deposit-to-bank"
+msgstr ""
+
+msgid "difference"
+msgstr ""
+
+msgid "end-balance"
+msgstr ""
+
+msgid "cash-plural"
+msgstr ""
+
+msgid "remarks"
+msgstr ""
+
+msgid "receipt"
+msgstr ""
+
+msgid "you-were-helped"
+msgstr ""
+
+msgid "loyalty-nr"
+msgstr ""
+
+msgid "loyalty-points"
+msgstr ""
+
+msgid "coupon-ka"
+msgstr ""
+
+msgid "coupon-kc"
+msgstr ""
+
+msgid "coupon-k"
+msgstr ""
+
+msgid "coupon-ki"
+msgstr ""
+
+msgid "coupon-ku"
+msgstr ""
+
+msgid "credit-receipt"
+msgstr ""
+
+msgid "storecredit"
+msgstr ""
+
+msgid "creditcard"
+msgstr ""
+
+msgid "couponin"
+msgstr ""
+
+msgid "webshop"
+msgstr ""
+
+msgid "article"
+msgstr ""
+
+msgid "discount"
+msgstr ""
+
+msgid "pay-off-store-credit"
+msgstr ""
+
+msgid "value"
+msgstr ""
+
+msgid "total-discount"
+msgstr ""
+
+msgid "round-off-difference"
+msgstr ""
+
+msgid "vat-high-over"
+msgstr ""
+
+msgid "vat-low-over"
+msgstr ""
+
+msgid "vat-zero-over"
+msgstr ""
+
+msgid "cashback-coupon"
+msgstr ""
+
+msgid "coupon-value-is"
+msgstr ""
+
+msgid "coupon-t-value-is"
+msgstr ""
+
+msgid "total-items"
+msgstr ""
+
+msgid "file-generated-info"
+msgstr ""
+
+msgid "applied-filters"
+msgstr ""
+
+msgid "start-date"
+msgstr ""
+
+msgid "end-date"
+msgstr ""
+
+msgid "transit"
+msgstr ""
+
+msgid "transit-done-by"
+msgstr ""
+
+msgid "from"
+msgstr ""
+
+msgid "to"
+msgstr ""
+
+msgid "articleDescription"
+msgstr ""
+
+msgid "brand"
+msgstr ""
+
+msgid "email-receipt-default-subject"
+msgstr ""
+
+msgid "email-receipt-default-subject-wholesale"
+msgstr ""
+
+msgid "pipe-timeout-error"
+msgstr ""
+
+msgid "article-status-report-heading"
+msgstr ""
+
+msgid "article-status-email-info"
+msgstr ""
+
+msgid "customer-sales-report-heading"
+msgstr ""
+
+msgid "stock-report-heading"
+msgstr ""
+
+msgid "trtype-0"
+msgstr ""
+
+msgid "trtype-1"
+msgstr ""
+
+msgid "trtype-2"
+msgstr ""
+
+msgid "trtype-3"
+msgstr ""
+
+msgid "trtype-4"
+msgstr ""
+
+msgid "trtype-5"
+msgstr ""
+
+msgid "trtype-6"
+msgstr ""
+
+msgid "trtype-7"
+msgstr ""
+
+msgid "trtype-14"
+msgstr ""
+
+msgid "trtype-15"
+msgstr ""
+
+msgid "trtype-18"
+msgstr ""
+
+msgid "trtype-93"
+msgstr ""
+
+msgid "trtype-94"
+msgstr ""
+
+msgid "trtype-95"
+msgstr ""
+
+msgid "trtype-96"
+msgstr ""
+
+msgid "trtype-97"
+msgstr ""
+
+msgid "trtype-98"
+msgstr ""
+
+msgid "color-supplier"
+msgstr ""
+
+msgid "color"
+msgstr ""
+
+msgid "location"
+msgstr ""
+
+msgid "time"
+msgstr ""
+
+msgid "user"
+msgstr ""
+
+msgid "type"
+msgstr ""
+
+msgid "reference"
+msgstr ""
+
+msgid "end-stock"
+msgstr ""
+
+msgid "redshift-connection-error"
+msgstr ""
+
+msgid "upload-complete"
+msgstr ""
+
+msgid "upload-logo-removed"
+msgstr ""
+
+msgid "only-POST-allowed"
+msgstr ""
+
+msgid "s3-connection"
+msgstr ""
+
+msgid "image-error"
+msgstr ""
+
+msgid "image-not-found"
+msgstr ""
+
+msgid "no-base64-image"
+msgstr ""
+
+msgid "not-image-file"
+msgstr ""
+
+msgid "unsupported-image"
+msgstr ""
+
+msgid "img-error-shrinking"
+msgstr ""
+
+msgid "img-err-oversized"
+msgstr ""
+
+msgid "bucket-error"
+msgstr ""
+
+msgid "upload-dir-not-set"
+msgstr ""
+

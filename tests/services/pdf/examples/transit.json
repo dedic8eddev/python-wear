@@ -1,0 +1,130 @@
+{
+    "_id": "5e54e2df57748083eeeef488",
+    "active": true,
+    "amountEntry": 0,
+    "buffer_id": "buffer_24353a88-c52d-4144-b7cd-2cacd9a0a420",
+    "cashier": {
+        "fullname": "Bobby Drake",
+        "id": "54dcb4e8c8d4b6002ad6353c",
+        "name": "Bobby"
+    },
+    "change": -260.49,
+    "customer": null,
+    "device": "5c7fee844524c1ff7bcadc8e",
+    "diff": 0,
+    "difference": 0,
+    "discountableAmount": 260.49,
+    "discountreason": "",
+    "line": false,
+    "loyaltyPoints": 0,
+    "nr": "51-6053-44",
+    "overallReceiptDiscount": 0,
+    "payments": {
+        "cash": 0,
+        "consignment": 0,
+        "couponin": 0,
+        "couponout": 0,
+        "creditcard": 0,
+        "creditreceipt": 0,
+        "pin": 0,
+        "storecredit": 0,
+        "webshop": 0,
+        "withdrawel": 0
+    },
+    "pinError": "",
+    "pinInfo": "",
+    "printed": "25-02-20 10:03",
+    "receipt": [
+        {
+            "articleCode": "B.Drake Cap",
+            "articleDescription": "Drake Cap",
+            "barcode": "11",
+            "brand": "My God",
+            "category": "barcode",
+            "changeDisc": false,
+            "color": "BUBBLE GUM ",
+            "found": true,
+            "group": null,
+            "nettPrice": 9.99,
+            "price": 9.99,
+            "qty": 1,
+            "reqid": "cc73",
+            "sizeLabel": "-",
+            "vat": 21
+        },
+        {
+            "articleCode": "B.Drake Coat",
+            "articleDescription": "Drake Coat",
+            "barcode": "10",
+            "brand": "My God",
+            "category": "barcode",
+            "changeDisc": false,
+            "color": "antelope aged washed",
+            "found": true,
+            "group": null,
+            "nettPrice": 250.5,
+            "price": 250.5,
+            "qty": 3,
+            "reqid": "886c",
+            "sizeLabel": "L",
+            "vat": 21
+        }
+    ],
+    "receiptNr": 44,
+    "receipt_email": "",
+    "remark": "",
+    "reqid": 0,
+    "selectedLine": 1,
+    "shift": "f95cf9e1-ff92-4ae1-8fd0-471bb42fe24c",
+    "shop": {
+        "city": "Àmştëlvéên",
+        "houseadd": "2",
+        "houseno": "123",
+        "id": "51",
+        "name": "Amstelveenn",
+        "phone": "0612345678",
+        "street": "Ręmbràndthôf",
+        "zipcode": "1181ZL"
+    },
+    "totalAmount": 260.49,
+    "totalCoupon": 0,
+    "totalDiscount": 0,
+    "totalDiscountCoupon": 0,
+    "totalNumber": 4,
+    "totalPaid": 0,
+    "totalStoreCreditPaid": 0,
+    "transit": {
+        "dir": "to",
+        "transitPeer": "50",
+        "transitWarehouse": "Amsterdam"
+    },
+    "transitNr": 44,
+    "type": 3,
+    "vat": {
+        "highamount": 45.21,
+        "hightotal": 260.49,
+        "highvalue": 21,
+        "lowamount": 0,
+        "lowtotal": 0,
+        "lowvalue": 9,
+        "zeroamount": 0,
+        "zerototal": 0,
+        "zerovalue": 0
+    },
+    "version": {
+        "date": "2014-07-10T12:49:13+0200",
+        "v": 8
+    },
+    "withdrawelreason": "",
+    "tenant_id": [
+        "91537"
+    ],
+    "created": {
+        "action": null,
+        "date": "2020-02-25T10:03:27+0100",
+        "user": {
+            "_id": "5c7fee844524c1ff7bcadc8e",
+            "username": "maddoxx.aveen"
+        }
+    }
+}

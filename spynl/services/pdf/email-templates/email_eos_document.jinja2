@@ -1,0 +1,21 @@
+{% extends 'base.jinja2' %}
+{% import 'macros.jinja2' as macros %}
+{% block content %}
+    {% if message %}
+        <p>
+            {{ message | safe }}
+        </p>
+    {% endif %}
+    <p>
+        {{ _('email-eos-document-info',
+            mapping={
+                'device': device,
+                'periodStart': periodStart | format_datetime(locale=locale, tzinfo=tz),
+                'periodEnd': periodEnd | format_datetime(locale=locale, tzinfo=tz),
+                'fullname': fullname,
+                'location': location,
+                'now': now | format_datetime(locale=locale, tzinfo=tz),
+            }
+        ) }}
+    </p>
+{% endblock %}

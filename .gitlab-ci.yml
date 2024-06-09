@@ -1,0 +1,234 @@
+# TODO delete the image from the gitlab registry on failure.
+# TODO trigger pipelines on softear6 and softwear7
+
+# NOTE The working directory of the Spynl docker image is /application
+
+# This is the image the gitlab documentation specifies for running alongside the
+# docker-in-docker service.
+image: docker:19.03.12
+
+stages:
+  - build # Build and TODO: verify image boots.
+  - test # Test and lint.
+  - build_artifacts # Docker aws registry temp password and docs
+  - push # Tag and push the spynl image to the Sentia docker registry.
+  - deploy # Deploy spynl and documentation
+
+variables:
+  # Our deployment jobs make commits to other repos and the job images do not have
+  # user information.
+  GIT_AUTHOR_NAME: "$GITLAB_USER_NAME"
+  GIT_AUTHOR_EMAIL: "$GITLAB_USER_EMAIL"
+  GIT_COMMITTER_NAME: "Gitlab CI"
+  GIT_COMMITTER_EMAIL: "development@softwear.nl"
+  GIT_DEPTH: "1"
+  GIT_STRATEGY: "none" # Set to clone for jobs that need the code.
+  GIT_SUBMODULE_STRATEGY: "none"
+  DOCKER_TLS_CERTDIR: "" # Needed for docker-in-docker.
+  DOCKER_DRIVER: "overlay2" # Speeds up builds.
+  DOCKER_PASSWORD_FILE: "docker_password.txt"
+  SENTIA_ECR: "785545872704.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com"
+  SENTIA_IMAGE: "785545872704.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/spynl:$CI_COMMIT_SHORT_SHA"
+
+build:
+  interruptible: true
+  stage: build
+  services:
+    - docker:19.03.12-dind
+  variables:
+    GIT_DEPTH: "50"
+    GIT_STRATEGY: "clone"
+    GIT_SUBMODULE_STRATEGY: "normal"
+  before_script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+  script:
+    - >
+      docker build -t $CI_REGISTRY_IMAGE:$CI_PIPELINE_ID
+      --build-arg BUILD_NR=$CI_COMMIT_SHORT_SHA
+      --build-arg BUILD_TIME="$(date -uIseconds)"
+      --build-arg PRINTQ_S3_KEY=$PRINTQ_AWS_ACCESS_KEY_ID
+      --build-arg PRINTQ_S3_SECRET=$PRINTQ_AWS_SECRET_ACCESS_KEY
+      . | tee docker-build.txt
+    - docker push $CI_REGISTRY_IMAGE
+  artifacts:
+    paths:
+      - docker-build.txt
+
+test:
+  stage: test
+  image: $CI_REGISTRY_IMAGE:$CI_PIPELINE_ID
+  needs: ["build"]
+  services:
+    - name: $CI_REGISTRY/softwearconnect/softwear-development/mongo-e2e
+      alias: mongo
+    - name: $CI_REGISTRY/softwearconnect/softwear-development/softwearbi:e2e
+      alias: postgres
+  variables:
+    MONGODB_URL: "mongo:27017"
+    REDSHIFT_URL: "postgresql://postgres:password@postgres:5432/softwearbi"
+    POSTGRES_PASSWORD: "password"
+    POSTGRES_DB: "softwearbi"
+  script:
+    - spynl-cli dev test
+  artifacts:
+    when: always
+    paths:
+      - report.xml
+      - report_spynl_data.xml
+      - coverage.xml
+    reports:
+      junit:
+        - report.xml
+        - report_spynl_data.xml
+
+lint:
+  stage: test
+  image: $CI_REGISTRY/softwearconnect/softwear-development/python-linting
+  needs: []
+  variables:
+    GIT_STRATEGY: "clone"
+    GIT_SUBMODULE_STRATEGY: "normal"
+  script:
+    - flake8 .
+    - black -S --check --diff .
+    - isort -c .
+    - >
+      python3 -c 'import yaml, sys; yaml.safe_load(sys.stdin)'
+      < spynl_swagger_external/retail/swapi.yaml
+    - >
+      python3 -c 'import yaml, sys; yaml.safe_load(sys.stdin)'
+      < spynl_swagger_external/wholesale/swapi.yaml
+
+# The image we use for docker-in-docker (docker:19.03.12) does not support
+# installing the awscli out of the box. So this jobs retrieves a docker password
+# and is passed through to the push stage as an artifact.
+ecr_login:
+  stage: build_artifacts
+  image: registry.gitlab.com/gitlab-org/cloud-deploy/aws-base:latest
+  script:
+    - aws ecr get-login-password --region $AWS_DEFAULT_REGION > $DOCKER_PASSWORD_FILE
+  artifacts:
+    expire_in: 1 hour
+    paths:
+      - $DOCKER_PASSWORD_FILE
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "master"'
+    - if: "$CI_COMMIT_TAG"
+    - if: "$CI_COMMIT_MESSAGE =~ /deploy-spynl/"
+
+build_documentation:
+  stage: build_artifacts
+  image: $CI_REGISTRY_IMAGE:$CI_PIPELINE_ID
+  needs: ["build"]
+  before_script:
+    # so the generated documentation ends up in the right place relative to the
+    # project
+    - cd /application
+  allow_failure: false
+  script:
+    # build internal docs
+    - spynl-cli dev generate-documentation
+    - spynl-cli api generate-json-schemas
+    - spynl-cli services generate-json-schemas
+    # check if the build was successful
+    - test -f spynl_swagger/spynl.json
+    # build external docs
+    - spynl-cli api generate-external-schemas --folder spynl_swagger_external/retail
+    - spynl-cli api generate-external-schemas --folder spynl_swagger_external/wholesale
+    # artifact paths are relative tot the $CI_PROJECT_DIR and cannot link outside of it
+    - mv spynl_swagger $CI_PROJECT_DIR/spynl_swagger
+    - mv spynl_swagger_external $CI_PROJECT_DIR/spynl_swagger_external
+  artifacts:
+    when: always
+    paths:
+      - spynl_swagger
+      - spynl_swagger_external
+
+push:
+  stage: push
+  services:
+    - docker:19.03.12-dind
+  before_script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker login -u AWS --password-stdin $SENTIA_ECR < $DOCKER_PASSWORD_FILE
+    # `docker tag` does not pull automatically, so pull explicitly.
+    - docker pull $CI_REGISTRY_IMAGE:$CI_PIPELINE_ID
+  script:
+    # Tag image with `dev` and push to our Gitlab registry.
+    - docker tag $CI_REGISTRY_IMAGE:$CI_PIPELINE_ID $CI_REGISTRY_IMAGE:dev
+    - docker push $CI_REGISTRY_IMAGE:dev
+    # Tag image for Sentia and push to Sentia.
+    - docker tag $CI_REGISTRY_IMAGE:$CI_PIPELINE_ID $SENTIA_IMAGE
+    - docker push $SENTIA_IMAGE
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "master"'
+    - if: "$CI_COMMIT_TAG"
+    - if: "$CI_COMMIT_MESSAGE =~ /deploy-spynl/"
+
+deploy:
+  stage: deploy
+  # A self managed Alpine image with bash and git installed.
+  image: $CI_REGISTRY/softwearconnect/softwear-development/bash-git
+  variables:
+    GIT_STRATEGY: "clone"
+    GIT_DEPTH: "50"
+  script:
+    - /bin/bash scripts/deploy.sh
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "master"'
+    - if: "$CI_COMMIT_TAG"
+    - if: "$CI_COMMIT_MESSAGE =~ /deploy-spynl/"
+    - if: $CI_COMMIT_BRANCH
+      when: manual
+      allow_failure: true
+
+.deploy_external_documentation:
+  stage: deploy
+  image:
+    name: amazon/aws-cli
+    entrypoint: [""]
+  needs:
+    - job: build_documentation
+      artifacts: true
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: $CI_COMMIT_BRANCH
+      when: manual
+      allow_failure: true
+  before_script:
+    - aws --version
+  script:
+    - aws s3 rm s3://$S3_BUCKET/external_developer_docs --recursive
+    - aws s3 cp spynl_swagger_external s3://$S3_BUCKET/external_developer_docs --recursive
+
+deploy_external_documentation_edge:
+  extends:
+    - .deploy_external_documentation
+  environment:
+    name: edge-external-doc
+    url: https://developer.edge.softwearconnect.com
+
+deploy_external_documentation_beta:
+  extends:
+    - .deploy_external_documentation
+  environment:
+    name: beta-external-doc
+    url: https://developer.beta.softwearconnect.com
+
+deploy_external_documentation_production:
+  extends:
+    - .deploy_external_documentation
+  environment:
+    name: production-external-doc
+    url: https://developer.softwearconnect.com
+
+pages:
+  stage: deploy
+  image: ${CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX}/alpine:3.13.5
+  artifacts:
+    paths:
+      - public
+  script:
+    - cp spynl_swagger public -r
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "master"'

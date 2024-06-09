@@ -1,0 +1,354 @@
+{% extends "sales_order_html_wrapper.jinja2" %}
+
+{% set locale = order.get('customer', {}).get('language', 'en_GB') %}
+
+{# This macro uses a utility function from spynl.services.pdf.utils to translate. The translations
+are in that function. This is done because the document is tranlated based on the language
+of the customer, instead of that of the user. There are also more languages available, and
+it's easier to add one quickly #}
+{% macro translate(key) -%}
+    {{ key | translate(order.get('customer', {}).get('language', 'en')) }}
+{%- endmacro %}
+
+{% macro address(name, address) %}
+    <div class="address">
+        <div> {{ name }} </div>
+        <div> {{ address.get('address', '') }} </div>
+        <div> {{ address.get('zipcode', '') }} {{ address.get('city', '') }} </div>
+        <div> {{ address.get('country', '') | format_country(locale)}} </div>
+    </div>
+{% endmacro %}
+
+{% macro price(value) %}
+    {# This is to make sure we do not show any decimal places for DKK #}
+    {% set currency = order.get('customer', {}).get('currency', {}).get('code', '') %}
+    {% if currency == 'DKK' %}
+        {% set format = '#,##0\xa0¤' %}
+        {% set currency_digits = False %}
+    {% else %}
+        {% set format = None %}
+        {% set currency_digits = True %}
+    {% endif %}
+    {{ value | format_currency(currency,
+        locale=locale,
+        currency_digits=currency_digits,
+        format=format) }}
+{% endmacro %}
+
+{% macro decimal(value) %}
+    {{ value | format_decimal(locale=locale) }}
+{% endmacro %}
+
+{% block doc_header %}
+    {% if order.get('status') != 'complete' %}
+        {{ translate('draft') }}
+    {% endif %}
+    {{ order.get('orderNumber', '') }}
+{% endblock %}
+
+{% block watermark %}
+    {% if order.get('status') != 'complete' %}
+        {{ translate('draft') }}
+    {% endif %}
+{% endblock %}
+
+{% block invoice_address %}
+    <div class="address"> <h3> {{ translate('Invoice Address') }} </h3> </div>
+    {{ address(order['customer'].get('legalName', ''), order['customer'].get('address', {})) }}
+{% endblock %}
+
+{% block payment_terms %}
+    {% if settings['discountLine1'] or settings['discountLine1'] or settings['nettTerm'] or
+    order['customer'].get('paymentTerms') or
+    (order.get('type') == 'sales-order' and order.get('customer', {}).get('preSaleDiscount')) %}
+        <div> <h3> {{ translate('Payment Terms') }} </h3> </div>
+    {% endif %}
+    <table class="payments_table">
+        <tbody>
+            <tr>
+                <td>
+                    {% if order['customer'].get('paymentTerms') %}
+                        <div class="padding_right">
+                            {{ order['customer'].get('paymentTerms') }}
+                        </div>
+                    {% endif %}
+                    {% if order.get('type') == 'sales-order' and order.get('customer', {}).get('preSaleDiscount') %}
+                        <div class="padding_right">
+                            {{ translate('Pre-sale discount') }}:
+                            {{ decimal(order['customer']['preSaleDiscount']) }} % </div>
+                    {% endif %}
+                </td>
+                <td>
+                    {% if settings['discountLine1'] and order.get('discountTerm1')%}
+                        {# TODO: what happens if there is no percentage? #}
+                        <div>
+                            {{ order['discountTerm1'] }} {{ translate('days') }}
+                            {{ decimal(order.get('discountPercentage1')) }} %
+                        </div>
+                    {% endif %}
+                    {% if settings['discountLine2'] and order.get('discountTerm2') %}
+                        <div>
+                            {{ order['discountTerm2'] }} {{ translate('days') }}
+                            {{ decimal(order.get('discountPercentage2')) }} %
+                        </div>
+                    {% endif %}
+                    {% if settings['nettTerm'] and order.get('nettTerm') %}
+                        <div>
+                            {{ order['nettTerm'] }} {{ translate('days') }}
+                            {{ translate('net') }}
+                        </div>
+                    {% endif %}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
+
+{% block doc_info %}
+    <div style="float:right;">
+        <div>
+            <h3> {{ translate('Order') }} </h3>
+        </div>
+        <div>
+            {% if order.get('customReference') %}
+                {{ order['customReference'] }}
+            {% else %}
+                {{ order.get('orderNumber', '') }}
+            {% endif %}
+        </div>
+        <div>
+            {{ translate('date') }}:
+            {{ order.get('signatureDate', '') | format_date(locale=locale) }}
+        </div>
+        {% if settings['agentName'] %}
+            <div> {{ translate('agent') }}: {{ order.get('agentName') }} </div>
+        {% endif %}
+    </div>
+{% endblock %}
+
+{% block delivery_address %}
+    {% if order.get('customer').get('deliveryAddress') %}
+        <div class="address"> <h3> {{ translate('Delivery Address') }} </h3> </div>
+        {{ address(order['customer'].get('name', ''), order['customer']['deliveryAddress']) }}
+    {% endif %}
+{% endblock %}
+
+{% block logo_space %}
+    {{ order.get('orderTerms', {}).get('orderPreviewText1', '') | safe }}
+{% endblock %}
+
+{% block client_details %}
+    <div> {{ translate('Client number') }}: {{ order['customer'].get('clientNumber') }} </div>
+    <div> {{ translate('VAT number') }}: {{ order['customer'].get('vatNumber') }} </div>
+{% endblock %}
+
+{% block shipping_carrier %}
+    {% if order.get('shippingCarrier') and settings['shippingCarrier'] %}
+        <div> <h3> {{ translate('Shipping Carrier') }} </h3> </div>
+        <div> {{ order['shippingCarrier'] }} </div>
+    {% endif %}
+{% endblock %}
+
+{% block product_table %}
+    <table class="product_table">
+        <tbody>
+            <tr>
+                {% if settings['productPhoto'] %}
+                    <td rowspan="0" style="width:23mm">
+                        <img
+                            class="thumbnail"
+                            src="{{ article_image_location }}{{ product['articleCode'] }}.jpg">
+                    </td>
+                {% endif %}
+                <td style="font-weight:bold"> {{ product['articleCode'] }} </td>
+                <td> {# properties #} </td>
+                {% if settings['suggestedRetailPrice'] %}
+                    <td class="amounts" style="font-weight:bold">
+                        {{ translate('Retailprice') }}
+                        {{ price(product['localizedSuggestedRetailPrice']) }}
+                    </td>
+                {% endif %}
+            </tr>
+            <tr>
+                {# construct two tables to be able to loop over properties #}
+                <td> <table>
+                    <tr> <td> {{ product['articleDescription'] }} </td> </tr>
+                    {% if settings['brand'] and product.get('brand') %}
+                        <tr> <td> {{ product['brand'] }} </td> </tr>
+                    {% endif %}
+                    {% if settings['collection'] and product.get('collection') %}
+                        <tr> <td> {{ product['collection'] }} </td> </tr>
+                    {% endif %}
+                    {% if settings['articleGroup'] and product.get('articleGroup') %}
+                        <tr> <td> {{ product['articleGroup'] }} </td> </tr>
+                    {% endif %}
+                    {# Do not show deliveryPeriodLabel if it's the default #}
+                    {% if order.get('deliveryPeriodLabel') and order['deliveryPeriodLabel'] != 'standaard'%}
+                        <tr> <td>
+                            {{ translate('period') | change_case }}:
+                            {{ order['deliveryPeriodLabel'] }}
+                        </td> </tr>
+                    {% endif %}
+                    {% if ( (settings['reservationDate'] and order.get('reservationDate')) or
+                        (settings['fixDate'] and order.get('fixDate')) ) %}
+                        <tr> <td>
+                            {% if settings['reservationDate'] and order.get('reservationDate') %}
+                                {{ order['reservationDate'] | format_date(locale=locale) }}
+                                {% set join_sign = ' - ' %}
+                            {% endif %}
+                            {% if settings['fixDate'] and order.get('fixDate') %}
+                                {{ join_sign }} {{ order['fixDate'] | format_date(locale=locale) }}
+                            {% endif %}
+                        </td> </tr>
+                    {% endif %}
+                </table> </td>
+                <td> <table>
+                    {% for property in settings.get('propertiesOnOrder', []) %}
+                        {% if product.get('properties', {}).get(property) %}
+                            <tr>
+                                <td> {{ property }}: </td>
+                                <td> {{ product['properties'][property] }} </td>
+                            </tr>
+                        {% endif %}
+                    {% endfor %}
+                </table> </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
+
+{% block additional_css %}
+    .sku_table {table-layout: fixed;}
+    .sku_table td {word-wrap: break-word;}
+    .sku_table td:nth-child(1) {width: 5%;}
+    {% if settings['colorDescription'] %}
+        .sku_table td:nth-child(2) {width: 10%;}
+        .sku_table td:nth-child(3) {width: 11%;}
+    {% else %}
+        .sku_table td:nth-child(2) {width: 21%;}
+    {% endif %}
+    .sku_table td:nth-last-child(3) {width: 10%;}
+    .sku_table td:nth-last-child(2) {width: 12%;}
+    .sku_table td:last-child {width: 12%;}
+{% endblock %}
+
+{% block sku_table %}
+    {% set size_width = 40 / (product['skuTable']['available_sizes'] | length) %}
+    <table class="sku_table">
+        <thead>
+            <tr>
+                <th> {# color code #} </th>
+                {% if settings['colorDescription'] %}
+                    <th> {# color description #} </th>
+                {% endif %}
+                <th> {# remarks #} </th>
+                {% for size in product['skuTable']['available_sizes'] %}
+                    {% if product['skuTable'].get('use_small_header_font') %}
+                        <th style="width: {{ size_width }}%;font-size:7pt"> {{ size }} </th>
+                    {% else %}
+                        <th style="width: {{ size_width }}%"> {{ size }} </th>
+                    {% endif %}
+                {% endfor %}
+                <th class="amounts"> {{ translate('total') }} </th> <th class="amounts"> {{ translate('price') }} </th> <th class="amounts"> {{ translate('total') }} </th> </tr>
+        </thead>
+        <tbody>
+            {% for row in product['skuTable']['skuRows'] %}
+                <tr>
+                    <td> {{ row['colorCode'] }} </td>
+                    {% if settings['colorDescription'] %}
+                        <td> {{ row['colorDescription'] }} </td>
+                    {% endif %}
+                    <td> {{ row['remarks'] }} </td>
+                    {% for size in product['skuTable']['available_sizes'] %}
+                        <td>
+                            {% if row['quantities'][size] %}
+                                {{ row['quantities'][size] }}
+                            {% endif %}
+                        </td>
+                    {% endfor %}
+                    <td class="amounts"> {{ row['totalQuantity'] }} </td>
+                    <td class="amounts"> {{ price(row['price']) }} </td>
+                    <td class="amounts"> {{ price(row['totalPrice']) }} </td>
+                </tr>
+            {% endfor %}
+            <tr>
+                <td> </td>
+                {% if settings['colorDescription'] %}
+                    <td> </td>
+                {% endif %}
+                <td> </td>
+                {% for size in product['skuTable']['available_sizes'] %} <td> </td>
+                {% endfor %}
+                <td class="amounts" style="font-weight:bold">
+                    {{ product['skuTable']['totalQuantity'] }}
+                </td>
+                <td colspan="2" class="amounts" style="font-weight:bold">
+                    {{ price(product['skuTable']['totalPrice']) }}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
+
+{% block summary %}
+    <table class="summary">
+        <tbody>
+            <tr>
+                <td> {{ translate('total number of items') }}:</td>
+                <td style="text-align: right"> {{ order['totalQuantity'] }} </td>
+            </tr>
+            <tr>
+                <td> {{ translate('total price') }}: </td>
+                <td style="text-align: right"> {{ price(order['totalLocalizedPrice']) }} </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
+
+{% macro base_signature(footnote) %}
+    {% if order.get('termsAndConditionsAccepted') %}
+        <div>{{ translate('General Terms and Conditions apply to all agreements. By signing this order, I explicitly declare that I accept your General Terms and Conditions.') }} {{ footnote | safe}}</div>
+    {% endif %}
+    {% if order.get('signature') %}
+        <img class="signature" src="{{ order['signature'] }}">
+    {% endif %}
+    <div> {{ order.get('signedBy', '') }} </div>
+{% endmacro %}
+
+{% block signature %}
+    {% if not settings.get('print_terms_and_conditions', True) %}
+        {{ base_signature('&#42;') }}
+        <div>&#42;{{ translate(
+                  'The terms and conditions relating to this order are in the attached document.'
+                  ) }} </div>
+    {% else %}
+        {{ base_signature('') }}
+    {% endif %}
+{% endblock %}
+
+{% block order_terms_2 %}
+    {{ order.get('orderTerms', {}).get('orderPreviewText2', '') | safe }}
+{% endblock %}
+
+{% block order_terms_3 %}
+    {{ order.get('orderTerms', {}).get('orderPreviewText3', '') | safe }}
+{% endblock %}
+
+{% block order_terms_4 %}
+    {{ order.get('orderTerms', {}).get('orderPreviewText4', '') | safe }}
+{% endblock %}
+
+{% block terms_and_conditions %}
+    {% if order.get('orderTerms', {}).get('orderPreviewText5') %}
+        <div class="terms_and_conditions">
+            {{ order['orderTerms']['orderPreviewText5'] | safe }}
+        </div>
+        <table style="width: 100%;margin-top:10mm;margin-bottom:10mm;">
+            <tr> <td style="width:45%;text-align:right">
+                {{ base_signature('') }}
+            </td> </tr>
+        </table>
+    {% endif %}
+{% endblock %}
+
+{% block remarks %} {{ order.get('remarks', {}) }} {% endblock %}

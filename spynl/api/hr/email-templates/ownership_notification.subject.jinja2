@@ -1,0 +1,11 @@
+{% if was_given %}
+  {{
+    _('email-template-ownership-notification-given-subject',
+    mapping={'user_username': user_username, 'tenant': tenant})|safe
+  }}
+{% else %}
+  {{
+    _('email-template-ownership-notification-revoked-subject',
+    mapping={'user_username': user_username, 'tenant': tenant})|safe
+  }}
+{% endif %}

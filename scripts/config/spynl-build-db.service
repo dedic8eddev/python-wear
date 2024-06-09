@@ -1,0 +1,14 @@
+[Unit]
+Description=Test Mongodb Container
+Requires=docker.service
+
+[Service]
+ExecStartPre=/bin/sleep 1
+ExecStartPre=/usr/bin/env docker pull mongo:latest
+ExecStart=/usr/bin/env docker run --restart=always --name=spynl_builds_mongo mongo:latest
+ExecStop=/usr/bin/env docker stop spynl_builds_mongo
+ExecStopPost=/usr/bin/env docker rm -f spynl_builds_mongo
+ExecReload=/usr/bin/env docker restart spynl_builds_mongo
+
+[Install]
+WantedBy=multi-user.target

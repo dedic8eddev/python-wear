@@ -1,0 +1,194 @@
+{
+    "tenant_id": [
+        "a_tenant"
+    ],
+    "_id" : "1b2d47ed-cf4c-4d26-ba7b-f696e1932c09",
+    "docNumber": "c2e86831-6ca3-43b4-acf4-f08165d3a7c2",
+    "remarks": "These are some remarks",
+    "warehouseId": "91537_$AAAB",
+    "products": [
+        {
+            "articleCode": "1100118",
+            "articleCodeSupplier": "35155786",
+            "articleGroup": "trui",
+            "articleDescription": "Stone Island Knittwear",
+            "brand": "",
+            "skus": [
+                {
+                    "size": "M",
+                    "sizeIndex": 2,
+                    "color": "navy blauw",
+                    "qty": 400,
+                    "barcode": "000053035675",
+                    "colorCode": "navy",
+                    "colorDescription": "blauw",
+                    "colorCodeSupplier": "**bla",
+                    "subColorDescription": "sub",
+                    "colorSupplier": "0020"
+                },
+                {
+                    "size": "L",
+                    "sizeIndex": 3,
+                    "color": "navy blauw",
+                    "qty": 300,
+                    "barcode": "000053035676",
+                    "colorCode": "navy",
+                    "colorDescription": "blauw",
+                    "colorCodeSupplier": "**bla",
+                    "colorSupplier": "0020"
+                },
+                {
+                    "size": "XL",
+                    "sizeIndex": 4,
+                    "color": "navy blauw",
+                    "qty": 250,
+                    "barcode": "000053035677",
+                    "colorCode": "navy",
+                    "colorDescription": "blauw",
+                    "colorCodeSupplier": "**bla",
+                    "colorSupplier": "0020"
+                },
+                {
+                    "size": "XXL",
+                    "sizeIndex": 5,
+                    "color": "navy blauw",
+                    "qty": 100,
+                    "barcode": "000053035678",
+                    "colorCode": "navy",
+                    "colorDescription": "blauw",
+                    "colorCodeSupplier": "**bla",
+                    "colorSupplier": "0020"
+                }
+            ],
+            "price": 172.41,
+            "suggestedRetailPrice": 0.0,
+            "valuePrice": 72.15,
+            "buyPrice": 72.15,
+            "sizes": [
+                "M",
+                "L",
+                "XL",
+                "XXL"
+            ]
+        },
+        {
+            "articleCode": "1100160",
+            "articleCodeSupplier": "35151527",
+            "articleGroup": "shirt",
+            "articleDescription": "Stone Island Shirt",
+            "brand": "",
+            "skus": [
+                {
+                    "size": "L",
+                    "sizeIndex": 3,
+                    "color": "roo rood",
+                    "colorCode": "roo",
+                    "qty": 400,
+                    "barcode": "000053035577",
+                    "colorCodeSupplier": "supplier",
+                    "colorFamily": "color family",
+                    "colorSupplier": "0046"
+                },
+                {
+                    "size": "S",
+                    "sizeIndex": 3,
+                    "color": "navy",
+                    "colorCode": "navy",
+                    "qty": 400,
+                    "barcode": "000053035577",
+                    "colorCodeSupplier": "supplier",
+                    "colorFamily": "color family",
+                    "colorSupplier": "0046"
+                }
+            ],
+            "price": 104.35,
+            "suggestedRetailPrice": 0.0,
+            "valuePrice": 44.02,
+            "buyPrice": 44.02,
+            "sizes": [
+                "S",
+                "M",
+                "L",
+                "XL"
+            ]
+        },
+        {
+            "articleCode": "1100218",
+            "articleCodeSupplier": "35153032",
+            "articleGroup": "broeken",
+            "articleDescription": "Stone Island Pant",
+            "brand": "",
+            "skus": [
+                {
+                    "size": "46",
+                    "sizeIndex": 2,
+                    "color": "gri grijs",
+                    "qty": 125,
+                    "barcode": "000053035600",
+                    "colorCode": "gri",
+                    "colorDescription": "grijs",
+                    "colorSupplier": "0060"
+                },
+                {
+                    "size": "48",
+                    "sizeIndex": 3,
+                    "color": "gri grijs",
+                    "qty": 150,
+                    "barcode": "000053035601",
+                    "colorCode": "gri",
+                    "colorDescription": "grijs",
+                    "colorSupplier": "0060"
+                },
+                {
+                    "size": "50",
+                    "sizeIndex": 4,
+                    "color": "gri grijs",
+                    "qty": 245,
+                    "barcode": "000053035602",
+                    "colorCode": "gri",
+                    "colorDescription": "grijs",
+                    "colorSupplier": "0060"
+                }
+            ],
+            "price": 99.81,
+            "suggestedRetailPrice": 0.0,
+            "valuePrice": 41.75,
+            "buyPrice": 41.75,
+            "sizes": [
+                "46",
+                "48",
+                "50"
+            ]
+        }
+    ],
+    "active": true,
+    "totalQty": 1970,
+    "status": "complete",
+    "supplierOrderReference": [
+        "11111",
+        "22222",
+        "33333"
+    ],
+    "totalBuyPrice": 0,
+    "totalValuePrice": 0,
+    "totalPrice": 0,
+    "orderNumber": "RCV-24",
+    "created": {
+        "user": {
+            "_id": "5c7fee844524c1ff7bcadc89",
+            "username": "maddoxx.logistics"
+        },
+        "action": "receivings/save",
+        "date": "2019-05-16T09:41:05+0200"
+    },
+    "modified": {
+        "user": {
+            "_id": "5c7fee844524c1ff7bcadc89",
+            "username": "maddoxx.logistics"
+        },
+        "action": "receivings/save",
+        "date": "2019-05-16T09:41:05+0200"
+    },
+    "type": "receivings",
+    "warehouseName": "Amsterdam"
+}

@@ -1,0 +1,16 @@
+{% extends "base.jinja2" %}
+{% import 'macros.jinja2' as macros %}
+{% block content %}
+  <p>
+    {{ user_message }}
+  </p>
+  <p>
+    {{
+      _('email-template-invitation-to-connect')
+    }}
+  </p>
+
+  {# add link button #}
+  {% set link = [app_url, '/accept-connection?id=', id, '&key=', key] | join('') | safe %}
+  {{ macros.button(link, _('email-template-invitation-to-connect-button')) }}
+{% endblock %}

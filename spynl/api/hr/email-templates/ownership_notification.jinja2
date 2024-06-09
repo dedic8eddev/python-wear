@@ -1,0 +1,30 @@
+{% extends "base.jinja2" %}
+{% import 'macros.jinja2' as macros %}
+
+{% set softwear_logo = True %}
+
+{% block content %}
+  {{ macros.greeting(recipient_fullname) }}
+  {% if was_given %}
+    <p>
+      {{
+        _('email-template-ownership-notification-ownership-given',
+        mapping={'user_username': user_username, 'tenant': tenant})
+      }}
+    </p>
+  {% else %}
+    <p>
+      {{
+        _('email-template-ownership-notification-revoked-ownership',
+        mapping={'user_username': user_username, 'tenant': tenant})
+      }}
+    </p>
+  {% endif %}
+  <p>
+    {{
+      _('email-template-if-you-have-questions',
+      mapping={'link': macros.contact('link')})|safe
+    }}
+  </p>
+  {{ macros.regards() }}
+{% endblock %}

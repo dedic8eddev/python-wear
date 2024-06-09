@@ -1,0 +1,3 @@
+doc linguist-documentation
+spynl/main/docs/swagger-ui/* linguist-vendored
+spynl/main/docs/docson/* linguist-vendored

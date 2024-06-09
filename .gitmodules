@@ -1,0 +1,3 @@
+[submodule "marshmallow-jsonschema"]
+	path = marshmallow-jsonschema
+	url = ../../softwearconnect/marshmallow-jsonschema.git

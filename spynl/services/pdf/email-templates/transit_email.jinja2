@@ -1,0 +1,14 @@
+{% extends 'base.jinja2' %}
+{% block content %}
+    {% if message %}
+        <p>
+            {{ message | safe }}
+        </p>
+    {% endif %}
+    <p>
+        {{ _('transit-from-to',
+            mapping={'from_warehouse': from_warehouse, 'to_warehouse': to_warehouse
+            })
+        }}
+    </p>
+{% endblock %}

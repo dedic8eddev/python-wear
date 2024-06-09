@@ -1,0 +1,30 @@
+<html>
+    <!-- use free fontawesome icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <body>
+        <div class="header">
+            <table class="header_table">
+                <tbody>
+                    <tr>
+                        <td>
+                            <h1> {% block doc_header %} {% endblock %} </h1>
+                        </td>
+                        <td rowspan="2" style="vertical-align:top;overflow:hidden">
+                            <div style="float:right;"> {% block logo_space %} {% endblock %} </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> {% block document_info %} {% endblock %} </td>
+                    </tr>
+                    <tr class="small_print">
+                        <!-- long remarks will be cut off. The cut off is about 270 characters (since it's not a mono space font, this is a very rought estimate) -->
+                        <td colspan="2" style="height:7mm;vertical-align:top;overflow:hidden"> <div style="float:left;"> {% block remarks %} {% endblock %} </div> </td>
+                    </tr>
+                    </tbody>
+            </table>
+        </div>
+
+        {% block body %} {% endblock %}
+
+    </body>
+</html>

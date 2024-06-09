@@ -1,0 +1,9 @@
+{% if first %}
+  {{
+   _('email-template-change-confirmation-subject')
+  }}
+{% else %}
+  {{
+    _('email-template-change-confirmation-resend-subject')
+  }}
+{% endif %}

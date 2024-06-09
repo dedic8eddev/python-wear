@@ -1,0 +1,168 @@
+@page {
+  size: A4 portrait;
+  margin: 70mm 10mm 20mm 10mm;
+  @bottom-right {
+    content: counter(page) "/" counter(pages);
+    font-family: 'Roboto', sans-serif;
+    font-size: 10pt;
+  }
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 10pt;
+}
+
+h1 {
+  font-size: 20pt;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.watermark {
+  position: fixed;
+  top: 25%;
+  text-align: center;
+  transform: rotate(54.7deg);
+  font-size: 120pt;
+  font-family: 'Roboto-black', sans-serif;
+  width: 100%;
+  opacity: 0.2;
+  font-weight: bold;
+}
+
+.header {
+  position: fixed;
+  bottom: 103%;
+  width: 186mm;
+}
+
+.header h3 {
+  margin: 0;
+}
+
+.header h1 {
+  margin-top: 0;
+}
+
+
+.header_table {
+  width: 100%;
+}
+
+.header_table tr:last-child {
+  border-bottom: 1pt solid grey;
+  border-top: 1pt solid grey;
+}
+
+.header_table td {
+  padding-top: 1mm;
+  padding-bottom: 1mm;
+}
+
+.header_table p{
+  margin: 0;
+}
+
+.header_table img{
+  margin-bottom: 1mm;
+}
+
+.payments_table tr:last-child {
+  border: 0;
+  margin: 0;
+}
+
+.payments_table td {
+  vertical-align: top;
+  padding: 0;
+}
+
+.padding_right {
+  padding-right: 2mm;
+}
+
+
+.product_table {
+  page-break-inside: avoid;
+  width: 100%;
+}
+
+.product_table td {
+  vertical-align: top;
+}
+
+.amounts {
+  text-align: right;
+}
+
+.sku_table {
+  margin-top: 2mm;
+  margin-bottom: 6mm;
+  width: 100%;
+}
+
+.sku_table th {
+  border-bottom: 1pt solid grey;
+}
+
+
+.sku_table tr:nth-child(even) {
+  background: #eee;
+}
+.sku_table tr:nth-child(odd) {
+  background: #fff;
+}
+.sku_table tr:last-child {
+  border-bottom: 1pt solid grey;
+  border-top: 1pt solid grey;
+  background: #fff;
+}
+
+.summary {
+  font-weight: bold;
+  margin-right: 0;
+  margin-left:auto;
+}
+
+.small_print {
+  font-size: 8pt;
+}
+
+.address {
+  line-height: 100%;
+  font-size: 10pt;
+}
+
+.address_header {
+  font-size: 10 pt;
+}
+
+img.thumbnail {
+  width: 2cm;
+}
+
+img.signature {
+  width: 5cm;
+}
+
+.terms_and_conditions {
+  page-break-before: always;
+  font-size: 8pt;
+}
+
+/* show lines around all elements (uncomment for debugging): */
+/* [cc escaped="true" lang="css"] */
+/* * { outline: 2px dotted red } */
+/* * * { outline: 2px dotted green } */
+/* * * * { outline: 2px dotted orange } */
+/* * * * * { outline: 2px dotted blue } */
+/* * * * * * { outline: 1px solid red } */
+/* * * * * * * { outline: 1px solid green } */
+/* * * * * * * * { outline: 1px solid orange } */
+/* * * * * * * * * { outline: 1px solid blue } */
+/* * * * * * * * * * { outline: 1px solid black } */
+/* * * * * * * * * * * { outline: 1px solid pink } */
+/* [/cc] */

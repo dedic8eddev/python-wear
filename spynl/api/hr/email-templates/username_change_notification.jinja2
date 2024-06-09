@@ -1,0 +1,23 @@
+{% extends "base.jinja2" %}
+{% import 'macros.jinja2' as macros %}
+
+{% set softwear_logo = True %}
+
+{% block content %}
+  {{ macros.greeting(fullname) }}
+  <p>
+    {{
+      _('email-template-username-change-notification-1',
+      mapping={'old_username': old_username, 'new_username': new_username})
+    }}
+  </p>
+  <p>
+    {{
+      _('email-template-username-change-notification-2')
+    }}
+  </p>
+  <p>
+    {{ macros.contact('link')|safe }}
+  </p>
+  {{ macros.regards() }}
+{% endblock %}

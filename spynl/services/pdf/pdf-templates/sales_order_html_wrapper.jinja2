@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <style>
+            {% block additional_css %} {% endblock %}
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <!-- top header table (addresses, logo) -->
+            <table class="header_table">
+                <tbody>
+                    <tr>
+                        <td colspan="2">
+                            <h1> {% block doc_header %} {% endblock %} </h1>
+                        </td>
+                        <td rowspan="3" style="width:80mm;height:40mm;vertical-align:top;overflow:hidden">
+                            <div style="float:right;"> {% block logo_space %} {% endblock %} </div>
+                        </td>
+                    </tr>
+                    <tr class="small_print">
+                        <td>{% block invoice_address %} {% endblock %}</td>
+                        <td>{% block delivery_address %} {% endblock %}</td>
+                    </tr>
+                    <tr class="small_print">
+                        <td>{% block client_details %} {% endblock %}</td>
+                        <td></td>
+                    </tr>
+                    <!-- bottom header row (payment terms, delivery terms, etc) -->
+                    <tr class="small_print">
+                        <td style="vertical-align:top">
+                            {% block payment_terms %} {% endblock %}
+                        </td>
+                        <td style="vertical-align:top">
+                            {% block shipping_carrier %} {% endblock %}
+                        </td>
+                        <td style="vertical-align:top">{% block doc_info %} {% endblock %}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        {% if settings.get('print_body', True) %}
+            <div class="watermark"> {% block watermark %} {% endblock %} </div>
+
+            {% block body %}
+                {% for product in order['products'] %}
+                    {% block product_table scoped %} {% endblock %}
+                    {% block sku_table scoped %} {% endblock %}
+                {% endfor %}
+            {% endblock %}
+
+            <div style="break-inside:avoid-page">
+                {% block summary %} {% endblock %}
+                <table style="width: 100%;margin-top:10mm;margin-bottom:10mm;">
+                    <tr>
+                        <td style="width:45%;vertical-align:top">{% block remarks %} {% endblock %}</td>
+                        <td style="width:45%;text-align:right">{% block signature %} {% endblock %}</td>
+                    </tr>
+                </table>
+            </div>
+            <table class="header_table">
+                <tr class="small_print">
+                    <td>{% block order_terms_2 %} {% endblock %}</td>
+                    <td>{% block order_terms_3 %} {% endblock %}</td>
+                    <td>{% block order_terms_4 %} {% endblock %}</td>
+                </tr>
+            </table>
+        {% endif %}
+        {% if settings.get('print_terms_and_conditions', True) %}
+            {% block terms_and_conditions %} {% endblock %}
+        {% endif %}
+
+    </body>
+</html>

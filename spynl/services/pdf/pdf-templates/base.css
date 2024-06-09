@@ -1,0 +1,37 @@
+@page {
+  size: A4 portrait;
+  margin: 20mm 10mm 20mm 10mm;
+  @bottom-right {
+    content: counter(page) "/" counter(pages);
+    font-family: "Roboto", sans-serif;
+    font-size: 10pt;
+  }
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 10pt;
+}
+
+h1 {
+  font-size: 20pt;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+
+/* show lines around all elements (uncomment for debugging): */
+/* [cc escaped="true" lang="css"] */
+/* * { outline: 2px dotted red } */
+/* * * { outline: 2px dotted green } */
+/* * * * { outline: 2px dotted orange } */
+/* * * * * { outline: 2px dotted blue } */
+/* * * * * * { outline: 1px solid red } */
+/* * * * * * * { outline: 1px solid green } */
+/* * * * * * * * { outline: 1px solid orange } */
+/* * * * * * * * * { outline: 1px solid blue } */
+/* * * * * * * * * * { outline: 1px solid black } */
+/* * * * * * * * * * * { outline: 1px solid pink } */
+/* [/cc] */

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style>
+  p {
+    font-family: sans-serif;
+    text-align: justify;
+    font-size: 0.9em;
+  }
+  h1 {
+     font-family: sans-serif;
+  }
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: justify;
+    font-family: sans-serif;
+    font-size: 0.9em;
+  }
+  th, td {
+    padding: 5px;
+  }
+</style>
+</head>
+<body>
+<h1>Ini Settings Used in Spynl</h1>
+<p>{{description|safe}}</p>
+<table border="1" style="width:100%">
+  <tr>
+    <th>Name</th>
+    <th>Value this instance</th>
+    <th>Required</th>
+    <th>Default</th>
+    <th>Description</th>
+  </tr>
+  {% for row in settings %}
+  <tr>
+    <td>{{row['name']}}</td>
+    <td>
+      {% if 'hidden' in row and row['hidden'] %}
+        ****
+      {% else %}
+        {{row['value']}}
+      {% endif %}
+    </td>
+    <td>{{row['required']}}</td>
+    <td>{{row['default']}}</td>
+    <td>{{row['info']}}</td>
+  </tr>
+  {% endfor %}
+</table>
+</body>
+</html>

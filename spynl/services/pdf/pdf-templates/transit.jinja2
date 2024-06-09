@@ -1,0 +1,89 @@
+{% extends "base_transit.jinja2" %}
+
+{% macro address(warehouse, label) %}
+    <table class="table-address">
+        <tbody>
+            <tr>
+                <td class="address-label"> {{ label | change_case }}: </td>
+                <td>
+                    <div class="address">
+                        <div> {{ warehouse['name'] }} </div>
+                        <div>
+                            {{ warehouse.get('street', '') }} {{ warehouse.get('houseno', '') }} {{ warehouse.get('houseadd', '') }}
+                        </div>
+                        <div> {{ warehouse.get('zipcode', '') }} {{ warehouse.get('city', '') }} </div>
+                        <div> {{ warehouse.get('phone', '') }} </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endmacro %}
+
+
+{% block logo_space %}
+    <img src="{{ tenant_logo_url(request) }}"/>
+{% endblock %}
+
+{% block receipt_number %}
+    {{ _('transit') | change_case }}: {{ transit['nr'] }}
+{% endblock %}
+
+{% block timestamp %}
+    {{ transit['created']['date'] | format_datetime(locale=locale, tzinfo=tz) }}
+{% endblock %}
+
+{% block barcode %}
+    <span style="font-family:'3 of 9 barcode'; font-size:26px; white-space:nowrap">
+        *-{{ transit['nr'] }}*
+    </span>
+{% endblock %}
+
+{% block cashier %}
+    {% if transit.get('cashier', {}).get('fullname') %}
+        {{ _('transit-done-by', mapping={'cashier': transit['cashier']['fullname']}) }}
+    {% endif %}
+{% endblock %}
+
+{% block from_address %}
+    {{ address(from_warehouse, _('from')) }}
+{% endblock %}
+
+{% block to_address %}
+    {{ address(to_warehouse, _('to')) }}
+{% endblock %}
+
+{% block receipt_table %}
+    <table class="table table-highlight">
+        <thead>
+            <tr>
+                <th> {{ _('article') | change_case }} </th>
+                <th> {{ _('barcode') | change_case }} </th>
+                <th> {{ _('articleDescription') | change_case }} </th>
+                <th> {{ _('sizeLabel') | change_case }} </th>
+                <th>  </th>
+                <th> {{ _('brand') | change_case }} </th>
+                <th> {{ _('quantity') | change_case }} </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in transit.get('receipt', []) %}
+                {% if entry.get('qty') %}
+                    <tr>
+                        <td> {{ entry.get('articleCode') }} </td>
+                        <td> {{ entry.get('barcode', '') }} </td>
+                        <td> {{ entry.get('articleDescription', '') }} </td>
+                        <td> {{ entry.get('sizeLabel', '') }} </td>
+                        <td> {{ entry.get('color', '') }} </td>
+                        <td> {{ entry.get('brand', '') }} </td>
+                        <td> {{ entry.get('qty') | int }} </td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
+            <tr class="total-row" style="border-top: 1pt solid grey;background: #fff;">
+                <td colspan="6"> {{ _('total') | change_case }} </td>
+                <td> {{ transit['totalNumber'] | int }} </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

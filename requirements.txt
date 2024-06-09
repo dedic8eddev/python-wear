@@ -1,0 +1,9 @@
+gunicorn
+pastedeploy
+raven
+sentry_sdk
+
+
+-e ./marshmallow-jsonschema
+-e ./spynl.data
+-e .

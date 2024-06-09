@@ -1,0 +1,74 @@
+{
+    "shift": "1b2c2f189-486a-4cfc-a6f0-7daa364a0faf",
+    "customer": null,
+    "overallReceiptDiscount": 0.0,
+    "type": 2,
+    "nr": "50-12-19677",
+    "device": "569bf0583209e90e021210aa",
+    "device_id": "00000",
+    "printed": "20-02-16 13:46",
+    "cashier": {
+        "id": "mios.04@softwear.nu",
+        "name": "Mylene",
+        "fullname": "Mylene"
+    },
+    "loyaltyPoints": 0,
+    "buffer_id": "buffer_8cadb3da-d48a-43f4-9931-af66ab72cadc",
+    "receiptNr": 19677.0,
+    "receipt": [
+        {
+            "sizeLabel": "ONE",
+            "qty": 1,
+            "rfid": null,
+            "color": "mult:multicolour",
+            "category": "barcode",
+            "vat": 21.0,
+            "group": null,
+            "barcode": "000698032677",
+            "articleCode": "diversen",
+            "articleDescription": "diversen",
+            "changeDisc": true,
+            "nettPrice": 49.99,
+            "price": 49.99
+        }
+    ],
+    "remark": "",
+    "payments": {
+        "cash": 0.0,
+        "consignment": 0.0,
+        "pin": 49.99,
+        "withdrawel": 0.0,
+        "storecredit": 0.0,
+        "creditreceipt": 0.0,
+        "couponin": 0.0,
+        "creditcard": 0.0
+    },
+    "shop": {
+        "id": "50",
+        "houseno": "",
+        "zipcode": "2611 RJ",
+        "street": "Molslaan 35-39",
+        "name": "A-Keuze",
+        "city": "Delft",
+        "phone": "015-2135004"
+    },
+    "totalAmount": 49.99,
+    "totalStoreCreditPaid": 0.0,
+    "totalNumber": 1.0,
+    "totalPaid": 49.99,
+    "totalCoupon": 0.0,
+    "totalDiscountCoupon": 0.0,
+    "vat": {
+        "zerovalue": 0.0,
+        "zerototal": 0.0,
+        "zeroamount": 0.0,
+        "lowvalue": 6.0,
+        "lowtotal": 0.0,
+        "lowamount": 0.0,
+        "highvalue": 21.0,
+        "hightotal": 49.99,
+        "highamount": 8.68
+    },
+    "difference": 0,
+    "change": 0.0
+}

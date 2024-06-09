@@ -1,0 +1,25 @@
+{
+  "name": "softwear-swagger-external",
+  "version": "1.0.0",
+  "description": "External Developer documentation of the Softwear backends",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/prettier/bin-prettier.js swapi.json",
+    "serve": "http-server -o -c-1 .",
+    "lint": "node_modules/prettier/bin-prettier.js --write swapi.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/softwearconnect/spynl.app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/softwearconnect/spynl.app/issues"
+  },
+  "homepage": "https://developer.swcloud.nl",
+  "devDependencies": {
+    "http-server": "^0.11.1",
+    "prettier": "^1.17.1"
+  }
+}

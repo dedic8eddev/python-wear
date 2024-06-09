@@ -1,0 +1,160 @@
+{
+    "active": true,
+    "amountEntry": "0",
+    "buffer_id": "buffer_40834f2f-25a2-43d5-9b9f-dbfc927824df",
+    "cashier": {
+        "fullname": "Bobby Drake",
+        "id": "54dcb4e8c8d4b6002ad6353c",
+        "name": "Bobby"
+    },
+    "change": 0,
+    "coupon": [
+        {
+        "id": "YI7KVA01XRZLX",
+        "type": "C",
+        "value": 5.65
+        },
+        {
+        "id": "9STRBLQUZBHOK",
+        "type": "T",
+        "value": 4.50
+        }
+    ],
+    "couponDiscount": 4.75,
+    "customer": {
+        "custnum": "$AAQY",
+        "email": "sally.ackers@softwear.nu",
+        "firstname": "Sally",
+        "id": "0141fa62-5f09-4a41-bd69-dfd7784d929a",
+        "lastname": "Ackers",
+        "loyaltynr": "0000000126",
+        "middlename": "de",
+        "points": 196,
+        "storecredit": 202.69,
+        "telephone": "02-00000000",
+        "title": "Mw"
+    },
+    "device": "5c7fee844524c1ff7bcadc91",
+    "device_id": "UKLLC",
+    "diff": -0.003639921722115247,
+    "difference": -0.01,
+    "discountableAmount": 127.75,
+    "discountreason": "",
+    "loyaltyPoints": 207,
+    "nr": "50-5932-212",
+    "overallReceiptDiscount": 0,
+    "payments": {
+        "cash": 133,
+        "consignment": 0,
+        "couponin": 0,
+        "couponout": 0,
+        "creditcard": 0,
+        "creditreceipt": 0,
+        "pin": 0,
+        "storecredit": 0,
+        "withdrawel": 0
+    },
+    "pinError": "",
+    "pinInfo": "\n   \n   \n ECR WS Development 4.0 \n         Header         \n         Header         \n         Header         \n\nTerminal:               \nMerchant:         654321\nECR:      ECR_SFTWRIPP4.\n                       0\nSTAN:             184477\n\n             CONTACTLESS\nAID:      A0000000043060\n                 Maestro\nKaart:      ********8005\nKaartnr:               1\n\nDatum:11-03-19  15:35:13\nAC:     A8889210EFF0FB4F\nProcessor:       Equens2\nAuth. code:       0ED4DA\nAuth. resp. code:     00\n\nBEDRAG:         EUR 9,99\nREF:          2W6C28BJRD\n\nBetaling akkoord        \n\nKAARTHOUDER BON         \n\nExample Footer\r\nExample \n ",
+    "printed": "18-11-19 13:58",
+    "receipt": [
+        {
+            "articleCode": "B.Drake T-shirt",
+            "articleDescription": "Drake T-shirt 16,5",
+            "barcode": "13",
+            "brand": "My God",
+            "category": "barcode",
+            "changeDisc": false,
+            "color": "blackberryamazone",
+            "found": true,
+            "group": null,
+            "nettPrice": 127.75,
+            "price": 107.75,
+            "qty": 1,
+            "reqid": "92ae",
+            "sizeLabel": "-",
+            "vat": 21
+        },
+        {
+            "articleDescription": "Waarde: 4,75",
+            "barcode": "+T8VIWBE65GQ2K",
+            "category": "coupon",
+            "couponNr": "T8VIWBE65GQ2K",
+            "found": true,
+            "nettPrice": 0,
+            "price": 0,
+            "qty": 1,
+            "reqid": "b3af",
+            "type": "C",
+            "value": 4.75,
+            "vat": 0
+        },
+        {
+            "category": "storecredit",
+            "found": true,
+            "nettPrice": 20,
+            "price": 20,
+            "qty": 1,
+            "reqid": "d5ac",
+            "type": "O"
+        },
+        {
+            "articleCode": "B.Drake Cap",
+            "articleDescription": "Drake Cap",
+            "barcode": "11",
+            "brand": "My God",
+            "category": "barcode",
+            "changeDisc": false,
+            "color": "BUBBLE GUM",
+            "found": true,
+            "group": null,
+            "nettPrice": 9.99,
+            "price": 9.99,
+            "qty": -1,
+            "reqid": "f228",
+            "sizeLabel": "-",
+            "vat": 21
+        }
+    ],
+    "receiptNr": 212,
+    "receipt_email": "",
+    "remark": "This is a remark. It should show up on the receipt. It is a bit long.",
+    "reqid": "d5ac",
+    "roundPayment": false,
+    "selectedLine": 3,
+    "shift": "1e29ca383-5637-4b5f-9f16-d3ba75a64132",
+    "shop": {
+        "city": "Amsterdam",
+        "houseadd": "",
+        "houseno": "",
+        "id": "50",
+        "name": "Amsterdam",
+        "phone": "020-6426306",
+        "street": "Gelderlandplein 48-50",
+        "zipcode": "1082LB"
+    },
+    "totalAmount": 137.76,
+    "totalCoupon": 0,
+    "totalDiscount": 4.75,
+    "totalDiscountCoupon": 0,
+    "totalNumber": 2,
+    "totalPaid": 133,
+    "totalStoreCreditPaid": 20,
+    "type": 2,
+    "vat": {
+        "highamount": 19.73,
+        "hightotal": 113.7,
+        "highvalue": 21,
+        "lowamount": 0,
+        "lowtotal": 0,
+        "lowvalue": 9,
+        "zeroamount": 0,
+        "zerototal": 0,
+        "zerovalue": 0
+    },
+    "version": {
+        "date": "20140710104913",
+        "v": 8
+    },
+    "withdrawelreason": ""
+}

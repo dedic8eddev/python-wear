@@ -1,0 +1,3 @@
+The fonts in this folder are installed to ~/.fonts with the --post-install function
+of setup.sh. If you add a font to this folder, please also add the name of the 
+font to the test in test_pdf.py that tests if the fonts are correctly installed.

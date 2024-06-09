@@ -1,0 +1,15 @@
+httpie
+ipython
+black
+isort
+flake8
+flake8-breakpoint
+flake8-tidy-imports
+pynvim
+responses
+jedi
+sqlparse
+
+-e ./marshmallow-jsonschema
+-e ./spynl.data
+-e .

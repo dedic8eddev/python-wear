@@ -1,0 +1,102 @@
+{
+    "_id": "5835a1fbd31d66005294a393",
+    "reqid": 0,
+    "discountreason": "",
+    "nr": "51-4755-572",
+    "change": 0,
+    "cashier": {
+        "fullname": "Tony",
+        "name": "12",
+        "id": "maddoxx.12@softwear.nu"
+    },
+    "buffer_id": "buffer_6e2e6966-d401-4c97-ade2-2323f3993bde",
+    "device_id": "HC8KG",
+    "receipt_email": "",
+    "totalStoreCreditPaid": 0,
+    "remark": "",
+    "pinInfo": "",
+    "selectedLine": 1,
+    "totalAmount": 5,
+    "receiptNr": 572,
+    "shop": {
+        "houseno": "12",
+        "street": "Rembrandthof",
+        "city": "Amstelveen",
+        "id": "51",
+        "houseadd": "",
+        "phone": "020-4539007",
+        "zipcode": "1181 ZL",
+        "name": "Amstelveen"
+    },
+    "totalNumber": 1,
+    "device": "56388f5c500ce94d78b121fb",
+    "totalDiscountCoupon": 0,
+    "totalCoupon": 999,
+    "type": 2,
+    "version": {
+        "v": 8,
+        "date": "2014-07-10 10:49:13"
+    },
+    "shopname": "Amstelveen",
+    "vat": {
+        "hightotal": 5,
+        "highamount": 0.87,
+        "zerototal": 0,
+        "lowtotal": 0,
+        "zeroamount": 0,
+        "lowamount": 0
+    },
+    "overallReceiptDiscount": 0.0,
+    "loyaltyPoints": 0,
+    "printed": "23-11-16 14:04",
+    "shift": "1716e07d2-2093-4773-a2b5-3958adafede9",
+    "difference": 0,
+    "receipt": [
+        {
+            "reqid": "32c2",
+            "color": "niet van toepassing",
+            "rfid": null,
+            "sizeLabel": "-",
+            "category": "barcode",
+            "brand": "Maddox",
+            "price": 5,
+            "vat": 21,
+            "articleCode": "vermaak5\u00e9",
+            "qty": 1,
+            "changeDisc": false,
+            "articleDescription": "Broek Korter",
+            "barcode": "5",
+            "found": true,
+            "nettPrice": 5,
+            "group": null
+        },
+        {
+            "reqid": "23a3",
+            "qty": 1,
+            "couponNr": "kadobon",
+            "nettPrice": 999,
+            "barcode": "+kadobon",
+            "found": true,
+            "type": "U",
+            "vat": 0,
+            "category": "coupon",
+            "price": 999
+        }
+    ],
+    "withdrawelreason": "",
+    "payments": {
+        "creditreceipt": 0,
+        "couponout": 0,
+        "couponin": 0,
+        "cash": -994,
+        "creditcard": 0,
+        "consignment": 0,
+        "pin": 0,
+        "withdrawel": 0,
+        "storecredit": 0
+    },
+    "amountEntry": 0,
+    "customer": null,
+    "tenant_id": "91537",
+    "totalPaid": -994
+}

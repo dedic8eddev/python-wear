@@ -1,0 +1,212 @@
+{
+    "_id": "5891c8ebe8348200d749648e",
+    "reqid": 0,
+    "vat": {
+        "zerototal": 0,
+        "hightotal": -40.01,
+        "highamount": -6.94,
+        "lowamount": 0,
+        "lowtotal": 0,
+        "zeroamount": 0
+    },
+    "change": 0,
+    "nr": "51-14623-2853",
+    "shop": {
+        "zipcode": "1078 GG",
+        "city": "Amsterdam",
+        "id": "51",
+        "phone": "020-6705482",
+        "name": "Amsterdam",
+        "houseno": "",
+        "street": "Scheldestraat 61",
+        "houseadd": ""
+    },
+    "coupon": {
+        "id": "NZF5OR070ORSR",
+        "value": 40.01,
+        "type": "T"
+    },
+    "withdrawelreason": "",
+    "totalStoreCreditPaid": 0,
+    "shift": "1caff0037-96f1-4524-8994-eaab719d0c6c",
+    "printed": "01-02-17 11:39",
+    "cashier": {
+        "id": "bebees.obama@softwear.nu",
+        "name": "e2e",
+        "fullname": "e2e cashier"
+    },
+    "payments": {
+        "creditreceipt": -40.01,
+        "storecredit": 0,
+        "couponin": 0,
+        "withdrawel": 0,
+        "cash": 0,
+        "creditcard": 0,
+        "consignment": 0,
+        "pin": 0,
+        "couponout": 0
+    },
+    "buffer_id": "buffer_d67d3bcf-5ea3-41f9-b8ee-44e41b952129",
+    "selectedLine": 1,
+    "device_id": "KASSA",
+    "receipt_email": "",
+    "amountEntry": 0,
+    "version": {
+        "date": "2014-07-10 10:49:13",
+        "v": 8
+    },
+    "shopname": "Amsterdam",
+    "receiptNr": 2853,
+    "totalDiscountCoupon": 0,
+    "discountreason": "",
+    "loyaltyPoints": 0,
+    "pinInfo": "",
+    "difference": 0,
+    "totalAmount": -40.01,
+    "tenant_id": "90864",
+    "customer": null,
+    "receipt": [
+        {
+            "articleDescription": "e2e Dress",
+            "reqid": "b833",
+            "vat": 21,
+            "articleCode": "00000034",
+            "category": "barcode",
+            "found": true,
+            "group": null,
+            "barcode": "300",
+            "qty": -1,
+            "changeDisc": false,
+            "sizeLabel": "42",
+            "brand": "Mexx",
+            "color": "roodpurple",
+            "nettPrice": 120,
+            "price": 110
+        },
+        {
+            "articleDescription": "e2e Pants",
+            "reqid": "b3c2",
+            "vat": 21,
+            "articleCode": "00000036",
+            "category": "barcode",
+            "found": true,
+            "group": null,
+            "barcode": "500",
+            "qty": 1,
+            "changeDisc": false,
+            "sizeLabel": "42",
+            "brand": "Mc Gregor",
+            "color": "bruinlightblue",
+            "nettPrice": 85.87,
+            "price": 69.99
+        }
+    ],
+    "totalNumber": 2,
+    "remark": "",
+    "type": 2,
+    "totalPaid": -40.01,
+    "totalCoupon": 0,
+    "overallReceiptDiscount": 0.0,
+    "device": "56388f58500ce94d78b1100d",
+    "tenant": [
+        {
+            "_id": "90864",
+            "name": "BeBees",
+            "tax_no": "",
+            "owners": [],
+            "legalname": "Softwear Development",
+            "stampStores": "20140514205859",
+            "stampUserDevices": "19801010101010",
+            "stampCustomers": "19801010101010",
+            "retail": true,
+            "asp_path": "p_usg",
+            "datafeed": "908642442823125240268",
+            "created": {
+                "user": "softwear.csv2mongo@softwear.nu",
+                "date": "2016-01-07 12:30:38.705000",
+                "utc_date_str": "201601071230",
+                "action": "csv2mongo"
+            },
+            "bankaccount": [
+                {
+                    "giro": {
+                        "account_no": ""
+                    },
+                    "bank": {
+                        "account_no": ""
+                    }
+                }
+            ],
+            "uuid": "908642442823125240268",
+            "stampSuppliers": "19801010101010",
+            "iln": "",
+            "applications": [
+                "inventory",
+                "pos",
+                "dashboard",
+                "reporting"
+            ],
+            "active": true,
+            "addresses": [
+                {
+                    "zipcode": "",
+                    "type": "main",
+                    "phone": "",
+                    "street": "",
+                    "city": "",
+                    "fax": "",
+                    "company": "",
+                    "houseadd": "",
+                    "houseno": "",
+                    "street2": "",
+                    "country": "Nederland",
+                    "state": ""
+                },
+                {
+                    "zipcode": "",
+                    "type": "billing",
+                    "phone": " ",
+                    "street": "",
+                    "city": "",
+                    "fax": " ",
+                    "company": "",
+                    "houseadd": "",
+                    "houseno": "",
+                    "street2": "",
+                    "country": "Nederland",
+                    "state": ""
+                }
+            ],
+            "wholesale": false,
+            "vat": "21%",
+            "stamp": "20140514205859",
+            "stampCashiers": "19801010101010",
+            "modified": {
+                "date": "2017-02-03 10:52:50.977000",
+                "action": "MONGO225",
+                "user": null
+            },
+            "stampArticles": "19801010101010",
+            "chamber_no": "",
+            "dimension4": "Cup",
+            "settings": {
+                "uploadDirectory": "90864836466074337883",
+                "authorizationMigrated": false,
+                "authorizationType": "roles",
+                "loyalty": {
+                    "customerCashback": 0,
+                    "pointFactor": 1,
+                    "suppressPointsOnDiscount": false,
+                    "pointValue": 2.5,
+                    "calculatePointsPerReceipt": true,
+                    "campaigns": []
+                },
+                "roundTotalAmount5cent": true
+            },
+            "remarks": "used for e2e testing. Do not update!",
+            "counters": {
+                "posInstanceId": 14921
+            }
+        }
+    ]
+}

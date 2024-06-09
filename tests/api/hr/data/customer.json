@@ -1,0 +1,47 @@
+{
+    "contacts": [
+        {
+            "type": "private",
+            "primary": true,
+            "name": "Test name",
+            "email": "mail@mail.com",
+            "mobile": "1234567890",
+            "phone": "0123 456 789"
+        }
+    ],
+    "addresses": [
+        {
+            "type": "billing",
+            "primary": true,
+            "street": "Test street name",
+            "houseno": "99",
+            "houseadd": "TEST HOUSE ADDRESS",
+            "zipcode": "1234AB",
+            "city": "Test city",
+            "country": "Test country",
+            "street2": "Test street name 2"
+        }
+    ],
+    "title": "Mr. test title",
+    "first_name": "first test name",
+    "middle_name": "middle test name",
+    "last_name": "last test name",
+    "dob": "2000-04-29",
+    "remarks": "Test remarks",
+    "properties": [
+        {
+            "name": "test_name_1",
+            "value": "3"
+        }
+    ],
+    "company": "test company",
+    "active": true,
+    "points": 0,
+    "currency": "test currency",
+    "lang": "english",
+    "agent_id": "",
+    "newsletter_subscribe": true,
+    "customer_zipcode":"1234AB",
+    "customer_city":"TEST CITY",
+    "customer_street":"TEST STREET NAME"
+}

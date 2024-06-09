@@ -1,0 +1,70 @@
+{
+    "_id": "56c7132bed9fea71323f63cf",
+    "shop": {
+        "city": "Rotterdam",
+        "name": "Rotterdam",
+        "houseadd": "",
+        "zipcode": "3011 JP",
+        "phone": "010 - 226 21 22",
+        "street": "Meent 90",
+        "houseno": "",
+        "id": "51"
+    },
+    "receipt": [],
+    "totalPaid": 0,
+    "reqid": 0,
+    "totalNumber": 0,
+    "type": 2,
+    "amountEntry": 0,
+    "selectedLine": 0,
+    "merchRef": "",
+    "version": {
+        "date": "2014-07-10 10:49:13",
+        "v": 8
+    },
+    "totalStoreCreditPaid": 0,
+    "loyaltyPoints": 0,
+    "totalAmount": 0,
+    "nr": "51-149-11117",
+    "receipt_email": "",
+    "vat": {
+        "lowamount": 0,
+        "lowtotal": 0,
+        "zerototal": 0,
+        "zeroamount": 0,
+        "hightotal": 0,
+        "highamount": 0
+    },
+    "totalCoupon": 0,
+    "receiptNr": 11117,
+    "elecTransId": "",
+    "cashier": {
+        "fullname": "Nazli",
+        "name": "Nazli",
+        "id": "nikkie.retail.20@softwear.nu"
+    },
+    "withdrawelreason": "5. Brand store benodigdheden",
+    "change": 0,
+    "overallReceiptDiscount": 0,
+    "printed": "19-02-16 14:04",
+    "device": "569bf0583209e90e021206bc",
+    "device_id": "00000",
+    "difference": 0,
+    "pinInfo": "",
+    "customer": null,
+    "remark": "",
+    "shift": "112977b94-0e78-456a-bb7d-c2d7dbaa4b91",
+    "discountreason": "",
+    "totalDiscountCoupon": 0,
+    "payments": {
+        "storecredit": 0,
+        "pin": 0,
+        "cash": -1.5,
+        "creditcard": 0,
+        "couponout": 0,
+        "consignment": 0,
+        "withdrawel": 1.5,
+        "couponin": 0,
+        "creditreceipt": 0
+    }
+}

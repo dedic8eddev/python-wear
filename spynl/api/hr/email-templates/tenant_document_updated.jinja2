@@ -1,0 +1,18 @@
+{% extends "base.jinja2" %}
+{% import 'macros.jinja2' as macros %}
+
+{% set softwear_logo = True %}
+
+{% block content %}
+    <p>De eigenaar van account {{ tenant }} heeft de volgende gegevens veranderd:</p>
+    <ul>
+        {% for field in fields %}<li>{{field}}</li>{% endfor %}
+    </ul>
+
+    <p>Klik hier om de huidige gegevens te bekijken:
+       <a href="https://admin.softwearconnect.com/#/tenant/{{request.current_tenant_id}}">https://admin.softwearconnect.com/#/tenant/{{request.current_tenant_id}}</a>
+    </p>
+
+
+  {{ macros.regards() }}
+{% endblock %}

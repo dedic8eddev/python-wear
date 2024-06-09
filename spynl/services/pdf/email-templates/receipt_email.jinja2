@@ -1,0 +1,9 @@
+{% extends "base.jinja2" %}
+{% block content %}
+    <table> <tbody>
+        <tr><td> {{ customer }} </td></tr>
+        <tr><td> {{ order_number }} </td></tr>
+        <tr><td> {{ agent_email }} </td></tr>
+    </tbody> </table>
+    {{ body | safe}}
+{% endblock %}

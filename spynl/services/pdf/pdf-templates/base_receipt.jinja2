@@ -1,0 +1,52 @@
+<html>
+    <body>
+        <table class="table table-header">
+            <tbody>
+                <colgroup>
+                    <col style="width:50%;">
+                    <col style="width:50%;">
+                </colgroup>
+                <tr>
+                    <td class="logo" colspan="2">
+                        {% block logo_space %} {% endblock %}
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-weight:bold;">
+                        {% block receipt_number %} {% endblock %}
+                    </td>
+                    <td style="text-align:right;font-weight:bold;">
+                        {% block timestamp %} {% endblock %}
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="vertical-align:bottom;">
+                        {% block barcode %} {% endblock %}
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="2" style="vertical-align:top;">
+                        {% block address %} {% endblock %} {% block cashier %} {% endblock %}
+                    </td>
+                    <td style="text-align:right;vertical-align:top;">
+                        {% block customer %} {% endblock %}
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align:right;vertical-align:bottom;">
+                        {% block loyalty %} {% endblock %}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        {% block receipt_table %} {% endblock %}
+
+        {% block footer %} {% endblock %}
+
+        {% block cashback_coupons %} {% endblock %}
+
+        {% block pin_info %} {% endblock %}
+
+    </body>
+</html>

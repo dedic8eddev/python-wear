@@ -1,0 +1,160 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 10pt;
+}
+
+h1 {
+  font-size: 20pt;
+}
+
+h2 {
+  margin-top: 7mm;
+  margin-bottom: 0.5mm;
+}
+
+hr {
+  margin-top: 0mm;
+  margin-bottom: 4mm;
+  border: 0.5pt solid black;
+}
+
+.header {
+  position: fixed;
+  bottom: 101%;
+  width: 100%;
+}
+
+.header h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.header_table {
+  width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.small_print {
+  font-size: 8pt;
+}
+
+.cover_page {
+  page-break-after: always;
+}
+
+.address {
+  line-height: 100%;
+}
+
+.filter_table td {
+  padding-right: 2mm;
+}
+
+.report_table {
+  width: 100%;
+  font-size: 8pt;
+  table-layout: fixed;
+  overflow-wrap: break-word;
+}
+
+.report_table th {
+  border-bottom: 1pt solid black;
+  border-top: 1pt solid black;
+  border-left: 0.3pt solid grey;
+  border-right: 0.3pt solid grey;
+  vertical-align: bottom;
+}
+
+.report_table td {
+  border-left: 0.3pt solid grey;
+  border-right: 0.3pt solid grey;
+  vertical-align: top;
+}
+
+.report_table tr {
+  border-bottom: 0.3pt solid grey;
+}
+
+.report_table tr:nth-child(even), .sku_table tr:nth-child(even) {
+  background: #eee;
+}
+.report_table tr:nth-child(odd), .sku_table tr:nth-child(odd) {
+  background: #fff;
+}
+
+/* for some reason it doesn't work to set this on totals */
+.report_table tr:last-child, .sku_table tr:last-child{
+  border-bottom: 1pt solid black;
+  background: #fff;
+}
+.product_table {
+  page-break-inside: avoid;
+}
+
+.product_table td {
+  vertical-align: top;
+}
+.sku_table {
+  margin-top: 2mm;
+  margin-bottom: 6mm;
+  width: 100%;
+}
+
+.sku_table td, .sku_table th {
+  text-align: right;
+}
+
+.sku_table td:first-child, .sku_table td:nth-child(2), th:first-child, .sku_table th:nth-child(2){
+  text-align: left;
+}
+
+.sku_table th {
+  border-bottom: 1pt solid grey;
+}
+
+.sku_table tr:last-child {
+  border-bottom: 1pt solid grey;
+  border-top: 1pt solid grey;
+}
+
+.history_sku_table tr:last-child {
+  border-bottom: 1pt solid grey;
+  border-top: 0pt solid grey;
+}
+
+
+.transformed {
+  transform: rotate(315deg);
+  transform-origin: bottom left;
+}
+
+.totals {
+  font-weight: bold;
+  border-top: 1pt solid black;
+}
+
+.totals td:first-child {
+  border-right: 1pt solid grey;
+}
+
+.right {
+  text-align: right;
+}
+
+
+/* show lines around all elements (uncomment for debugging): */
+/* [cc escaped=”true” lang=”css”] */
+/* * { outline: 2px dotted red } */
+/* * * { outline: 2px dotted green } */
+/* * * * { outline: 2px dotted orange } */
+/* * * * * { outline: 2px dotted blue } */
+/* * * * * * { outline: 1px solid red } */
+/* * * * * * * { outline: 1px solid green } */
+/* * * * * * * * { outline: 1px solid orange } */
+/* * * * * * * * * { outline: 1px solid blue } */
+/* * * * * * * * * * { outline: 1px solid black } */
+/* * * * * * * * * * * { outline: 1px solid pink } */
+/* [/cc] */

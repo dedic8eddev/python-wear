@@ -1,0 +1,59 @@
+<html>
+    <body>
+        <div class="header">
+            <!-- top header table (addresses, logo) -->
+            <table class="header_table">
+                <tbody>
+                    <tr>
+                        <td colspan="2">
+                            <h1> {% block doc_header %} {% endblock %} </h1>
+                        </td>
+                        <td rowspan="3" style="width:80mm;height:40mm;vertical-align:top;overflow:hidden">
+                            <div style="float:right;"> {% block logo_space %} {% endblock %} </div>
+                        </td>
+                    </tr>
+                    <tr class="small_print">
+                        {% block employee %} {% endblock %}                        
+                        <td>{% block delivery_address %} {% endblock %}</td>
+                        <td></td>
+                    </tr>
+                    <tr class="small_print">
+                        <td>{% block client_details %} {% endblock %}</td>
+                        <td></td>
+                    </tr>
+                    <!-- bottom header row (payment terms, delivery terms, etc) -->
+                    <tr class="small_print">
+                        <td style="vertical-align:top">
+                            {% block remarks %} {% endblock %}
+                        </td>
+                        <td></td>
+                        <td style="vertical-align:top">{% block doc_info %} {% endblock %}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="watermark"> {% block watermark %} {% endblock %} </div>
+
+        {% block body %}
+            {% for product in order['products'] %}
+                <div class="product_sku_block">
+                    {% block product_table scoped %} {% endblock %}
+                    {% block sku_table scoped %} {% endblock %}
+                </div>
+            {% endfor %}
+        {% endblock %}
+
+        {% block summary %} {% endblock %}
+        {#
+        The footer table is positioned absolute at the bottom of the page. This means we need
+        to make sure it does not overlap with the rest of the document. This div takes care of
+        that. If the footer is more thatn 5cm, overlap is still possible.
+        #}
+        <div style="height:5cm"></div>
+            <table class="footer_table">
+                <tr class="small_print">
+                    <td>{% block order_terms_3 %} {% endblock %}</td>
+                </tr>
+            </table>
+    </body>
+</html>

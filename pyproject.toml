@@ -1,0 +1,12 @@
+[tool.black]
+skip-string-normalization = true
+extend-exclude = "marshmallow-jsonschema"
+
+[tool.vulture]
+exclude = ["spynl/api/auth/testutils.py"]
+ignore_names = ["Meta"]
+
+[tool.pytest.ini_options]
+filterwarnings = [
+    "ignore::DeprecationWarning:pkg_resources"
+]

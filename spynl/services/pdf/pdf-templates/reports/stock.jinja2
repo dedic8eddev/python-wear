@@ -1,0 +1,67 @@
+{% extends "report_shared.jinja2" %}
+
+{%- macro product_table(product) -%}
+    <table class="product_table">
+        <tbody>
+            <tr>
+                {% if parameters['productPhotos'] %}
+                    <td rowspan="0" style="width:23mm">
+                        <img
+                            class="thumbnail"
+                            src="{{ article_image_location }}{{ product['article'] }}.jpg">
+                    </td>
+                {% endif %}
+                <td colspan="2" style="font-weight:bold"> {{ product['article'] }} </td>
+            </tr>
+            {% for key in product %}
+                {% if key not in ['article', 'skuStockMatrix'] %}
+                    <tr>
+                        <td>
+                            {{ column_metadata.get(key, {}).get('label', key) | change_case }}:
+                        </td>
+                        <td> {{ product[key] }} </td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
+        </tbody>
+    </table>
+{%- endmacro -%}
+
+{%- macro stock_matrix(product) -%}
+    {% if parameters['history'] %}
+        <table class="sku_table history_sku_table">
+    {% else %}
+        <table class="sku_table">
+    {% endif %}
+        <thead>
+            <tr>
+                {% for header in product['skuStockMatrix'][0] %}
+                    <th> {{ header }} </th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in product['skuStockMatrix'][1:] %}
+                <tr>
+                    {% for item in row %}
+                        <td> {% if item is not none %} {{ item }} {% endif %}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{%- endmacro -%}
+
+{% block report_table %}
+    {% for group in data %}
+        {# If the header is an empty string, no groups were selected #}
+        {% if group['header'] %}
+            <h2> {{ group['header'] | change_case }} </h2>
+            <hr>
+        {% endif %}
+        {% for product in group['products'] %}
+            {{ product_table(product) }}
+            {{ stock_matrix(product) }}
+        {% endfor %}
+    {% endfor %}
+{% endblock %}
